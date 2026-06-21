@@ -1,0 +1,431 @@
+
+ * IMPORTANT: 23 news items need reading for repository 'gentoo'.
+ * Use eselect news read to view new items.
+
+
+These are the packages that would be merged, in order:
+
+Calculating dependencies  ... done!
+Dependency resolution took 1.78 s (backtrack: 0/20).
+
+[ebuild  N     ] dev-lang/duktape-2.7.0-r3:0/2.7.0::gentoo  1003 KiB
+[ebuild  N     ] acct-group/polkitd-0-r3::gentoo  0 KiB
+[ebuild  N     ] acct-group/messagebus-0-r3::gentoo  0 KiB
+[ebuild  N     ] acct-user/polkitd-0-r3::gentoo  0 KiB
+[ebuild  N     ] acct-user/messagebus-0-r3::gentoo  0 KiB
+[ebuild  N     ] dev-libs/gobject-introspection-common-1.86.0::gentoo  1058 KiB
+[ebuild  N     ] dev-lang/nasm-3.01::gentoo  USE="-doc" 1464 KiB
+[ebuild  N     ] media-libs/libjpeg-turbo-3.1.4.1:0/0.2::gentoo  USE="-java -static-libs -test -verify-sig" 2484 KiB
+[ebuild  N     ] dev-cpp/eigen-3.4.1:3/3.4::gentoo  USE="openmp -adolc (-blas) -boost -cholmod (-cuda) -cuda-clang -debug -doc -fftw -hip -klu (-lapack) -mathjax (-metis) (-opengl) (-pastix) -pocketfft -sparsehash -spqr -superlu (-test) -umfpack" CPU_FLAGS_X86="sse sse2 -avx -avx2 -avx512dq -avx512f -f16c -fma3 -popcnt -sse3 -sse4_1 -sse4_2 -ssse3" LLVM_SLOT="21 -22 (-23)" 2109 KiB
+[ebuild   R    ] sys-libs/pam-1.7.2::gentoo  USE="nls selinux* -audit -berkdb -debug (-elogind) -examples -nis -systemd -verify-sig" 500 KiB
+[ebuild     U  ] sys-apps/util-linux-2.42.2::gentoo [2.41.4-r1::gentoo] USE="cramfs hardlink logger ncurses pam readline selinux* su suid (unicode) -audit -build -caps -cryptsetup -fdformat -kill -magic (-nls) -python (-rtas) -slang -static-libs -systemd -test -tty-helpers -udev -uuidd -verify-sig" PYTHON_TARGETS="python3_14 -python3_12 -python3_13*" 10409 KiB
+[ebuild   R    ] sys-apps/coreutils-9.11-r1::gentoo  USE="acl nls openssl selinux* xattr -caps -gmp -hostname -kill -multicall (-split-usr) -static -test -test-full -vanilla -verify-sig" 6415 KiB
+[ebuild   R    ] sys-apps/findutils-4.10.0::gentoo  USE="nls selinux* -static -test -test-full -verify-sig" 2189 KiB
+[ebuild  NS    ] app-text/docbook-xml-dtd-4.1.2-r7:4.1.2::gentoo [4.2-r3:4.2::gentoo, 4.5-r2:4.5::gentoo] 74 KiB
+[ebuild  NS    ] app-text/docbook-xml-dtd-4.4-r3:4.4::gentoo [4.2-r3:4.2::gentoo, 4.5-r2:4.5::gentoo] 94 KiB
+[ebuild  N     ] app-text/xmlto-0.0.28-r11::gentoo  USE="-latex -text" 125 KiB
+[ebuild  N     ] dev-python/pyproject-metadata-0.11.0::gentoo  USE="-test -verify-provenance" PYTHON_TARGETS="python3_14 -python3_12 -python3_13 -python3_14t (-python3_15) (-python3_15t)" 43 KiB
+[ebuild  N     ] dev-python/olefile-0.47::gentoo  USE="-doc" PYTHON_TARGETS="python3_14 -python3_12 -python3_13" 100 KiB
+[ebuild  N     ] dev-python/lxml-6.1.1::gentoo  USE="threads -debug -doc -examples -test" PYTHON_TARGETS="python3_14 -python3_12 -python3_13 (-python3_15)" 973 KiB
+[ebuild  N     ] dev-python/scikit-build-core-0.12.2::gentoo  USE="-test -verify-provenance" PYTHON_TARGETS="python3_14 -python3_12 -python3_13" 297 KiB
+[ebuild  N     ] dev-python/pybind11-3.0.4::gentoo  USE="-test" PYTHON_TARGETS="python3_14 -python3_12 -python3_13" 944 KiB
+[ebuild  N     ] dev-python/pillow-12.2.0-r1::gentoo  USE="jpeg zlib -avif -debug -examples -imagequant -jpeg2k -lcms -raqm -test -tiff -tk -truetype -webp -xcb" PYTHON_TARGETS="python3_14 -python3_12 -python3_13" 45955 KiB
+[ebuild  N     ] dev-python/docutils-0.23::gentoo  PYTHON_TARGETS="python3_14 -python3_12 -python3_13" 2250 KiB
+[ebuild  N     ] dev-util/glib-utils-2.88.1::gentoo  PYTHON_SINGLE_TARGET="python3_14 -python3_12 -python3_13" 5654 KiB
+[ebuild  N     ] dev-libs/glib-2.88.1:2::gentoo  USE="dbus elf introspection mime selinux xattr -debug -doc -static-libs -sysprof (-systemtap) -test -utils" 0 KiB
+[ebuild  N     ] x11-misc/shared-mime-info-2.4-r3::gentoo  USE="-test" 6931 KiB
+[ebuild  N     ] dev-util/desktop-file-utils-0.28::gentoo  80 KiB
+[ebuild  N     ] dev-util/gdbus-codegen-2.88.1::gentoo  PYTHON_SINGLE_TARGET="python3_14 -python3_12 -python3_13" 0 KiB
+[ebuild  N     ] dev-libs/gobject-introspection-1.86.0::gentoo  USE="-doctool -gtk-doc -test" PYTHON_SINGLE_TARGET="python3_14 -python3_12 -python3_13" 0 KiB
+[ebuild   R    ] sys-apps/shadow-4.19.4:0/5::gentoo  USE="acl nls pam selinux* xattr -audit -skey (-split-usr) -su -systemd -test -verify-sig" 2279 KiB
+[ebuild  N     ] sec-policy/selinux-policykit-2.20260312_p1::gentoo  SELINUX_POLICY_TYPES="mcs mls strict targeted" 0 KiB
+[ebuild  N     ] sec-policy/selinux-dbus-2.20260312_p1::gentoo  SELINUX_POLICY_TYPES="mcs mls strict targeted" 0 KiB
+[ebuild  N     ] sec-policy/selinux-openrc-2.20260312_p1::gentoo  SELINUX_POLICY_TYPES="mcs mls strict targeted" 0 KiB
+[ebuild  N     ] sec-policy/selinux-shutdown-2.20260312_p1::gentoo  SELINUX_POLICY_TYPES="mcs mls strict targeted" 0 KiB
+[ebuild     U  ] sys-apps/sysvinit-3.18::gentoo [3.15::gentoo] USE="selinux* (-ibm) (-nls) -static -verify-sig" 233 KiB
+[ebuild  N     ] sys-auth/elogind-257.16::gentoo  USE="acl pam policykit selinux -audit -cgroup-hybrid -debug -doc -test" 2573 KiB
+[ebuild  N     ] sys-apps/dbus-1.16.2-r1::gentoo  USE="elogind selinux -X -apparmor -audit -debug -doc -static-libs -systemd -test -valgrind" 1090 KiB
+[ebuild  N     ] gnome-base/dconf-0.40.0::gentoo  USE="-gtk-doc -test" 116 KiB
+[ebuild  N     ] sys-auth/polkit-126-r3::gentoo  USE="elogind introspection nls pam selinux -examples -gtk -kde -systemd -test" 446 KiB
+[ebuild   R    ] sys-process/procps-4.0.6:0/1-ng::gentoo  USE="elogind* kill ncurses nls selinux* (unicode) -modern-top -skill -static-libs -systemd -test -verify-sig" 1544 KiB
+[ebuild   R    ] net-misc/openssh-10.3_p1::gentoo  USE="pam selinux* ssl -audit (-debug) -kerberos -ldns -libedit -livecd -security-key -static -test -verify-sig" 1961 KiB
+[ebuild     U  ] sys-apps/openrc-0.63.2::gentoo [0.63.1::gentoo] USE="netifrc pam selinux* sysvinit unicode -audit -bash -debug -newnet -s6 -sysv-utils" 262 KiB
+
+Total: 42 packages (3 upgrades, 31 new, 2 in new slots, 6 reinstalls), Size of downloads: 101640 KiB
+>>> Verifying ebuild manifests
+
+>>> Running pre-merge checks for acct-group/polkitd-0-r3
+>>> Running pre-merge checks for acct-group/messagebus-0-r3
+>>> Running pre-merge checks for acct-user/polkitd-0-r3
+>>> Running pre-merge checks for acct-user/messagebus-0-r3
+>>> Running pre-merge checks for dev-cpp/eigen-3.4.1
+>>> Running pre-merge checks for sys-apps/util-linux-2.42.2
+>>> Running pre-merge checks for net-misc/openssh-10.3_p1
+>>> Jobs: 0 of 42 complete, 1 running                                   Load avg: 0.12, 0.44, 0.57
+>>> Emerging (1 of 42) dev-lang/duktape-2.7.0-r3::gentoo
+>>> Jobs: 0 of 42 complete, 1 running                                   Load avg: 0.12, 0.44, 0.57
+>>> Jobs: 0 of 42 complete, 2 running                                   Load avg: 0.12, 0.44, 0.57
+>>> Emerging (2 of 42) acct-group/polkitd-0-r3::gentoo
+>>> Jobs: 0 of 42 complete, 2 running                                   Load avg: 0.12, 0.44, 0.57
+>>> Jobs: 0 of 42 complete, 1 running                                   Load avg: 0.12, 0.44, 0.57
+>>> Jobs: 0 of 42 complete, 2 running, 1 merge wait                     Load avg: 0.12, 0.44, 0.57
+>>> Emerging (3 of 42) acct-group/messagebus-0-r3::gentoo
+>>> Jobs: 0 of 42 complete, 2 running, 1 merge wait                     Load avg: 0.12, 0.44, 0.57
+>>> Jobs: 0 of 42 complete, 1 running, 1 merge wait                     Load avg: 0.35, 0.49, 0.58
+>>> Jobs: 0 of 42 complete, 2 running, 2 merge wait                     Load avg: 0.35, 0.49, 0.58
+>>> Emerging (4 of 42) dev-libs/gobject-introspection-common-1.86.0::gentoo
+>>> Jobs: 0 of 42 complete, 2 running, 2 merge wait                     Load avg: 0.35, 0.49, 0.58
+>>> Jobs: 0 of 42 complete, 1 running, 2 merge wait                     Load avg: 0.72, 0.56, 0.60
+>>> Jobs: 0 of 42 complete, 2 running, 3 merge wait                     Load avg: 0.72, 0.56, 0.60
+>>> Emerging (5 of 42) dev-lang/nasm-3.01::gentoo
+>>> Jobs: 0 of 42 complete, 2 running, 3 merge wait                     Load avg: 0.72, 0.56, 0.60
+>>> Jobs: 0 of 42 complete, 1 running, 3 merge wait                     Load avg: 0.91, 0.60, 0.62
+>>> Jobs: 0 of 42 complete, 2 running, 4 merge wait                     Load avg: 0.91, 0.60, 0.62
+>>> Emerging (6 of 42) dev-cpp/eigen-3.4.1::gentoo
+>>> Jobs: 0 of 42 complete, 2 running, 4 merge wait                     Load avg: 0.91, 0.60, 0.62
+>>> Jobs: 0 of 42 complete, 1 running, 4 merge wait                     Load avg: 1.16, 0.66, 0.64
+>>> Jobs: 0 of 42 complete, 2 running, 5 merge wait                     Load avg: 1.16, 0.66, 0.64
+>>> Emerging (7 of 42) sys-libs/pam-1.7.2::gentoo
+>>> Jobs: 0 of 42 complete, 2 running, 5 merge wait                     Load avg: 1.16, 0.66, 0.64
+>>> Jobs: 0 of 42 complete, 1 running, 5 merge wait                     Load avg: 1.90, 0.84, 0.70
+>>> Jobs: 0 of 42 complete, 6 merge wait                                Load avg: 2.63, 1.01, 0.75
+>>> Installing (2 of 42) acct-group/polkitd-0-r3::gentoo
+>>> Jobs: 0 of 42 complete, 7 merge wait                                Load avg: 2.63, 1.01, 0.75
+>>> Completed (2 of 42) acct-group/polkitd-0-r3::gentoo
+>>> Jobs: 0 of 42 complete, 6 merge wait                                Load avg: 2.42, 0.99, 0.75
+>>> Jobs: 1 of 42 complete, 6 merge wait                                Load avg: 2.42, 0.99, 0.75
+>>> Installing (3 of 42) acct-group/messagebus-0-r3::gentoo
+>>> Jobs: 1 of 42 complete, 6 merge wait                                Load avg: 2.42, 0.99, 0.75
+>>> Completed (3 of 42) acct-group/messagebus-0-r3::gentoo
+>>> Jobs: 1 of 42 complete, 5 merge wait                                Load avg: 2.42, 0.99, 0.75
+>>> Jobs: 2 of 42 complete, 5 merge wait                                Load avg: 2.42, 0.99, 0.75
+>>> Installing (4 of 42) dev-libs/gobject-introspection-common-1.86.0::gentoo
+>>> Jobs: 2 of 42 complete, 5 merge wait                                Load avg: 2.42, 0.99, 0.75
+>>> Completed (4 of 42) dev-libs/gobject-introspection-common-1.86.0::gentoo
+>>> Jobs: 2 of 42 complete, 4 merge wait                                Load avg: 2.42, 0.99, 0.75
+>>> Jobs: 3 of 42 complete, 4 merge wait                                Load avg: 2.42, 0.99, 0.75
+>>> Installing (1 of 42) dev-lang/duktape-2.7.0-r3::gentoo
+>>> Jobs: 3 of 42 complete, 4 merge wait                                Load avg: 2.42, 0.99, 0.75
+>>> Completed (1 of 42) dev-lang/duktape-2.7.0-r3::gentoo
+>>> Jobs: 3 of 42 complete, 3 merge wait                                Load avg: 2.31, 0.99, 0.75
+>>> Jobs: 4 of 42 complete, 3 merge wait                                Load avg: 2.31, 0.99, 0.75
+>>> Installing (6 of 42) dev-cpp/eigen-3.4.1::gentoo
+>>> Jobs: 4 of 42 complete, 3 merge wait                                Load avg: 2.31, 0.99, 0.75
+>>> Installing (5 of 42) dev-lang/nasm-3.01::gentoo
+>>> Jobs: 4 of 42 complete, 3 merge wait                                Load avg: 2.31, 0.99, 0.75
+>>> Completed (5 of 42) dev-lang/nasm-3.01::gentoo
+>>> Jobs: 4 of 42 complete, 1 merge wait                                Load avg: 2.31, 0.99, 0.75
+>>> Jobs: 5 of 42 complete, 1 merge wait                                Load avg: 2.31, 0.99, 0.75
+>>> Completed (6 of 42) dev-cpp/eigen-3.4.1::gentoo
+>>> Jobs: 5 of 42 complete, 1 merge wait                                Load avg: 2.31, 0.99, 0.75
+>>> Jobs: 6 of 42 complete, 1 merge wait                                Load avg: 2.31, 0.99, 0.75
+>>> Installing (7 of 42) sys-libs/pam-1.7.2::gentoo
+>>> Jobs: 6 of 42 complete, 1 merge wait                                Load avg: 2.31, 0.99, 0.75
+>>> Completed (7 of 42) sys-libs/pam-1.7.2::gentoo
+>>> Jobs: 6 of 42 complete                                              Load avg: 2.28, 1.01, 0.75
+>>> Jobs: 7 of 42 complete                                              Load avg: 2.28, 1.01, 0.75
+>>> Jobs: 7 of 42 complete, 1 running                                   Load avg: 2.28, 1.01, 0.75
+>>> Emerging (8 of 42) acct-user/polkitd-0-r3::gentoo
+>>> Jobs: 7 of 42 complete, 1 running                                   Load avg: 2.28, 1.01, 0.75
+>>> Jobs: 7 of 42 complete, 2 running                                   Load avg: 2.28, 1.01, 0.75
+>>> Emerging (9 of 42) acct-user/messagebus-0-r3::gentoo
+>>> Jobs: 7 of 42 complete, 2 running                                   Load avg: 2.28, 1.01, 0.75
+>>> Jobs: 7 of 42 complete, 1 running                                   Load avg: 2.26, 1.03, 0.76
+>>> Jobs: 7 of 42 complete, 2 running, 1 merge wait                     Load avg: 2.26, 1.03, 0.76
+>>> Emerging (10 of 42) media-libs/libjpeg-turbo-3.1.4.1::gentoo
+>>> Jobs: 7 of 42 complete, 2 running, 1 merge wait                     Load avg: 2.26, 1.03, 0.76
+>>> Jobs: 7 of 42 complete, 1 running, 1 merge wait                     Load avg: 2.26, 1.03, 0.76
+>>> Jobs: 7 of 42 complete, 2 running, 2 merge wait                     Load avg: 2.26, 1.03, 0.76
+>>> Emerging (11 of 42) sys-apps/util-linux-2.42.2::gentoo
+>>> Jobs: 7 of 42 complete, 2 running, 2 merge wait                     Load avg: 2.26, 1.03, 0.76
+>>> Jobs: 7 of 42 complete, 1 running, 2 merge wait                     Load avg: 3.71, 1.42, 0.89
+>>> Jobs: 7 of 42 complete, 3 merge wait                                Load avg: 4.65, 2.22, 1.21
+>>> Installing (8 of 42) acct-user/polkitd-0-r3::gentoo
+>>> Jobs: 7 of 42 complete, 4 merge wait                                Load avg: 4.65, 2.22, 1.21
+>>> Completed (8 of 42) acct-user/polkitd-0-r3::gentoo
+>>> Jobs: 7 of 42 complete, 3 merge wait                                Load avg: 4.65, 2.22, 1.21
+>>> Jobs: 8 of 42 complete, 3 merge wait                                Load avg: 4.65, 2.22, 1.21
+>>> Installing (9 of 42) acct-user/messagebus-0-r3::gentoo
+>>> Jobs: 8 of 42 complete, 3 merge wait                                Load avg: 4.65, 2.22, 1.21
+>>> Completed (9 of 42) acct-user/messagebus-0-r3::gentoo
+>>> Jobs: 8 of 42 complete, 2 merge wait                                Load avg: 4.36, 2.20, 1.21
+>>> Jobs: 9 of 42 complete, 2 merge wait                                Load avg: 4.36, 2.20, 1.21
+>>> Installing (10 of 42) media-libs/libjpeg-turbo-3.1.4.1::gentoo
+>>> Jobs: 9 of 42 complete, 2 merge wait                                Load avg: 4.36, 2.20, 1.21
+>>> Completed (10 of 42) media-libs/libjpeg-turbo-3.1.4.1::gentoo
+>>> Jobs: 9 of 42 complete, 1 merge wait                                Load avg: 4.36, 2.20, 1.21
+>>> Jobs: 10 of 42 complete, 1 merge wait                               Load avg: 4.36, 2.20, 1.21
+>>> Installing (11 of 42) sys-apps/util-linux-2.42.2::gentoo
+>>> Jobs: 10 of 42 complete, 1 merge wait                               Load avg: 4.36, 2.20, 1.21
+>>> Completed (11 of 42) sys-apps/util-linux-2.42.2::gentoo
+>>> Jobs: 10 of 42 complete                                             Load avg: 4.09, 2.18, 1.21
+>>> Jobs: 11 of 42 complete                                             Load avg: 4.09, 2.18, 1.21
+>>> Jobs: 11 of 42 complete, 1 running                                  Load avg: 4.09, 2.18, 1.21
+>>> Emerging (12 of 42) sys-apps/coreutils-9.11-r1::gentoo
+>>> Jobs: 11 of 42 complete, 1 running                                  Load avg: 4.09, 2.18, 1.21
+>>> Jobs: 11 of 42 complete                                             Load avg: 8.23, 3.58, 1.77
+>>> Installing (12 of 42) sys-apps/coreutils-9.11-r1::gentoo
+>>> Jobs: 11 of 42 complete, 1 merge wait                               Load avg: 8.23, 3.58, 1.77
+>>> Completed (12 of 42) sys-apps/coreutils-9.11-r1::gentoo
+>>> Jobs: 11 of 42 complete                                             Load avg: 8.23, 3.58, 1.77
+>>> Jobs: 12 of 42 complete                                             Load avg: 8.23, 3.58, 1.77
+>>> Jobs: 12 of 42 complete, 1 running                                  Load avg: 8.23, 3.58, 1.77
+>>> Emerging (13 of 42) sys-apps/findutils-4.10.0::gentoo
+>>> Jobs: 12 of 42 complete, 1 running                                  Load avg: 8.23, 3.58, 1.77
+>>> Jobs: 12 of 42 complete                                             Load avg: 3.90, 3.15, 1.72
+>>> Installing (13 of 42) sys-apps/findutils-4.10.0::gentoo
+>>> Jobs: 12 of 42 complete, 1 merge wait                               Load avg: 3.90, 3.15, 1.72
+>>> Completed (13 of 42) sys-apps/findutils-4.10.0::gentoo
+>>> Jobs: 12 of 42 complete                                             Load avg: 3.75, 3.13, 1.72
+>>> Jobs: 13 of 42 complete                                             Load avg: 3.75, 3.13, 1.72
+>>> Jobs: 13 of 42 complete, 1 running                                  Load avg: 3.75, 3.13, 1.72
+>>> Emerging (14 of 42) app-text/docbook-xml-dtd-4.1.2-r7::gentoo
+>>> Jobs: 13 of 42 complete, 1 running                                  Load avg: 3.75, 3.13, 1.72
+>>> Jobs: 13 of 42 complete, 2 running                                  Load avg: 3.75, 3.13, 1.72
+>>> Emerging (15 of 42) app-text/docbook-xml-dtd-4.4-r3::gentoo
+>>> Jobs: 13 of 42 complete, 2 running                                  Load avg: 3.75, 3.13, 1.72
+>>> Jobs: 13 of 42 complete, 1 running                                  Load avg: 3.60, 3.11, 1.72
+>>> Jobs: 13 of 42 complete, 2 running, 1 merge wait                    Load avg: 3.60, 3.11, 1.72
+>>> Emerging (16 of 42) app-text/xmlto-0.0.28-r11::gentoo
+>>> Jobs: 13 of 42 complete, 2 running, 1 merge wait                    Load avg: 3.60, 3.11, 1.72
+>>> Jobs: 13 of 42 complete, 1 running, 1 merge wait                    Load avg: 3.60, 3.11, 1.72
+>>> Jobs: 13 of 42 complete, 2 running, 2 merge wait                    Load avg: 3.60, 3.11, 1.72
+>>> Emerging (17 of 42) dev-python/pyproject-metadata-0.11.0::gentoo
+>>> Jobs: 13 of 42 complete, 2 running, 2 merge wait                    Load avg: 3.60, 3.11, 1.72
+>>> Failed to emerge dev-python/pyproject-metadata-0.11.0, Log file:
+>>> Jobs: 13 of 42 complete, 2 running, 2 merge wait                    Load avg: 3.56, 3.11, 1.73
+>>>  '/var/log/portage/dev-python:pyproject-metadata-0.11.0:20260621-130626.log'
+>>> Jobs: 13 of 42 complete, 2 running, 2 merge wait                    Load avg: 3.56, 3.11, 1.73
+>>> Jobs: 13 of 42 complete, 2 running, 1 failed, 2 merge wait          Load avg: 3.56, 3.11, 1.73
+>>> Jobs: 13 of 42 complete, 1 running, 1 failed, 2 merge wait          Load avg: 3.56, 3.11, 1.73
+>>> Jobs: 13 of 42 complete, 1 failed, 2 merge wait                     Load avg: 3.56, 3.11, 1.73
+>>> Installing (14 of 42) app-text/docbook-xml-dtd-4.1.2-r7::gentoo
+>>> Jobs: 13 of 42 complete, 1 failed, 3 merge wait                     Load avg: 3.56, 3.11, 1.73
+>>> Installing (15 of 42) app-text/docbook-xml-dtd-4.4-r3::gentoo
+>>> Jobs: 13 of 42 complete, 1 failed, 3 merge wait                     Load avg: 3.56, 3.11, 1.73
+>>> Completed (14 of 42) app-text/docbook-xml-dtd-4.1.2-r7::gentoo
+>>> Jobs: 13 of 42 complete, 1 failed                                   Load avg: 3.43, 3.09, 1.73
+>>> Installing (16 of 42) app-text/xmlto-0.0.28-r11::gentoo
+>>> Jobs: 13 of 42 complete, 1 failed                                   Load avg: 3.43, 3.09, 1.73
+>>> Jobs: 14 of 42 complete, 1 failed                                   Load avg: 3.43, 3.09, 1.73
+>>> Completed (15 of 42) app-text/docbook-xml-dtd-4.4-r3::gentoo
+>>> Jobs: 14 of 42 complete, 1 failed                                   Load avg: 3.43, 3.09, 1.73
+>>> Jobs: 15 of 42 complete, 1 failed                                   Load avg: 3.43, 3.09, 1.73
+>>> Completed (16 of 42) app-text/xmlto-0.0.28-r11::gentoo
+>>> Jobs: 15 of 42 complete, 1 failed                                   Load avg: 3.43, 3.09, 1.73
+>>> Jobs: 16 of 42 complete, 1 failed                                   Load avg: 3.43, 3.09, 1.73
+
+*** Resuming merge...
+
+These are the packages that would be merged, in order:
+
+Calculating dependencies  ... done!
+Dependency resolution took 2.03 s.
+
+[ebuild   R    ] sys-apps/shadow-4.19.4:0/5::gentoo  USE="acl nls pam selinux* xattr -audit -skey (-split-usr) -su -systemd -test -verify-sig" 0 KiB
+[ebuild   R    ] net-misc/openssh-10.3_p1::gentoo  USE="pam selinux* ssl -audit (-debug) -kerberos -ldns -libedit -livecd -security-key -static -test -verify-sig" 0 KiB
+[ebuild  N     ] dev-python/olefile-0.47::gentoo  USE="-doc" PYTHON_TARGETS="python3_14 -python3_12 -python3_13" 0 KiB
+[ebuild  N     ] dev-python/lxml-6.1.1::gentoo  USE="threads -debug -doc -examples -test" PYTHON_TARGETS="python3_14 -python3_12 -python3_13 (-python3_15)" 0 KiB
+[ebuild  N     ] sec-policy/selinux-openrc-2.20260312_p1::gentoo  SELINUX_POLICY_TYPES="mcs mls strict targeted" 0 KiB
+[ebuild  N     ] sec-policy/selinux-shutdown-2.20260312_p1::gentoo  SELINUX_POLICY_TYPES="mcs mls strict targeted" 0 KiB
+[ebuild  N     ] sec-policy/selinux-policykit-2.20260312_p1::gentoo  SELINUX_POLICY_TYPES="mcs mls strict targeted" 0 KiB
+[ebuild  N     ] sec-policy/selinux-dbus-2.20260312_p1::gentoo  SELINUX_POLICY_TYPES="mcs mls strict targeted" 0 KiB
+[ebuild     U  ] sys-apps/sysvinit-3.18::gentoo [3.15::gentoo] USE="selinux* (-ibm) (-nls) -static -verify-sig" 0 KiB
+[ebuild     U  ] sys-apps/openrc-0.63.2::gentoo [0.63.1::gentoo] USE="netifrc pam selinux* sysvinit unicode -audit -bash -debug -newnet -s6 -sysv-utils" 0 KiB
+
+Total: 10 packages (2 upgrades, 6 new, 2 reinstalls), Size of downloads: 0 KiB
+ * emerge --keep-going: dev-python/scikit-build-core-0.12.2 dropped because it
+ * requires >=dev-python/pyproject-metadata-0.5[python_targets_python3_14(-)]
+ * emerge --keep-going: dev-python/pybind11-3.0.4 dropped because it requires
+ * dev-python/scikit-build-core[python_targets_python3_14(-)]
+ * emerge --keep-going: dev-python/pillow-12.2.0-r1 dropped because it
+ * requires dev-python/pybind11[python_targets_python3_14(-)]
+ * emerge --keep-going: dev-python/docutils-0.23 dropped because it requires
+ * dev-python/pillow[python_targets_python3_14(-)]
+ * emerge --keep-going: dev-libs/glib-2.88.1 dropped because it requires dev-
+ * python/docutils, x11-misc/shared-mime-info, gnome-base/dconf
+ * emerge --keep-going: gnome-base/dconf-0.40.0 dropped because it requires
+ * sys-apps/dbus, x11-misc/shared-mime-info, >=dev-util/gdbus-
+ * codegen-2.80.5-r1, >=dev-libs/glib-2.44.0:2, dev-util/desktop-file-utils
+ * emerge --keep-going: sys-auth/polkit-126-r3 dropped because it requires
+ * sys-auth/elogind, >=dev-libs/glib-2.32:2, >=dev-libs/glib-2.32, >=dev-
+ * libs/gobject-introspection-1.82.0-r2, dev-util/glib-utils
+ * emerge --keep-going: sys-auth/elogind-257.16 dropped because it requires
+ * sys-apps/dbus, sys-auth/polkit
+ * emerge --keep-going: sys-apps/dbus-1.16.2-r1 dropped because it requires
+ * sys-auth/elogind
+ * emerge --keep-going: sys-process/procps-4.0.6 dropped because it requires
+ * sys-auth/elogind
+ * emerge --keep-going: dev-util/desktop-file-utils-0.28 dropped because it
+ * requires >=dev-libs/glib-2.26:2
+ * emerge --keep-going: dev-libs/gobject-introspection-1.86.0 dropped because
+ * it requires >=dev-libs/glib-2.82.0:2[introspection], dev-util/desktop-file-
+ * utils, x11-misc/shared-mime-info
+ * emerge --keep-going: x11-misc/shared-mime-info-2.4-r3 dropped because it
+ * requires dev-libs/glib:2
+ * emerge --keep-going: dev-util/gdbus-codegen-2.88.1 dropped because it
+ * requires >=dev-python/docutils-0.21.1, >=dev-libs/glib-2.88.1
+ * emerge --keep-going: dev-util/glib-utils-2.88.1 dropped because it requires
+ * >=dev-python/docutils-0.21.1
+>>> Running pre-merge checks for net-misc/openssh-10.3_p1
+>>> Jobs: 0 of 10 complete, 1 running                                   Load avg: 3.24, 3.05, 1.73
+>>> Emerging (1 of 10) sys-apps/shadow-4.19.4::gentoo
+>>> Jobs: 0 of 10 complete, 1 running                                   Load avg: 3.24, 3.05, 1.73
+>>> Jobs: 0 of 10 complete, 2 running                                   Load avg: 3.24, 3.05, 1.73
+>>> Emerging (2 of 10) dev-python/olefile-0.47::gentoo
+>>> Jobs: 0 of 10 complete, 2 running                                   Load avg: 3.24, 3.05, 1.73
+>>> Failed to emerge dev-python/olefile-0.47, Log file:
+>>> Jobs: 0 of 10 complete, 2 running                                   Load avg: 3.14, 3.03, 1.73
+>>>  '/var/log/portage/dev-python:olefile-0.47:20260621-130641.log'
+>>> Jobs: 0 of 10 complete, 2 running                                   Load avg: 3.14, 3.03, 1.73
+>>> Jobs: 0 of 10 complete, 2 running, 1 failed                         Load avg: 3.14, 3.03, 1.73
+>>> Jobs: 0 of 10 complete, 1 running, 1 failed                         Load avg: 3.14, 3.03, 1.73
+>>> Jobs: 0 of 10 complete, 1 failed                                    Load avg: 6.76, 3.85, 2.02
+>>> Installing (1 of 10) sys-apps/shadow-4.19.4::gentoo
+>>> Jobs: 0 of 10 complete, 1 failed, 1 merge wait                      Load avg: 6.76, 3.85, 2.02
+>>> Completed (1 of 10) sys-apps/shadow-4.19.4::gentoo
+>>> Jobs: 0 of 10 complete, 1 failed                                    Load avg: 6.30, 3.80, 2.02
+>>> Jobs: 1 of 10 complete, 1 failed                                    Load avg: 6.30, 3.80, 2.02
+
+*** Resuming merge...
+
+These are the packages that would be merged, in order:
+
+Calculating dependencies  . ... done!
+Dependency resolution took 1.14 s.
+
+[ebuild   R    ] net-misc/openssh-10.3_p1::gentoo  USE="pam selinux* ssl -audit (-debug) -kerberos -ldns -libedit -livecd -security-key -static -test -verify-sig" 0 KiB
+[ebuild  N     ] dev-python/lxml-6.1.1::gentoo  USE="threads -debug -doc -examples -test" PYTHON_TARGETS="python3_14 -python3_12 -python3_13 (-python3_15)" 0 KiB
+[ebuild  N     ] sec-policy/selinux-openrc-2.20260312_p1::gentoo  SELINUX_POLICY_TYPES="mcs mls strict targeted" 0 KiB
+[ebuild  N     ] sec-policy/selinux-shutdown-2.20260312_p1::gentoo  SELINUX_POLICY_TYPES="mcs mls strict targeted" 0 KiB
+[ebuild  N     ] sec-policy/selinux-policykit-2.20260312_p1::gentoo  SELINUX_POLICY_TYPES="mcs mls strict targeted" 0 KiB
+[ebuild  N     ] sec-policy/selinux-dbus-2.20260312_p1::gentoo  SELINUX_POLICY_TYPES="mcs mls strict targeted" 0 KiB
+[ebuild     U  ] sys-apps/sysvinit-3.18::gentoo [3.15::gentoo] USE="selinux* (-ibm) (-nls) -static -verify-sig" 0 KiB
+[ebuild     U  ] sys-apps/openrc-0.63.2::gentoo [0.63.1::gentoo] USE="netifrc pam selinux* sysvinit unicode -audit -bash -debug -newnet -s6 -sysv-utils" 0 KiB
+
+Total: 8 packages (2 upgrades, 5 new, 1 reinstall), Size of downloads: 0 KiB
+>>> Running pre-merge checks for net-misc/openssh-10.3_p1
+>>> Jobs: 0 of 8 complete, 1 running                                    Load avg: 6.30, 3.80, 2.02
+>>> Emerging (1 of 8) net-misc/openssh-10.3_p1::gentoo
+>>> Jobs: 0 of 8 complete, 1 running                                    Load avg: 6.30, 3.80, 2.02
+>>> Jobs: 0 of 8 complete, 2 running                                    Load avg: 5.88, 3.75, 2.01
+>>> Emerging (2 of 8) dev-python/lxml-6.1.1::gentoo
+>>> Jobs: 0 of 8 complete, 2 running                                    Load avg: 5.88, 3.75, 2.01
+>>> Jobs: 0 of 8 complete, 1 running                                    Load avg: 10.8, 5.3, 2.7
+>>> Jobs: 0 of 8 complete, 2 running, 1 merge wait                      Load avg: 10.8, 5.3, 2.7
+>>> Emerging (3 of 8) sec-policy/selinux-openrc-2.20260312_p1::gentoo
+>>> Jobs: 0 of 8 complete, 2 running, 1 merge wait                      Load avg: 10.8, 5.3, 2.7
+>>> Jobs: 0 of 8 complete, 1 running, 1 merge wait                      Load avg: 9.42, 5.20, 2.65
+>>> Jobs: 0 of 8 complete, 2 running, 2 merge wait                      Load avg: 9.42, 5.20, 2.65
+>>> Emerging (4 of 8) sec-policy/selinux-shutdown-2.20260312_p1::gentoo
+>>> Jobs: 0 of 8 complete, 2 running, 2 merge wait                      Load avg: 9.42, 5.20, 2.65
+>>> Failed to emerge dev-python/lxml-6.1.1, Log file:
+>>> Jobs: 0 of 8 complete, 2 running, 2 merge wait                      Load avg: 8.36, 5.11, 2.64
+>>>  '/var/log/portage/dev-python:lxml-6.1.1:20260621-130716.log'
+>>> Jobs: 0 of 8 complete, 2 running, 2 merge wait                      Load avg: 8.36, 5.11, 2.64
+>>> Jobs: 0 of 8 complete, 2 running, 1 failed, 2 merge wait            Load avg: 8.36, 5.11, 2.64
+>>> Jobs: 0 of 8 complete, 1 running, 1 failed, 2 merge wait            Load avg: 8.36, 5.11, 2.64
+>>> Jobs: 0 of 8 complete, 1 failed, 2 merge wait                       Load avg: 8.36, 5.11, 2.64
+>>> Installing (1 of 8) net-misc/openssh-10.3_p1::gentoo
+>>> Jobs: 0 of 8 complete, 1 failed, 3 merge wait                       Load avg: 8.36, 5.11, 2.64
+>>> Completed (1 of 8) net-misc/openssh-10.3_p1::gentoo
+>>> Jobs: 0 of 8 complete, 1 failed, 2 merge wait                       Load avg: 7.69, 5.02, 2.63
+>>> Jobs: 1 of 8 complete, 1 failed, 2 merge wait                       Load avg: 7.69, 5.02, 2.63
+>>> Installing (3 of 8) sec-policy/selinux-openrc-2.20260312_p1::gentoo
+>>> Jobs: 1 of 8 complete, 1 failed, 2 merge wait                       Load avg: 7.69, 5.02, 2.63
+>>> Completed (3 of 8) sec-policy/selinux-openrc-2.20260312_p1::gentoo
+>>> Jobs: 1 of 8 complete, 1 failed, 1 merge wait                       Load avg: 7.15, 4.96, 2.62
+>>> Jobs: 2 of 8 complete, 1 failed, 1 merge wait                       Load avg: 7.15, 4.96, 2.62
+>>> Installing (4 of 8) sec-policy/selinux-shutdown-2.20260312_p1::gentoo
+>>> Jobs: 2 of 8 complete, 1 failed, 1 merge wait                       Load avg: 7.15, 4.96, 2.62
+>>> Completed (4 of 8) sec-policy/selinux-shutdown-2.20260312_p1::gentoo
+>>> Jobs: 2 of 8 complete, 1 failed                                     Load avg: 6.66, 4.89, 2.61
+>>> Jobs: 3 of 8 complete, 1 failed                                     Load avg: 6.66, 4.89, 2.61
+
+*** Resuming merge...
+
+These are the packages that would be merged, in order:
+
+Calculating dependencies  ... done!
+Dependency resolution took 1.14 s.
+
+[ebuild  N     ] sec-policy/selinux-policykit-2.20260312_p1::gentoo  SELINUX_POLICY_TYPES="mcs mls strict targeted" 0 KiB
+[ebuild  N     ] sec-policy/selinux-dbus-2.20260312_p1::gentoo  SELINUX_POLICY_TYPES="mcs mls strict targeted" 0 KiB
+[ebuild     U  ] sys-apps/sysvinit-3.18::gentoo [3.15::gentoo] USE="selinux* (-ibm) (-nls) -static -verify-sig" 0 KiB
+[ebuild     U  ] sys-apps/openrc-0.63.2::gentoo [0.63.1::gentoo] USE="netifrc pam selinux* sysvinit unicode -audit -bash -debug -newnet -s6 -sysv-utils" 0 KiB
+
+Total: 4 packages (2 upgrades, 2 new), Size of downloads: 0 KiB
+>>> Jobs: 0 of 4 complete, 1 running                                    Load avg: 6.66, 4.89, 2.61
+>>> Emerging (1 of 4) sec-policy/selinux-policykit-2.20260312_p1::gentoo
+>>> Jobs: 0 of 4 complete, 1 running                                    Load avg: 6.66, 4.89, 2.61
+>>> Jobs: 0 of 4 complete, 2 running                                    Load avg: 6.66, 4.89, 2.61
+>>> Emerging (2 of 4) sec-policy/selinux-dbus-2.20260312_p1::gentoo
+>>> Jobs: 0 of 4 complete, 2 running                                    Load avg: 6.66, 4.89, 2.61
+>>> Jobs: 0 of 4 complete, 1 running                                    Load avg: 5.94, 4.80, 2.60
+>>> Jobs: 0 of 4 complete, 2 running, 1 merge wait                      Load avg: 5.94, 4.80, 2.60
+>>> Emerging (3 of 4) sys-apps/sysvinit-3.18::gentoo
+>>> Jobs: 0 of 4 complete, 2 running, 1 merge wait                      Load avg: 5.94, 4.80, 2.60
+>>> Jobs: 0 of 4 complete, 1 running, 1 merge wait                      Load avg: 5.63, 4.75, 2.60
+>>> Jobs: 0 of 4 complete, 2 merge wait                                 Load avg: 5.63, 4.75, 2.60
+>>> Installing (1 of 4) sec-policy/selinux-policykit-2.20260312_p1::gentoo
+>>> Jobs: 0 of 4 complete, 3 merge wait                                 Load avg: 5.63, 4.75, 2.60
+>>> Installing (2 of 4) sec-policy/selinux-dbus-2.20260312_p1::gentoo
+>>> Jobs: 0 of 4 complete, 3 merge wait                                 Load avg: 5.63, 4.75, 2.60
+>>> Completed (2 of 4) sec-policy/selinux-dbus-2.20260312_p1::gentoo
+>>> Jobs: 0 of 4 complete, 1 merge wait                                 Load avg: 5.26, 4.69, 2.59
+>>> Jobs: 1 of 4 complete, 1 merge wait                                 Load avg: 5.26, 4.69, 2.59
+>>> Completed (1 of 4) sec-policy/selinux-policykit-2.20260312_p1::gentoo
+>>> Jobs: 1 of 4 complete, 1 merge wait                                 Load avg: 4.92, 4.63, 2.58
+>>> Jobs: 2 of 4 complete, 1 merge wait                                 Load avg: 4.92, 4.63, 2.58
+>>> Installing (3 of 4) sys-apps/sysvinit-3.18::gentoo
+>>> Jobs: 2 of 4 complete, 1 merge wait                                 Load avg: 4.92, 4.63, 2.58
+>>> Completed (3 of 4) sys-apps/sysvinit-3.18::gentoo
+>>> Jobs: 2 of 4 complete                                               Load avg: 4.92, 4.63, 2.58
+>>> Jobs: 3 of 4 complete                                               Load avg: 4.92, 4.63, 2.58
+>>> Jobs: 3 of 4 complete, 1 running                                    Load avg: 4.92, 4.63, 2.58
+>>> Emerging (4 of 4) sys-apps/openrc-0.63.2::gentoo
+>>> Jobs: 3 of 4 complete, 1 running                                    Load avg: 4.92, 4.63, 2.58
+>>> Jobs: 3 of 4 complete                                               Load avg: 4.31, 4.51, 2.57
+>>> Installing (4 of 4) sys-apps/openrc-0.63.2::gentoo
+>>> Jobs: 3 of 4 complete, 1 merge wait                                 Load avg: 4.31, 4.51, 2.57
+>>> Completed (4 of 4) sys-apps/openrc-0.63.2::gentoo
+>>> Jobs: 3 of 4 complete                                               Load avg: 3.97, 4.43, 2.55
+>>> Jobs: 4 of 4 complete                                               Load avg: 3.97, 4.43, 2.55
+
+ * 
+ * The following 18 packages have failed to build, install, or execute
+ * postinst:
+ * 
+ *  (dev-python/pyproject-metadata-0.11.0:0/0::gentoo, ebuild scheduled for merge), Log file:
+ *   '/var/log/portage/dev-python:pyproject-metadata-0.11.0:20260621-130626.log'
+ *  (dev-python/scikit-build-core-0.12.2:0/0::gentoo, ebuild scheduled for merge)
+ *  (dev-python/pybind11-3.0.4:0/0::gentoo, ebuild scheduled for merge)
+ *  (dev-python/pillow-12.2.0-r1:0/0::gentoo, ebuild scheduled for merge)
+ *  (dev-python/docutils-0.23:0/0::gentoo, ebuild scheduled for merge)
+ *  (dev-libs/glib-2.88.1:2/2::gentoo, ebuild scheduled for merge)
+ *  (gnome-base/dconf-0.40.0:0/0::gentoo, ebuild scheduled for merge)
+ *  (sys-auth/polkit-126-r3:0/0::gentoo, ebuild scheduled for merge)
+ *  (sys-auth/elogind-257.16:0/0::gentoo, ebuild scheduled for merge)
+ *  (sys-apps/dbus-1.16.2-r1:0/0::gentoo, ebuild scheduled for merge)
+ *  (sys-process/procps-4.0.6:0/1-ng::gentoo, ebuild scheduled for merge)
+ *  (dev-util/desktop-file-utils-0.28:0/0::gentoo, ebuild scheduled for merge)
+ *  (dev-libs/gobject-introspection-1.86.0:0/0::gentoo, ebuild scheduled for merge)
+ *  (x11-misc/shared-mime-info-2.4-r3:0/0::gentoo, ebuild scheduled for merge)
+ *  (dev-util/gdbus-codegen-2.88.1:0/0::gentoo, ebuild scheduled for merge)
+ *  (dev-util/glib-utils-2.88.1:0/0::gentoo, ebuild scheduled for merge)
+ *  (dev-python/olefile-0.47:0/0::gentoo, ebuild scheduled for merge), Log file:
+ *   '/var/log/portage/dev-python:olefile-0.47:20260621-130641.log'
+ *  (dev-python/lxml-6.1.1:0/0::gentoo, ebuild scheduled for merge), Log file:
+ *   '/var/log/portage/dev-python:lxml-6.1.1:20260621-130716.log'
+ * 
+
+ * GNU info directory index is up-to-date.
+
+ * IMPORTANT: 3 config files in '/etc' need updating.
+ * See the CONFIGURATION FILES and CONFIGURATION FILES UPDATE TOOLS
+ * sections of the emerge man page to learn how to update config files.
+
+ * IMPORTANT: 23 news items need reading for repository 'gentoo'.
+ * Use eselect news read to view new items.
+
+INTEGRATION_RC=1

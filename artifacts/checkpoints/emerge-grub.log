@@ -1,0 +1,51 @@
+
+ * IMPORTANT: 21 news items need reading for repository 'gentoo'.
+ * Use eselect news read to view new items.
+
+
+These are the packages that would be merged, in order:
+
+Calculating dependencies  ... done!
+Dependency resolution took 0.62 s (backtrack: 0/20).
+
+[ebuild  N     ] sys-boot/grub-themes-gentoo-1.0-r2::gentoo  5117 KiB
+[ebuild  N     ] sys-boot/grub-2.14-r5:2/2.14-r5::gentoo  USE="branding fonts nls themes -device-mapper -doc -efiemu -libzfs -mount -protect -sdl -secureboot (-test) -truetype -verify-sig" GRUB_PLATFORMS="efi-64 -coreboot -efi-32 -emu -ieee1275 (-loongson) -multiboot -pc -qemu (-qemu-mips) -uboot -xen -xen-32 -xen-pvh" 14183 KiB
+
+Total: 2 packages (2 new), Size of downloads: 19300 KiB
+>>> Verifying ebuild manifests
+
+>>> Running pre-merge checks for sys-boot/grub-themes-gentoo-1.0-r2
+ [32m*[0m Your /boot partition was detected as being mounted.
+ [32m*[0m Files will be installed there for grub-themes-gentoo to function correctly.
+ [32m*[0m Assuming you do not have a separate /efi partition.
+ [32m*[0m Assuming you do not have a separate /boot/efi partition.
+ [32m*[0m Assuming you do not have a separate /boot/EFI partition.
+>>> Jobs: 0 of 2 complete, 1 running                                    Load avg: 2.14, 5.77, 4.63
+>>> Emerging (1 of 2) sys-boot/grub-themes-gentoo-1.0-r2::gentoo
+>>> Jobs: 0 of 2 complete, 1 running                                    Load avg: 2.14, 5.77, 4.63
+>>> Jobs: 0 of 2 complete                                               Load avg: 2.29, 5.74, 4.62
+>>> Installing (1 of 2) sys-boot/grub-themes-gentoo-1.0-r2::gentoo
+>>> Jobs: 0 of 2 complete, 1 merge wait                                 Load avg: 2.29, 5.74, 4.62
+>>> Completed (1 of 2) sys-boot/grub-themes-gentoo-1.0-r2::gentoo
+>>> Jobs: 0 of 2 complete                                               Load avg: 2.29, 5.74, 4.62
+>>> Jobs: 1 of 2 complete                                               Load avg: 2.29, 5.74, 4.62
+>>> Jobs: 1 of 2 complete, 1 running                                    Load avg: 2.29, 5.74, 4.62
+>>> Emerging (2 of 2) sys-boot/grub-2.14-r5::gentoo
+>>> Jobs: 1 of 2 complete, 1 running                                    Load avg: 2.29, 5.74, 4.62
+>>> Jobs: 1 of 2 complete                                               Load avg: 10.1, 7.8, 5.6
+>>> Installing (2 of 2) sys-boot/grub-2.14-r5::gentoo
+>>> Jobs: 1 of 2 complete, 1 merge wait                                 Load avg: 10.1, 7.8, 5.6
+>>> Recording sys-boot/grub in "world" favorites file...
+>>> Jobs: 1 of 2 complete                                               Load avg: 9.39, 7.73, 5.54
+>>> Completed (2 of 2) sys-boot/grub-2.14-r5::gentoo
+>>> Jobs: 1 of 2 complete                                               Load avg: 9.39, 7.73, 5.54
+>>> Jobs: 2 of 2 complete                                               Load avg: 9.39, 7.73, 5.54
+
+
+ * Regenerating GNU info directory index...
+ * Processed 113 info files.
+
+ * IMPORTANT: 22 news items need reading for repository 'gentoo'.
+ * Use eselect news read to view new items.
+
+EMERGE_GRUB_RC=0

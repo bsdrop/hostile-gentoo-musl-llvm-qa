@@ -1,0 +1,4 @@
+Current /etc/portage/make.profile symlink:
+realpath: /etc/portage/make.profile: No such file or directory
+realpath: /var/db/repos/gentoo/profiles: No such file or directory
+  

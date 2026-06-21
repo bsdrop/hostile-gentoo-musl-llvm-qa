@@ -1,0 +1,93 @@
+!!! No gcc found. You probably need to 'source /etc/profile'
+!!! to update the environment of this terminal and possibly
+!!! other terminals also.
+Portage 3.0.79 (python 3.14.6-final-0, default/linux/amd64/23.0/musl/llvm, [unavailable], musl-1.2.6-r1, 6.18.33-p1 x86_64)
+=================================================================
+System uname: Linux-6.18.33-p1-x86_64-AMD_Ryzen_5_5600_6-Core_Processor-with-musl1
+KiB Mem:    16354088 total,  11281120 free
+KiB Swap:    8388604 total,   8388604 free
+Timestamp of repository gentoo: Sun, 21 Jun 2026 00:45:00 +0000
+Head commit of repository gentoo: ab374cc04b49d6726e07fbf93cc3d6a5e74e4c0c
+sh bash 5.3_p9-r1
+ld LLD 21.1.8 (compatible with GNU linkers)
+app-misc/pax-utils:       1.3.10::gentoo
+app-shells/bash:          5.3_p9-r1::gentoo
+dev-build/autoconf:       2.72-r7::gentoo
+dev-build/automake:       1.18.1-r1::gentoo
+dev-build/cmake:          4.3.3::gentoo
+dev-build/libtool:        2.5.4::gentoo
+dev-build/make:           4.4.1-r102::gentoo
+dev-build/meson:          1.10.2::gentoo
+dev-lang/perl:            5.42.0-r1::gentoo
+dev-lang/python:          3.13.14::gentoo, 3.14.6::gentoo
+dev-lang/rust-bin:        1.93.1::gentoo
+llvm-core/clang:          21.1.8::gentoo
+llvm-core/lld:            21.1.8-r1::gentoo
+llvm-core/llvm:           21.1.8::gentoo
+sys-apps/baselayout:      2.18-r1::gentoo
+sys-apps/openrc:          0.63.1::gentoo
+sys-apps/sandbox:         2.46::gentoo
+sys-kernel/linux-headers: 6.18::gentoo (virtual/os-headers)
+sys-libs/musl:            1.2.6-r1::gentoo
+Repositories:
+
+gentoo
+    location: /var/db/repos/gentoo
+    sync-type: rsync
+    sync-uri: rsync://rsync.gentoo.org/gentoo-portage
+    priority: -1000
+    volatile: False
+    sync-rsync-verify-metamanifest: yes
+    sync-rsync-verify-jobs: 1
+    sync-rsync-verify-max-age: 3
+    sync-rsync-extra-opts: 
+
+Binary Repositories:
+
+gentoo
+    location: /var/cache/binhost/gentoo
+    priority: 1
+    sync-uri: https://distfiles.gentoo.org/releases/amd64/binpackages/23.0/x86-64_musl_llvm
+    verify-signature: True
+
+ACCEPT_KEYWORDS="amd64"
+ACCEPT_LICENSE="@FREE"
+ADDR2LINE="llvm-addr2line"
+AR="llvm-ar"
+AS="clang -c"
+CBUILD="x86_64-pc-linux-musl"
+CC="clang"
+CFLAGS="-O2 -pipe"
+CHOST="x86_64-pc-linux-musl"
+CONFIG_PROTECT="/etc /var/bind"
+CONFIG_PROTECT_MASK="/etc/ca-certificates.conf /etc/env.d /etc/gconf /etc/gentoo-release /etc/sandbox.d"
+CPP="clang-cpp"
+CXX="clang++"
+CXXFLAGS="-O2 -pipe"
+DISTDIR="/var/cache/distfiles"
+ENV_UNSET="CARGO_HOME DBUS_SESSION_BUS_ADDRESS DISPLAY GDK_PIXBUF_MODULE_FILE GOBIN GOPATH PERL5LIB PERL5OPT PERLPREFIX PERL_CORE PERL_MB_OPT PERL_MM_OPT XAUTHORITY XDG_CACHE_HOME XDG_CONFIG_DIRS XDG_CONFIG_HOME XDG_DATA_DIRS XDG_DATA_HOME XDG_RUNTIME_DIR XDG_STATE_HOME"
+FCFLAGS="-O2 -pipe"
+FEATURES="assume-digests binpkg-docompress binpkg-dostrip binpkg-logs binpkg-multi-instance buildpkg-live compress-index config-protect-if-modified distlocks ebuild-locks fixlafiles ipc-sandbox merge-sync merge-wait network-sandbox news parallel-fetch pid-sandbox pkgdir-index-trusted preserve-libs protect-owned qa-unresolved-soname-deps sandbox strict unknown-features-warn unmerge-logs unmerge-orphans userfetch userpriv usersandbox usersync xattr"
+FFLAGS="-O2 -pipe"
+GENTOO_MIRRORS="http://distfiles.gentoo.org"
+INSTALL_MASK="charset.alias /usr/share/locale/locale.alias"
+LANG="C.UTF-8"
+LD="ld.lld"
+LDFLAGS="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--as-needed"
+LEX="flex"
+NM="llvm-nm"
+OBJCOPY="llvm-objcopy"
+OBJDUMP="llvm-objdump"
+PKGDIR="/var/cache/binpkgs"
+PORTAGE_COMPRESS="bzip2"
+PORTAGE_CONFIGROOT="/"
+PORTAGE_RSYNC_OPTS="--recursive --links --safe-links --perms --times --omit-dir-times --compress --force --whole-file --delete --stats --human-readable --timeout=180 --exclude=/distfiles --exclude=/local --exclude=/packages --exclude=/.git"
+PORTAGE_TMPDIR="/var/tmp"
+RANLIB="llvm-ranlib"
+READELF="llvm-readelf"
+SHELL="/bin/bash"
+STRINGS="llvm-strings"
+STRIP="llvm-strip"
+USE="acl amd64 bzip2 cet clang crypt iconv ipv6 libtirpc llvm-libunwind ncurses nls openmp pam pcre pic readline seccomp ssl test-rust unicode xattr zlib" ABI_X86="64" ADA_TARGET="gcc_15" APACHE2_MODULES="authn_core authz_core socache_shmcb unixd actions alias auth_basic authn_anon authn_dbm authn_file authz_dbm authz_groupfile authz_host authz_owner authz_user autoindex cache cgi cgid dav dav_fs dav_lock deflate dir env expires ext_filter file_cache filter headers include info log_config logio mime mime_magic negotiation rewrite setenvif speling status unique_id userdir usertrack vhost_alias" CALLIGRA_FEATURES="karbon sheets words" COLLECTD_PLUGINS="df interface irq load memory rrdtool swap syslog" CPU_FLAGS_X86="mmx mmxext sse sse2" ELIBC="musl" GPSD_PROTOCOLS="ashtech aivdm earthmate evermore fv18 garmin garmintxt gpsclock greis isync itrax navcom oncore skytraq superstar2 tsip tripmate tnt" GUILE_SINGLE_TARGET="3-0" GUILE_TARGETS="3-0" INPUT_DEVICES="libinput" KERNEL="linux" LCD_DEVICES="bayrad cfontz glk hd44780 lb216 lcdm001 mtxorb text" LLVM_TARGETS="X86" LUA_SINGLE_TARGET="lua5-1" LUA_TARGETS="lua5-1" OFFICE_IMPLEMENTATION="libreoffice" PHP_TARGETS="php8-3" POSTGRES_TARGETS="postgres17" PYTHON_SINGLE_TARGET="python3_14" PYTHON_TARGETS="python3_14" QEMU_SOFTMMU_TARGETS="x86_64" RUBY_TARGETS="ruby33" VIDEO_CARDS="amdgpu fbdev intel nouveau radeon radeonsi vesa dummy" XTABLES_ADDONS="quota2 psd pknock lscan length2 ipv4options ipp2p iface geoip fuzzy condition tarpit sysrq proto logmark ipmark dhcpmac delude chaos account"
+Unset:  ARFLAGS, ASFLAGS, CCLD, CONFIG_SHELL, CPPFLAGS, CTARGET, CXXFILT, ELFEDIT, EMERGE_DEFAULT_OPTS, EXTRA_ECONF, F77FLAGS, FC, GCOV, GPROF, LC_ALL, LFLAGS, LIBTOOL, LINGUAS, MAKE, MAKEFLAGS, MAKEOPTS, PORTAGE_BINHOST, PORTAGE_BUNZIP2_COMMAND, PORTAGE_COMPRESS_FLAGS, PORTAGE_RSYNC_EXTRA_OPTS, PYTHONPATH, RUSTFLAGS, SIZE, YACC, YFLAGS
+

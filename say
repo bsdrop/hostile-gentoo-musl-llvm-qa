@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# Posts a message to a Discord webhook for Gentoo QA reporting.
+# Usage: ./say "your message"   (or: ./say < file)
+#
+# The webhook URL is NOT hard-coded (this repo is public; bots scrape Discord
+# webhooks). It is read from $SAY_WEBHOOK, else from a local gitignored
+# `.webhook` file next to this script (or one dir up).
+set -u
+
+WEBHOOK="${SAY_WEBHOOK:-}"
+if [ -z "$WEBHOOK" ]; then
+  d="$(cd "$(dirname "$0")" && pwd)"
+  for f in "$d/.webhook" "$d/../.webhook" "./.webhook"; do
+    [ -f "$f" ] && { WEBHOOK="$(head -n1 "$f")"; break; }
+  done
+fi
+if [ -z "$WEBHOOK" ]; then
+  echo "[say] no webhook configured (set SAY_WEBHOOK or create .webhook)" >&2
+  exit 1
+fi
+
+msg="${*:-}"
+if [ -z "$msg" ]; then
+  msg="$(cat)"
+fi
+
+# Discord content cap is 2000 chars; trim defensively.
+if [ "${#msg}" -gt 1900 ]; then
+  msg="${msg:0:1900}...(truncated)"
+fi
+
+curl -sS -H "Content-Type: application/json" \
+  -d "$(jq -Rn --arg c "$msg" '{content:$c}')" \
+  "$WEBHOOK" >/dev/null && echo "[say] sent (${#msg} chars)" || echo "[say] FAILED to send" >&2

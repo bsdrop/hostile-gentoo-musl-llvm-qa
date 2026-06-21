@@ -1,0 +1,21 @@
+[11:54:31] emerge-webrsync starting
+[11:55:50] emerge-webrsync (retry)
+[12:00:45] emerge boot tools + kernel sources
+[12:02:03] re-emerge boot tools with grub -device-mapper
+[12:03:15] re-emerge boot tools (expect/dejagnu notest)
+[12:04:17] re-emerge boot tools (efivar notest)
+[12:17:44] mounted ESP /dev/vda1 at chroot /boot (mount-boot.eclass guard)
+[12:24:42] re-emerge grub with /boot mounted
+[12:28:46] kernel build LLVM=1 -j8 start
+[12:38:15] grub-install + grub-mkconfig
+[12:41:10] POST-REBOOT: installed system boots from disk; musl+clang+openrc+ssh confirmed
+[12:43:55] emerge SELinux userland (36 pkgs)
+[12:49:14] rebuild libselinux with -fail-clean to capture compile error
+[12:50:54] libselinux musl patch + audit notest; re-emerge SELinux
+[12:55:32] setfiles relabel / and /boot
+[13:01:08] one-shot FEATURES=-test SELinux integration rebuild (42 pkgs)
+[13:10:54] sandbox fscreate fix; retry glib/dbus/elogind/polkit stack
+[13:18:00] relabel fs before reboot (boot-time SELinux test)
+[13:18:18] REBOOT for boot-time SELinux test
+[13:20:46] install PipeWire/Wayland stack (tests off, no elogind/X11)
+[13:30:28] graceful poweroff for snapshot

@@ -1,0 +1,49 @@
+!!! Section 'gentoo' in repos.conf has location attribute set to nonexistent directory: '/var/db/repos/gentoo'
+!!! Invalid Repository Location (not a dir): '/var/db/repos/gentoo'
+WARNING: One or more repositories have missing repo_name entries:
+
+	/var/db/repos/gentoo/profiles/repo_name
+
+NOTE: Each repo_name entry should be a plain text file containing a
+unique name for the repository on the first line.
+
+
+!!! No gcc found. You probably need to 'source /etc/profile'
+!!! to update the environment of this terminal and possibly
+!!! other terminals also.
+Portage 3.0.79 (python 3.14.6-final-0, unavailable, [unavailable], musl-1.2.6-r1, 6.18.33-p1 x86_64)
+=================================================================
+System uname: Linux-6.18.33-p1-x86_64-AMD_Ryzen_5_5600_6-Core_Processor-with-musl1
+KiB Mem:    16354088 total,  12418316 free
+KiB Swap:    8388604 total,   8388604 free
+sh bash 5.3_p9-r1
+ld LLD 21.1.8 (compatible with GNU linkers)
+dev-build/autoconf:       2.72-r7::gentoo
+dev-build/automake:       1.18.1-r1::gentoo
+dev-build/libtool:        2.5.4::gentoo
+dev-lang/python:          3.13.14::gentoo, 3.14.6::gentoo
+sys-kernel/linux-headers: 6.18::gentoo (virtual/os-headers)
+Repositories:
+
+Binary Repositories:
+
+gentoo
+    location: /var/cache/binhost/gentoo
+    priority: 1
+    sync-uri: https://distfiles.gentoo.org/releases/amd64/binpackages/23.0/x86-64_musl_llvm
+    verify-signature: True
+
+ACCEPT_LICENSE="* -@EULA"
+CFLAGS="-O2 -pipe"
+CHOST="x86_64-pc-linux-musl"
+CONFIG_PROTECT="/etc /var/bind"
+CONFIG_PROTECT_MASK="/etc/ca-certificates.conf /etc/env.d /etc/gentoo-release /etc/sandbox.d"
+CXXFLAGS="-O2 -pipe"
+DISTDIR="/var/cache/distfiles"
+FEATURES="assume-digests binpkg-docompress binpkg-dostrip binpkg-logs binpkg-multi-instance buildpkg-live compress-index config-protect-if-modified distlocks ebuild-locks fixlafiles ipc-sandbox merge-sync merge-wait multilib-strict network-sandbox news parallel-fetch pid-sandbox pkgdir-index-trusted preserve-libs protect-owned qa-unresolved-soname-deps sandbox strict unknown-features-warn unmerge-logs unmerge-orphans userfetch userpriv usersandbox usersync xattr"
+GENTOO_MIRRORS="http://distfiles.gentoo.org"
+PKGDIR="/var/cache/binpkgs"
+PORTAGE_TMPDIR="/var/tmp"
+USE=""
+Unset:  ACCEPT_KEYWORDS, EMERGE_DEFAULT_OPTS, ENV_UNSET, PORTAGE_BINHOST, PORTAGE_BUNZIP2_COMMAND
+

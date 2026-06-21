@@ -1,0 +1,4 @@
+# VM has no LVM/device-mapper root -> drop grub device-mapper, which otherwise pulls
+# sys-fs/lvm2[test] whose REQUIRED_USE="test? ( lvm )" conflicts under global FEATURES=test.
+# This does NOT weaken any target constraint (LVM is not a target). See constraint-exceptions.md E4.
+sys-boot/grub -device-mapper

@@ -1,0 +1,5 @@
+# SELinux userland needs python bindings (legit, not a weakening).
+sys-libs/libselinux python
+sys-process/audit    python
+app-misc/pax-utils python
+sys-apps/dbus -elogind

@@ -1,0 +1,15 @@
+# Per-package test exceptions (global FEATURES=test stays on). See constraint-exceptions.md.
+# E5: expect<->dejagnu circular build dep induced by FEATURES=test auto-enabling their test USE.
+dev-tcltk/expect   notest.conf
+dev-util/dejagnu   notest.conf
+sys-libs/efivar       notest.conf
+# E7: SELinux userland test-dep cascade (FEATURES=test). selinux-python/setools[test]
+# pull pyqt6 testlib + a python test tree ending in pillow REQUIRED_USE conflict.
+sys-apps/selinux-python   notest.conf
+app-admin/setools         notest.conf
+sys-apps/policycoreutils  notest.conf
+sec-policy/selinux-base   notest.conf
+# E8: FEATURES=test causes pervasive dev-python test-dep cascades (pillow REQUIRED_USE,
+# setuptools slot conflicts, pyqt6 testlib). Disable python TEST SUITES only; C/C++ tests stay on.
+dev-python/*  notest.conf
+sys-process/audit  notest.conf

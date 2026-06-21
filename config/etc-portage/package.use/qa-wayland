@@ -1,0 +1,5 @@
+# elogind does not build on musl (E14). Route seat/session via standalone seatd instead.
+sys-auth/seatd          server -elogind
+media-video/pipewire    -elogind
+media-video/wireplumber -elogind
+sys-auth/polkit         -elogind

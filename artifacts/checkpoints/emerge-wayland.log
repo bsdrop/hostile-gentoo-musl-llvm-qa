@@ -1,0 +1,313 @@
+
+ * IMPORTANT: 23 news items need reading for repository 'gentoo'.
+ * Use eselect news read to view new items.
+
+
+These are the packages that would be merged, in order:
+
+Calculating dependencies  ... done!
+Dependency resolution took 0.98 s (backtrack: 0/20).
+
+[ebuild  N     ] acct-group/seat-0-r1::gentoo  0 KiB
+[ebuild  N     ] acct-group/pipewire-0-r2::gentoo  0 KiB
+[ebuild  N     ] media-libs/alsa-topology-conf-1.2.5.1-r1::gentoo  USE="-verify-sig" 12 KiB
+[ebuild  N     ] media-libs/alsa-ucm-conf-1.2.16::gentoo  USE="-verify-sig" 83 KiB
+[ebuild  N     ] x11-libs/libdrm-2.4.134::gentoo  USE="-doc -test -tools -udev -valgrind" VIDEO_CARDS="-amdgpu (-exynos) (-freedreno) -intel -nouveau (-omap) -radeon (-tegra) (-vc4) (-vivante) -vmware" 427 KiB
+[ebuild  N     ] media-libs/libglvnd-1.7.0::gentoo  USE="-X -test" 560 KiB
+[ebuild  N     ] dev-util/spirv-headers-1.4.350.0::gentoo  553 KiB
+[ebuild  N     ] sec-policy/selinux-seatd-2.20260312_p1::gentoo  SELINUX_POLICY_TYPES="mcs mls strict targeted" 0 KiB
+[ebuild  N     ] sec-policy/selinux-wayland-2.20260312_p1::gentoo  SELINUX_POLICY_TYPES="mcs mls strict targeted" 0 KiB
+[ebuild  N     ] app-eselect/eselect-lua-4-r2::gentoo  0 KiB
+[ebuild  N     ] media-libs/alsa-lib-1.2.16::gentoo  USE="-debug -doc -python -verify-sig" PYTHON_SINGLE_TARGET="python3_14 -python3_12 -python3_13" 1105 KiB
+[ebuild  N     ] dev-python/mako-1.3.12::gentoo  USE="-doc -test" PYTHON_TARGETS="python3_14 -python3_12 -python3_13" 391 KiB
+[ebuild  N     ] dev-libs/libyaml-0.2.5::gentoo  USE="-doc -static-libs -test" 84 KiB
+[ebuild  N     ] dev-util/wayland-scanner-1.25.0::gentoo  596 KiB
+[ebuild  N     ] dev-util/spirv-tools-1.4.350.0::gentoo  USE="-test" 3392 KiB
+[ebuild  N     ] sys-apps/dbus-1.16.2-r1::gentoo  USE="selinux -X -apparmor -audit -debug -doc -elogind -static-libs -systemd -test -valgrind" 0 KiB
+[ebuild  N     ] media-libs/libdisplay-info-0.3.0:0/3::gentoo  USE="-verify-sig" 111 KiB
+[ebuild  N     ] dev-lang/lua-5.4.8:5.4::gentoo  USE="deprecated readline" 610 KiB
+[ebuild  N     ] dev-python/pyyaml-6.0.3::gentoo  USE="-debug -examples -test" PYTHON_TARGETS="python3_14 -python3_12 -python3_13 -python3_14t (-python3_15) (-python3_15t)" 122 KiB
+[ebuild  N     ] sys-auth/seatd-0.9.3:0/1::gentoo  USE="selinux server -builtin -elogind -systemd" 42 KiB
+[ebuild  N     ] dev-libs/wayland-1.25.0-r1::gentoo  USE="selinux -doc -test" 0 KiB
+[ebuild  N     ] dev-libs/wayland-protocols-1.49::gentoo  USE="-test" 148 KiB
+[ebuild  N     ] dev-util/glslang-1.4.350.0:0/16.3::gentoo  4228 KiB
+[ebuild  N     ] media-libs/libva-2.23.0:0/2::gentoo  USE="wayland -X -glx" 298 KiB
+[ebuild  N     ] media-libs/mesa-26.1.2::gentoo  USE="llvm (opengl) proprietary-codecs vaapi vulkan wayland zstd -X -debug -lm-sensors -opencl -sysprof -test -unwind -valgrind" CPU_FLAGS_X86="sse2" LLVM_SLOT="21 -18 -19 -20 -22" VIDEO_CARDS="virgl -asahi -d3d12 (-freedreno) -i915 (-imagination) -intel -lavapipe (-lima) -nouveau -nvk (-panfrost) -r300 -r600 -radeon -radeonsi (-v3d) (-vc4) (-vivante) -vmware -zink" 76221 KiB
+[ebuild  N     ] media-video/pipewire-1.6.6:0/0.4::gentoo  USE="dbus readline selinux ssl -X -bluetooth -doc -echo-cancel -elogind -extra -ffmpeg -fftw -flatpak -gsettings -gstreamer -ieee1394 -jack-client -jack-sdk -libcamera -loudness -lv2 -man -modemmanager -pipewire-alsa -pulseaudio -roc -sound-server (-system-service) -systemd -test -v4l -zeroconf" 2089 KiB
+[ebuild  N     ] media-video/wireplumber-0.5.15:0/0.5::gentoo  USE="-doc -elogind (-system-service) -systemd -test" LUA_SINGLE_TARGET="lua5-4 -lua5-3" 467 KiB
+
+Total: 27 packages (27 new), Size of downloads: 91528 KiB
+>>> Verifying ebuild manifests
+
+>>> Running pre-merge checks for acct-group/seat-0-r1
+>>> Running pre-merge checks for acct-group/pipewire-0-r2
+>>> Running pre-merge checks for media-libs/mesa-26.1.2
+>>> Jobs: 0 of 27 complete, 1 running                                   Load avg: 0.14, 0.03, 0.01
+>>> Emerging (1 of 27) acct-group/seat-0-r1::gentoo
+>>> Jobs: 0 of 27 complete, 1 running                                   Load avg: 0.14, 0.03, 0.01
+>>> Jobs: 0 of 27 complete, 2 running                                   Load avg: 0.14, 0.03, 0.01
+>>> Emerging (2 of 27) acct-group/pipewire-0-r2::gentoo
+>>> Jobs: 0 of 27 complete, 2 running                                   Load avg: 0.14, 0.03, 0.01
+>>> Jobs: 0 of 27 complete, 1 running                                   Load avg: 0.45, 0.10, 0.03
+>>> Jobs: 0 of 27 complete, 2 running, 1 merge wait                     Load avg: 0.45, 0.10, 0.03
+>>> Emerging (3 of 27) media-libs/alsa-topology-conf-1.2.5.1-r1::gentoo
+>>> Jobs: 0 of 27 complete, 2 running, 1 merge wait                     Load avg: 0.45, 0.10, 0.03
+>>> Jobs: 0 of 27 complete, 1 running, 1 merge wait                     Load avg: 0.45, 0.10, 0.03
+>>> Jobs: 0 of 27 complete, 2 running, 2 merge wait                     Load avg: 0.45, 0.10, 0.03
+>>> Emerging (4 of 27) media-libs/alsa-ucm-conf-1.2.16::gentoo
+>>> Jobs: 0 of 27 complete, 2 running, 2 merge wait                     Load avg: 0.45, 0.10, 0.03
+>>> Jobs: 0 of 27 complete, 1 running, 2 merge wait                     Load avg: 0.65, 0.15, 0.05
+>>> Jobs: 0 of 27 complete, 2 running, 3 merge wait                     Load avg: 0.65, 0.15, 0.05
+>>> Emerging (5 of 27) x11-libs/libdrm-2.4.134::gentoo
+>>> Jobs: 0 of 27 complete, 2 running, 3 merge wait                     Load avg: 0.65, 0.15, 0.05
+>>> Jobs: 0 of 27 complete, 1 running, 3 merge wait                     Load avg: 0.65, 0.15, 0.05
+>>> Jobs: 0 of 27 complete, 2 running, 4 merge wait                     Load avg: 0.65, 0.15, 0.05
+>>> Emerging (6 of 27) media-libs/libglvnd-1.7.0::gentoo
+>>> Jobs: 0 of 27 complete, 2 running, 4 merge wait                     Load avg: 0.65, 0.15, 0.05
+>>> Jobs: 0 of 27 complete, 1 running, 4 merge wait                     Load avg: 0.86, 0.21, 0.07
+>>> Jobs: 0 of 27 complete, 2 running, 5 merge wait                     Load avg: 0.86, 0.21, 0.07
+>>> Emerging (7 of 27) dev-util/spirv-headers-1.4.350.0::gentoo
+>>> Jobs: 0 of 27 complete, 2 running, 5 merge wait                     Load avg: 0.86, 0.21, 0.07
+>>> Jobs: 0 of 27 complete, 1 running, 5 merge wait                     Load avg: 0.86, 0.21, 0.07
+>>> Jobs: 0 of 27 complete, 2 running, 6 merge wait                     Load avg: 0.86, 0.21, 0.07
+>>> Emerging (8 of 27) sec-policy/selinux-seatd-2.20260312_p1::gentoo
+>>> Jobs: 0 of 27 complete, 2 running, 6 merge wait                     Load avg: 0.86, 0.21, 0.07
+>>> Jobs: 0 of 27 complete, 1 running, 6 merge wait                     Load avg: 0.95, 0.24, 0.08
+>>> Jobs: 0 of 27 complete, 2 running, 7 merge wait                     Load avg: 0.95, 0.24, 0.08
+>>> Emerging (9 of 27) sec-policy/selinux-wayland-2.20260312_p1::gentoo
+>>> Jobs: 0 of 27 complete, 2 running, 7 merge wait                     Load avg: 0.95, 0.24, 0.08
+>>> Jobs: 0 of 27 complete, 1 running, 7 merge wait                     Load avg: 1.04, 0.27, 0.09
+>>> Jobs: 0 of 27 complete, 2 running, 8 merge wait                     Load avg: 1.04, 0.27, 0.09
+>>> Emerging (10 of 27) app-eselect/eselect-lua-4-r2::gentoo
+>>> Jobs: 0 of 27 complete, 2 running, 8 merge wait                     Load avg: 1.04, 0.27, 0.09
+>>> Jobs: 0 of 27 complete, 1 running, 8 merge wait                     Load avg: 1.04, 0.27, 0.09
+>>> Jobs: 0 of 27 complete, 2 running, 9 merge wait                     Load avg: 1.04, 0.27, 0.09
+>>> Emerging (11 of 27) dev-python/mako-1.3.12::gentoo
+>>> Jobs: 0 of 27 complete, 2 running, 9 merge wait                     Load avg: 1.04, 0.27, 0.09
+>>> Jobs: 0 of 27 complete, 1 running, 9 merge wait                     Load avg: 1.27, 0.33, 0.11
+>>> Jobs: 0 of 27 complete, 2 running, 10 merge wait                    Load avg: 1.27, 0.33, 0.11
+>>> Emerging (12 of 27) dev-libs/libyaml-0.2.5::gentoo
+>>> Jobs: 0 of 27 complete, 2 running, 10 merge wait                    Load avg: 1.27, 0.33, 0.11
+>>> Jobs: 0 of 27 complete, 1 running, 10 merge wait                    Load avg: 1.41, 0.37, 0.13
+>>> Jobs: 0 of 27 complete, 2 running, 11 merge wait                    Load avg: 1.41, 0.37, 0.13
+>>> Emerging (13 of 27) dev-util/wayland-scanner-1.25.0::gentoo
+>>> Jobs: 0 of 27 complete, 2 running, 11 merge wait                    Load avg: 1.41, 0.37, 0.13
+>>> Jobs: 0 of 27 complete, 1 running, 11 merge wait                    Load avg: 1.54, 0.42, 0.14
+>>> Jobs: 0 of 27 complete, 2 running, 12 merge wait                    Load avg: 1.54, 0.42, 0.14
+>>> Emerging (14 of 27) sys-apps/dbus-1.16.2-r1::gentoo
+>>> Jobs: 0 of 27 complete, 2 running, 12 merge wait                    Load avg: 1.54, 0.42, 0.14
+>>> Jobs: 0 of 27 complete, 1 running, 12 merge wait                    Load avg: 1.54, 0.42, 0.14
+>>> Jobs: 0 of 27 complete, 2 running, 13 merge wait                    Load avg: 1.54, 0.42, 0.14
+>>> Emerging (15 of 27) media-libs/libdisplay-info-0.3.0::gentoo
+>>> Jobs: 0 of 27 complete, 2 running, 13 merge wait                    Load avg: 1.54, 0.42, 0.14
+>>> Jobs: 0 of 27 complete, 1 running, 13 merge wait                    Load avg: 1.68, 0.49, 0.17
+>>> Jobs: 0 of 27 complete, 14 merge wait                               Load avg: 2.17, 0.63, 0.22
+>>> Installing (1 of 27) acct-group/seat-0-r1::gentoo
+>>> Jobs: 0 of 27 complete, 15 merge wait                               Load avg: 2.17, 0.63, 0.22
+>>> Installing (2 of 27) acct-group/pipewire-0-r2::gentoo
+>>> Jobs: 0 of 27 complete, 15 merge wait                               Load avg: 2.17, 0.63, 0.22
+>>> Completed (1 of 27) acct-group/seat-0-r1::gentoo
+>>> Jobs: 0 of 27 complete                                              Load avg: 2.22, 0.70, 0.25
+>>> Installing (3 of 27) media-libs/alsa-topology-conf-1.2.5.1-r1::gentoo
+>>> Jobs: 0 of 27 complete                                              Load avg: 2.22, 0.70, 0.25
+>>> Jobs: 1 of 27 complete                                              Load avg: 2.22, 0.70, 0.25
+>>> Completed (2 of 27) acct-group/pipewire-0-r2::gentoo
+>>> Jobs: 1 of 27 complete                                              Load avg: 2.22, 0.70, 0.25
+>>> Installing (4 of 27) media-libs/alsa-ucm-conf-1.2.16::gentoo
+>>> Jobs: 1 of 27 complete                                              Load avg: 2.22, 0.70, 0.25
+>>> Jobs: 2 of 27 complete                                              Load avg: 2.22, 0.70, 0.25
+>>> Completed (3 of 27) media-libs/alsa-topology-conf-1.2.5.1-r1::gentoo
+>>> Jobs: 2 of 27 complete                                              Load avg: 2.22, 0.70, 0.25
+>>> Jobs: 3 of 27 complete                                              Load avg: 2.22, 0.70, 0.25
+>>> Installing (5 of 27) x11-libs/libdrm-2.4.134::gentoo
+>>> Jobs: 3 of 27 complete                                              Load avg: 2.22, 0.70, 0.25
+>>> Completed (4 of 27) media-libs/alsa-ucm-conf-1.2.16::gentoo
+>>> Jobs: 3 of 27 complete                                              Load avg: 2.22, 0.70, 0.25
+>>> Jobs: 4 of 27 complete                                              Load avg: 2.22, 0.70, 0.25
+>>> Installing (6 of 27) media-libs/libglvnd-1.7.0::gentoo
+>>> Jobs: 4 of 27 complete                                              Load avg: 2.22, 0.70, 0.25
+>>> Completed (5 of 27) x11-libs/libdrm-2.4.134::gentoo
+>>> Jobs: 4 of 27 complete                                              Load avg: 2.22, 0.70, 0.25
+>>> Jobs: 5 of 27 complete                                              Load avg: 2.22, 0.70, 0.25
+>>> Installing (7 of 27) dev-util/spirv-headers-1.4.350.0::gentoo
+>>> Jobs: 5 of 27 complete                                              Load avg: 2.22, 0.70, 0.25
+>>> Completed (6 of 27) media-libs/libglvnd-1.7.0::gentoo
+>>> Jobs: 5 of 27 complete                                              Load avg: 2.22, 0.70, 0.25
+>>> Jobs: 6 of 27 complete                                              Load avg: 2.22, 0.70, 0.25
+>>> Installing (8 of 27) sec-policy/selinux-seatd-2.20260312_p1::gentoo
+>>> Jobs: 6 of 27 complete                                              Load avg: 2.22, 0.70, 0.25
+>>> Completed (7 of 27) dev-util/spirv-headers-1.4.350.0::gentoo
+>>> Jobs: 6 of 27 complete                                              Load avg: 2.20, 0.72, 0.26
+>>> Jobs: 7 of 27 complete                                              Load avg: 2.20, 0.72, 0.26
+>>> Installing (9 of 27) sec-policy/selinux-wayland-2.20260312_p1::gentoo
+>>> Jobs: 7 of 27 complete                                              Load avg: 2.20, 0.72, 0.26
+>>> Completed (8 of 27) sec-policy/selinux-seatd-2.20260312_p1::gentoo
+>>> Jobs: 7 of 27 complete                                              Load avg: 2.20, 0.72, 0.26
+>>> Jobs: 8 of 27 complete                                              Load avg: 2.20, 0.72, 0.26
+>>> Installing (10 of 27) app-eselect/eselect-lua-4-r2::gentoo
+>>> Jobs: 8 of 27 complete                                              Load avg: 2.20, 0.72, 0.26
+>>> Completed (9 of 27) sec-policy/selinux-wayland-2.20260312_p1::gentoo
+>>> Jobs: 8 of 27 complete                                              Load avg: 2.02, 0.71, 0.25
+>>> Jobs: 9 of 27 complete                                              Load avg: 2.02, 0.71, 0.25
+>>> Installing (11 of 27) dev-python/mako-1.3.12::gentoo
+>>> Jobs: 9 of 27 complete                                              Load avg: 2.02, 0.71, 0.25
+>>> Completed (10 of 27) app-eselect/eselect-lua-4-r2::gentoo
+>>> Jobs: 9 of 27 complete                                              Load avg: 2.26, 0.78, 0.28
+>>> Jobs: 10 of 27 complete                                             Load avg: 2.26, 0.78, 0.28
+>>> Installing (12 of 27) dev-libs/libyaml-0.2.5::gentoo
+>>> Jobs: 10 of 27 complete                                             Load avg: 2.26, 0.78, 0.28
+>>> Completed (11 of 27) dev-python/mako-1.3.12::gentoo
+>>> Jobs: 10 of 27 complete                                             Load avg: 2.26, 0.78, 0.28
+>>> Jobs: 11 of 27 complete                                             Load avg: 2.26, 0.78, 0.28
+>>> Installing (13 of 27) dev-util/wayland-scanner-1.25.0::gentoo
+>>> Jobs: 11 of 27 complete                                             Load avg: 2.26, 0.78, 0.28
+>>> Completed (12 of 27) dev-libs/libyaml-0.2.5::gentoo
+>>> Jobs: 11 of 27 complete                                             Load avg: 2.26, 0.78, 0.28
+>>> Jobs: 12 of 27 complete                                             Load avg: 2.26, 0.78, 0.28
+>>> Installing (15 of 27) media-libs/libdisplay-info-0.3.0::gentoo
+>>> Jobs: 12 of 27 complete                                             Load avg: 2.26, 0.78, 0.28
+>>> Completed (13 of 27) dev-util/wayland-scanner-1.25.0::gentoo
+>>> Jobs: 12 of 27 complete                                             Load avg: 2.26, 0.78, 0.28
+>>> Jobs: 13 of 27 complete                                             Load avg: 2.26, 0.78, 0.28
+>>> Installing (14 of 27) sys-apps/dbus-1.16.2-r1::gentoo
+>>> Jobs: 13 of 27 complete                                             Load avg: 2.26, 0.78, 0.28
+>>> Completed (15 of 27) media-libs/libdisplay-info-0.3.0::gentoo
+>>> Jobs: 13 of 27 complete                                             Load avg: 2.26, 0.78, 0.28
+>>> Jobs: 14 of 27 complete                                             Load avg: 2.26, 0.78, 0.28
+>>> Recording sys-apps/dbus in "world" favorites file...
+>>> Jobs: 14 of 27 complete                                             Load avg: 2.16, 0.78, 0.28
+>>> Completed (14 of 27) sys-apps/dbus-1.16.2-r1::gentoo
+>>> Jobs: 14 of 27 complete                                             Load avg: 2.16, 0.78, 0.28
+>>> Jobs: 15 of 27 complete                                             Load avg: 2.16, 0.78, 0.28
+>>> Jobs: 15 of 27 complete, 1 running                                  Load avg: 2.16, 0.78, 0.28
+>>> Emerging (16 of 27) media-libs/alsa-lib-1.2.16::gentoo
+>>> Jobs: 15 of 27 complete, 1 running                                  Load avg: 2.16, 0.78, 0.28
+>>> Jobs: 15 of 27 complete, 2 running                                  Load avg: 2.16, 0.78, 0.28
+>>> Emerging (17 of 27) dev-util/spirv-tools-1.4.350.0::gentoo
+>>> Jobs: 15 of 27 complete, 2 running                                  Load avg: 2.16, 0.78, 0.28
+>>> Jobs: 15 of 27 complete, 1 running                                  Load avg: 7.74, 2.59, 0.93
+>>> Jobs: 15 of 27 complete, 2 running, 1 merge wait                    Load avg: 7.74, 2.59, 0.93
+>>> Emerging (18 of 27) dev-lang/lua-5.4.8::gentoo
+>>> Jobs: 15 of 27 complete, 2 running, 1 merge wait                    Load avg: 7.74, 2.59, 0.93
+>>> Jobs: 15 of 27 complete, 1 running, 1 merge wait                    Load avg: 8.97, 3.28, 1.21
+>>> Jobs: 15 of 27 complete, 2 running, 2 merge wait                    Load avg: 8.97, 3.28, 1.21
+>>> Emerging (19 of 27) dev-python/pyyaml-6.0.3::gentoo
+>>> Jobs: 15 of 27 complete, 2 running, 2 merge wait                    Load avg: 8.97, 3.28, 1.21
+>>> Jobs: 15 of 27 complete, 1 running, 2 merge wait                    Load avg: 8.98, 3.74, 1.42
+>>> Jobs: 15 of 27 complete, 2 running, 3 merge wait                    Load avg: 8.98, 3.74, 1.42
+>>> Emerging (20 of 27) sys-auth/seatd-0.9.3::gentoo
+>>> Jobs: 15 of 27 complete, 2 running, 3 merge wait                    Load avg: 8.98, 3.74, 1.42
+>>> Jobs: 15 of 27 complete, 1 running, 3 merge wait                    Load avg: 10.1, 4.2, 1.6
+>>> Jobs: 15 of 27 complete, 2 running, 4 merge wait                    Load avg: 10.1, 4.2, 1.6
+>>> Emerging (21 of 27) dev-libs/wayland-1.25.0-r1::gentoo
+>>> Jobs: 15 of 27 complete, 2 running, 4 merge wait                    Load avg: 10.1, 4.2, 1.6
+>>> Jobs: 15 of 27 complete, 1 running, 4 merge wait                    Load avg: 10.2, 4.7, 1.8
+>>> Jobs: 15 of 27 complete, 2 running, 5 merge wait                    Load avg: 10.2, 4.7, 1.8
+>>> Emerging (22 of 27) dev-libs/wayland-protocols-1.49::gentoo
+>>> Jobs: 15 of 27 complete, 2 running, 5 merge wait                    Load avg: 10.2, 4.7, 1.8
+>>> Jobs: 15 of 27 complete, 1 running, 5 merge wait                    Load avg: 9.52, 4.62, 1.81
+>>> Jobs: 15 of 27 complete, 6 merge wait                               Load avg: 8.44, 5.14, 2.16
+>>> Installing (16 of 27) media-libs/alsa-lib-1.2.16::gentoo
+>>> Jobs: 15 of 27 complete, 7 merge wait                               Load avg: 8.44, 5.14, 2.16
+>>> Installing (18 of 27) dev-lang/lua-5.4.8::gentoo
+>>> Jobs: 15 of 27 complete, 7 merge wait                               Load avg: 8.44, 5.14, 2.16
+>>> Completed (16 of 27) media-libs/alsa-lib-1.2.16::gentoo
+>>> Jobs: 15 of 27 complete                                             Load avg: 8.44, 5.14, 2.16
+>>> Installing (19 of 27) dev-python/pyyaml-6.0.3::gentoo
+>>> Jobs: 15 of 27 complete                                             Load avg: 8.44, 5.14, 2.16
+>>> Jobs: 16 of 27 complete                                             Load avg: 8.44, 5.14, 2.16
+>>> Completed (18 of 27) dev-lang/lua-5.4.8::gentoo
+>>> Jobs: 16 of 27 complete                                             Load avg: 8.44, 5.14, 2.16
+>>> Installing (20 of 27) sys-auth/seatd-0.9.3::gentoo
+>>> Jobs: 16 of 27 complete                                             Load avg: 8.44, 5.14, 2.16
+>>> Jobs: 17 of 27 complete                                             Load avg: 8.44, 5.14, 2.16
+>>> Completed (19 of 27) dev-python/pyyaml-6.0.3::gentoo
+>>> Jobs: 17 of 27 complete                                             Load avg: 8.44, 5.14, 2.16
+>>> Jobs: 18 of 27 complete                                             Load avg: 8.44, 5.14, 2.16
+>>> Installing (21 of 27) dev-libs/wayland-1.25.0-r1::gentoo
+>>> Jobs: 18 of 27 complete                                             Load avg: 8.44, 5.14, 2.16
+>>> Recording sys-auth/seatd in "world" favorites file...
+>>> Jobs: 18 of 27 complete                                             Load avg: 8.00, 5.11, 2.16
+>>> Completed (20 of 27) sys-auth/seatd-0.9.3::gentoo
+>>> Jobs: 18 of 27 complete                                             Load avg: 8.00, 5.11, 2.16
+>>> Jobs: 19 of 27 complete                                             Load avg: 8.00, 5.11, 2.16
+>>> Installing (22 of 27) dev-libs/wayland-protocols-1.49::gentoo
+>>> Jobs: 19 of 27 complete                                             Load avg: 8.00, 5.11, 2.16
+>>> Recording dev-libs/wayland in "world" favorites file...
+>>> Jobs: 19 of 27 complete                                             Load avg: 8.00, 5.11, 2.16
+>>> Completed (21 of 27) dev-libs/wayland-1.25.0-r1::gentoo
+>>> Jobs: 19 of 27 complete                                             Load avg: 8.00, 5.11, 2.16
+>>> Jobs: 20 of 27 complete                                             Load avg: 8.00, 5.11, 2.16
+>>> Installing (17 of 27) dev-util/spirv-tools-1.4.350.0::gentoo
+>>> Jobs: 20 of 27 complete                                             Load avg: 8.00, 5.11, 2.16
+>>> Recording dev-libs/wayland-protocols in "world" favorites file...
+>>> Jobs: 20 of 27 complete                                             Load avg: 8.00, 5.11, 2.16
+>>> Completed (22 of 27) dev-libs/wayland-protocols-1.49::gentoo
+>>> Jobs: 20 of 27 complete                                             Load avg: 8.00, 5.11, 2.16
+>>> Jobs: 21 of 27 complete                                             Load avg: 8.00, 5.11, 2.16
+>>> Completed (17 of 27) dev-util/spirv-tools-1.4.350.0::gentoo
+>>> Jobs: 21 of 27 complete                                             Load avg: 8.00, 5.11, 2.16
+>>> Jobs: 22 of 27 complete                                             Load avg: 8.00, 5.11, 2.16
+>>> Jobs: 22 of 27 complete, 1 running                                  Load avg: 8.00, 5.11, 2.16
+>>> Emerging (23 of 27) dev-util/glslang-1.4.350.0::gentoo
+>>> Jobs: 22 of 27 complete, 1 running                                  Load avg: 8.00, 5.11, 2.16
+>>> Jobs: 22 of 27 complete, 2 running                                  Load avg: 7.44, 5.04, 2.16
+>>> Emerging (24 of 27) media-libs/libva-2.23.0::gentoo
+>>> Jobs: 22 of 27 complete, 2 running                                  Load avg: 7.44, 5.04, 2.16
+>>> Jobs: 22 of 27 complete, 1 running                                  Load avg: 7.97, 5.31, 2.31
+>>> Jobs: 22 of 27 complete, 2 running, 1 merge wait                    Load avg: 7.97, 5.31, 2.31
+>>> Emerging (25 of 27) media-video/pipewire-1.6.6::gentoo
+>>> Jobs: 22 of 27 complete, 2 running, 1 merge wait                    Load avg: 7.97, 5.31, 2.31
+>>> Jobs: 22 of 27 complete, 1 running, 1 merge wait                    Load avg: 9.81, 6.05, 2.66
+>>> Jobs: 22 of 27 complete, 2 merge wait                               Load avg: 10.0, 6.6, 3.0
+>>> Installing (24 of 27) media-libs/libva-2.23.0::gentoo
+>>> Jobs: 22 of 27 complete, 3 merge wait                               Load avg: 10.0, 6.6, 3.0
+>>> Installing (23 of 27) dev-util/glslang-1.4.350.0::gentoo
+>>> Jobs: 22 of 27 complete, 3 merge wait                               Load avg: 10.0, 6.6, 3.0
+>>> Completed (24 of 27) media-libs/libva-2.23.0::gentoo
+>>> Jobs: 22 of 27 complete                                             Load avg: 9.23, 6.44, 2.95
+>>> Installing (25 of 27) media-video/pipewire-1.6.6::gentoo
+>>> Jobs: 22 of 27 complete                                             Load avg: 9.23, 6.44, 2.95
+>>> Jobs: 23 of 27 complete                                             Load avg: 9.23, 6.44, 2.95
+>>> Completed (23 of 27) dev-util/glslang-1.4.350.0::gentoo
+>>> Jobs: 23 of 27 complete                                             Load avg: 9.23, 6.44, 2.95
+>>> Jobs: 24 of 27 complete                                             Load avg: 9.23, 6.44, 2.95
+>>> Recording media-video/pipewire in "world" favorites file...
+>>> Jobs: 24 of 27 complete                                             Load avg: 9.23, 6.44, 2.95
+>>> Completed (25 of 27) media-video/pipewire-1.6.6::gentoo
+>>> Jobs: 24 of 27 complete                                             Load avg: 9.23, 6.44, 2.95
+>>> Jobs: 25 of 27 complete                                             Load avg: 9.23, 6.44, 2.95
+>>> Jobs: 25 of 27 complete, 1 running                                  Load avg: 9.23, 6.44, 2.95
+>>> Emerging (26 of 27) media-libs/mesa-26.1.2::gentoo
+>>> Jobs: 25 of 27 complete, 1 running                                  Load avg: 9.23, 6.44, 2.95
+>>> Jobs: 25 of 27 complete, 2 running                                  Load avg: 8.58, 6.35, 2.93
+>>> Emerging (27 of 27) media-video/wireplumber-0.5.15::gentoo
+>>> Jobs: 25 of 27 complete, 2 running                                  Load avg: 8.58, 6.35, 2.93
+>>> Jobs: 25 of 27 complete, 1 running                                  Load avg: 7.87, 6.30, 2.97
+>>> Jobs: 25 of 27 complete, 1 merge wait                               Load avg: 7.05, 6.61, 3.45
+>>> Installing (27 of 27) media-video/wireplumber-0.5.15::gentoo
+>>> Jobs: 25 of 27 complete, 2 merge wait                               Load avg: 7.05, 6.61, 3.45
+>>> Installing (26 of 27) media-libs/mesa-26.1.2::gentoo
+>>> Jobs: 25 of 27 complete, 2 merge wait                               Load avg: 7.05, 6.61, 3.45
+>>> Recording media-video/wireplumber in "world" favorites file...
+>>> Jobs: 25 of 27 complete                                             Load avg: 7.05, 6.61, 3.45
+>>> Completed (27 of 27) media-video/wireplumber-0.5.15::gentoo
+>>> Jobs: 25 of 27 complete                                             Load avg: 7.05, 6.61, 3.45
+>>> Jobs: 26 of 27 complete                                             Load avg: 7.05, 6.61, 3.45
+>>> Recording media-libs/mesa in "world" favorites file...
+>>> Jobs: 26 of 27 complete                                             Load avg: 7.05, 6.61, 3.45
+>>> Completed (26 of 27) media-libs/mesa-26.1.2::gentoo
+>>> Jobs: 26 of 27 complete                                             Load avg: 7.05, 6.61, 3.45
+>>> Jobs: 27 of 27 complete                                             Load avg: 7.05, 6.61, 3.45
+
+
+ * GNU info directory index is up-to-date.
+
+ * IMPORTANT: 3 config files in '/etc' need updating.
+ * See the CONFIGURATION FILES and CONFIGURATION FILES UPDATE TOOLS
+ * sections of the emerge man page to learn how to update config files.
+
+ * IMPORTANT: 25 news items need reading for repository 'gentoo'.
+ * Use eselect news read to view new items.
+
+WAYLAND_RC=0

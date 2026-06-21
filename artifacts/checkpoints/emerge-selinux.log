@@ -1,0 +1,132 @@
+
+ * IMPORTANT: 22 news items need reading for repository 'gentoo'.
+ * Use eselect news read to view new items.
+
+
+These are the packages that would be merged, in order:
+
+Calculating dependencies  ... done!
+Dependency resolution took 0.73 s (backtrack: 0/20).
+
+[ebuild   R    ] sys-apps/checkpolicy-3.10::gentoo  USE="-debug" 0 KiB
+[ebuild  N     ] sys-libs/libselinux-3.10-r1::gentoo  USE="python -debug -ruby -static-libs" PYTHON_TARGETS="python3_14 -python3_12 -python3_13" RUBY_TARGETS="ruby33 -ruby32" 0 KiB
+[ebuild  N     ] sys-process/audit-4.1.4-r3::gentoo  USE="python -build -gssapi -io-uring -ldap (-split-usr) -static-libs" PYTHON_TARGETS="python3_14 -python3_12 -python3_13" 0 KiB
+[ebuild  N     ] sys-libs/libsemanage-3.10:0/2::gentoo  PYTHON_TARGETS="python3_14 -python3_12 -python3_13" 0 KiB
+[ebuild  N     ] app-admin/setools-4.6.0::gentoo  USE="-debug -test" PYTHON_TARGETS="python3_14 -python3_12 -python3_13" 0 KiB
+[ebuild  N     ] sys-apps/selinux-python-3.10::gentoo  USE="-test" PYTHON_TARGETS="python3_14 -python3_12 -python3_13" 0 KiB
+[ebuild  N     ] sys-apps/policycoreutils-3.10::gentoo  USE="pam -audit (-split-usr)" PYTHON_TARGETS="python3_14 -python3_12 -python3_13" 0 KiB
+[ebuild  N     ] sec-policy/selinux-base-2.20260312_p1::gentoo  USE="ubac unconfined unknown-perms -doc -systemd" SELINUX_POLICY_TYPES="mcs mls strict targeted" 0 KiB
+[ebuild  N     ] sec-policy/selinux-base-policy-2.20260312_p1::gentoo  USE="unconfined -systemd" SELINUX_POLICY_TYPES="mcs mls strict targeted" 0 KiB
+[ebuild  N     ] sec-policy/selinux-unconfined-2.20260312_p1::gentoo  SELINUX_POLICY_TYPES="mcs mls strict targeted" 0 KiB
+
+Total: 10 packages (9 new, 1 reinstall), Size of downloads: 0 KiB
+>>> Verifying ebuild manifests
+
+>>> Jobs: 0 of 10 complete, 1 running                                   Load avg: 0.26, 0.89, 0.53
+>>> Emerging (1 of 10) sys-apps/checkpolicy-3.10::gentoo
+>>> Jobs: 0 of 10 complete, 1 running                                   Load avg: 0.26, 0.89, 0.53
+>>> Jobs: 0 of 10 complete, 2 running                                   Load avg: 0.26, 0.89, 0.53
+>>> Emerging (2 of 10) sys-libs/libselinux-3.10-r1::gentoo
+>>> Jobs: 0 of 10 complete, 2 running                                   Load avg: 0.26, 0.89, 0.53
+>>> Jobs: 0 of 10 complete, 1 running                                   Load avg: 1.23, 1.08, 0.60
+>>> Jobs: 0 of 10 complete, 2 running, 1 merge wait                     Load avg: 1.23, 1.08, 0.60
+>>> Emerging (3 of 10) sys-process/audit-4.1.4-r3::gentoo
+>>> Jobs: 0 of 10 complete, 2 running, 1 merge wait                     Load avg: 1.23, 1.08, 0.60
+>>> Jobs: 0 of 10 complete, 1 running, 1 merge wait                     Load avg: 1.19, 1.08, 0.60
+>>> Jobs: 0 of 10 complete, 2 merge wait                                Load avg: 1.44, 1.16, 0.65
+>>> Installing (1 of 10) sys-apps/checkpolicy-3.10::gentoo
+>>> Jobs: 0 of 10 complete, 3 merge wait                                Load avg: 1.44, 1.16, 0.65
+>>> Installing (2 of 10) sys-libs/libselinux-3.10-r1::gentoo
+>>> Jobs: 0 of 10 complete, 3 merge wait                                Load avg: 1.44, 1.16, 0.65
+>>> Recording sys-libs/libselinux in "world" favorites file...
+>>> Jobs: 0 of 10 complete                                              Load avg: 1.44, 1.16, 0.65
+>>> Completed (2 of 10) sys-libs/libselinux-3.10-r1::gentoo
+>>> Jobs: 0 of 10 complete                                              Load avg: 1.44, 1.16, 0.65
+>>> Installing (3 of 10) sys-process/audit-4.1.4-r3::gentoo
+>>> Jobs: 0 of 10 complete                                              Load avg: 1.44, 1.16, 0.65
+>>> Jobs: 1 of 10 complete                                              Load avg: 1.44, 1.16, 0.65
+>>> Completed (1 of 10) sys-apps/checkpolicy-3.10::gentoo
+>>> Jobs: 1 of 10 complete                                              Load avg: 1.44, 1.16, 0.65
+>>> Jobs: 2 of 10 complete                                              Load avg: 1.44, 1.16, 0.65
+>>> Recording sys-process/audit in "world" favorites file...
+>>> Jobs: 2 of 10 complete                                              Load avg: 1.40, 1.16, 0.65
+>>> Completed (3 of 10) sys-process/audit-4.1.4-r3::gentoo
+>>> Jobs: 2 of 10 complete                                              Load avg: 1.40, 1.16, 0.65
+>>> Jobs: 3 of 10 complete                                              Load avg: 1.40, 1.16, 0.65
+>>> Jobs: 3 of 10 complete, 1 running                                   Load avg: 1.40, 1.16, 0.65
+>>> Emerging (4 of 10) sys-libs/libsemanage-3.10::gentoo
+>>> Jobs: 3 of 10 complete, 1 running                                   Load avg: 1.40, 1.16, 0.65
+>>> Jobs: 3 of 10 complete, 2 running                                   Load avg: 1.40, 1.16, 0.65
+>>> Emerging (5 of 10) app-admin/setools-4.6.0::gentoo
+>>> Jobs: 3 of 10 complete, 2 running                                   Load avg: 1.40, 1.16, 0.65
+>>> Jobs: 3 of 10 complete, 1 running                                   Load avg: 1.50, 1.19, 0.67
+>>> Jobs: 3 of 10 complete, 1 merge wait                                Load avg: 1.33, 1.17, 0.68
+>>> Installing (4 of 10) sys-libs/libsemanage-3.10::gentoo
+>>> Jobs: 3 of 10 complete, 2 merge wait                                Load avg: 1.33, 1.17, 0.68
+>>> Installing (5 of 10) app-admin/setools-4.6.0::gentoo
+>>> Jobs: 3 of 10 complete, 2 merge wait                                Load avg: 1.33, 1.17, 0.68
+>>> Completed (4 of 10) sys-libs/libsemanage-3.10::gentoo
+>>> Jobs: 3 of 10 complete                                              Load avg: 1.33, 1.17, 0.68
+>>> Jobs: 4 of 10 complete                                              Load avg: 1.33, 1.17, 0.68
+>>> Completed (5 of 10) app-admin/setools-4.6.0::gentoo
+>>> Jobs: 4 of 10 complete                                              Load avg: 1.33, 1.17, 0.68
+>>> Jobs: 5 of 10 complete                                              Load avg: 1.33, 1.17, 0.68
+>>> Jobs: 5 of 10 complete, 1 running                                   Load avg: 1.33, 1.17, 0.68
+>>> Emerging (6 of 10) sys-apps/selinux-python-3.10::gentoo
+>>> Jobs: 5 of 10 complete, 1 running                                   Load avg: 1.33, 1.17, 0.68
+>>> Jobs: 5 of 10 complete                                              Load avg: 1.60, 1.23, 0.70
+>>> Installing (6 of 10) sys-apps/selinux-python-3.10::gentoo
+>>> Jobs: 5 of 10 complete, 1 merge wait                                Load avg: 1.60, 1.23, 0.70
+>>> Recording sys-apps/selinux-python in "world" favorites file...
+>>> Jobs: 5 of 10 complete                                              Load avg: 1.60, 1.23, 0.70
+>>> Completed (6 of 10) sys-apps/selinux-python-3.10::gentoo
+>>> Jobs: 5 of 10 complete                                              Load avg: 1.60, 1.23, 0.70
+>>> Jobs: 6 of 10 complete                                              Load avg: 1.60, 1.23, 0.70
+>>> Jobs: 6 of 10 complete, 1 running                                   Load avg: 1.60, 1.23, 0.70
+>>> Emerging (7 of 10) sys-apps/policycoreutils-3.10::gentoo
+>>> Jobs: 6 of 10 complete, 1 running                                   Load avg: 1.60, 1.23, 0.70
+>>> Jobs: 6 of 10 complete                                              Load avg: 1.50, 1.22, 0.71
+>>> Installing (7 of 10) sys-apps/policycoreutils-3.10::gentoo
+>>> Jobs: 6 of 10 complete, 1 merge wait                                Load avg: 1.50, 1.22, 0.71
+>>> Recording sys-apps/policycoreutils in "world" favorites file...
+>>> Jobs: 6 of 10 complete                                              Load avg: 1.50, 1.22, 0.71
+>>> Completed (7 of 10) sys-apps/policycoreutils-3.10::gentoo
+>>> Jobs: 6 of 10 complete                                              Load avg: 1.50, 1.22, 0.71
+>>> Jobs: 7 of 10 complete                                              Load avg: 1.50, 1.22, 0.71
+>>> Jobs: 7 of 10 complete, 1 running                                   Load avg: 1.50, 1.22, 0.71
+>>> Emerging (8 of 10) sec-policy/selinux-base-2.20260312_p1::gentoo
+>>> Jobs: 7 of 10 complete, 1 running                                   Load avg: 1.50, 1.22, 0.71
+>>> Jobs: 7 of 10 complete                                              Load avg: 2.24, 1.41, 0.79
+>>> Installing (8 of 10) sec-policy/selinux-base-2.20260312_p1::gentoo
+>>> Jobs: 7 of 10 complete, 1 merge wait                                Load avg: 2.24, 1.41, 0.79
+>>> Completed (8 of 10) sec-policy/selinux-base-2.20260312_p1::gentoo
+>>> Jobs: 7 of 10 complete                                              Load avg: 2.24, 1.41, 0.79
+>>> Jobs: 8 of 10 complete                                              Load avg: 2.24, 1.41, 0.79
+>>> Jobs: 8 of 10 complete, 1 running                                   Load avg: 2.24, 1.41, 0.79
+>>> Emerging (9 of 10) sec-policy/selinux-base-policy-2.20260312_p1::gentoo
+>>> Jobs: 8 of 10 complete, 1 running                                   Load avg: 2.24, 1.41, 0.79
+>>> Jobs: 8 of 10 complete                                              Load avg: 1.98, 1.44, 0.82
+>>> Installing (9 of 10) sec-policy/selinux-base-policy-2.20260312_p1::gentoo
+>>> Jobs: 8 of 10 complete, 1 merge wait                                Load avg: 1.98, 1.44, 0.82
+>>> Recording sec-policy/selinux-base-policy in "world" favorites file...
+>>> Jobs: 8 of 10 complete                                              Load avg: 1.90, 1.44, 0.82
+>>> Completed (9 of 10) sec-policy/selinux-base-policy-2.20260312_p1::gentoo
+>>> Jobs: 8 of 10 complete                                              Load avg: 1.90, 1.44, 0.82
+>>> Jobs: 9 of 10 complete                                              Load avg: 1.90, 1.44, 0.82
+>>> Jobs: 9 of 10 complete, 1 running                                   Load avg: 1.90, 1.44, 0.82
+>>> Emerging (10 of 10) sec-policy/selinux-unconfined-2.20260312_p1::gentoo
+>>> Jobs: 9 of 10 complete, 1 running                                   Load avg: 1.90, 1.44, 0.82
+>>> Jobs: 9 of 10 complete                                              Load avg: 1.76, 1.42, 0.83
+>>> Installing (10 of 10) sec-policy/selinux-unconfined-2.20260312_p1::gentoo
+>>> Jobs: 9 of 10 complete, 1 merge wait                                Load avg: 1.76, 1.42, 0.83
+>>> Completed (10 of 10) sec-policy/selinux-unconfined-2.20260312_p1::gentoo
+>>> Jobs: 9 of 10 complete                                              Load avg: 1.70, 1.41, 0.83
+>>> Jobs: 10 of 10 complete                                             Load avg: 1.70, 1.41, 0.83
+
+
+ * GNU info directory index is up-to-date.
+
+ * IMPORTANT: 23 news items need reading for repository 'gentoo'.
+ * Use eselect news read to view new items.
+
+EMERGE_SELINUX_RC=0

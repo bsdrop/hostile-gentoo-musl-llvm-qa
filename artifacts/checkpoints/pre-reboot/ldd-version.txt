@@ -1,0 +1,4 @@
+musl libc (x86_64)
+Version 1.2.6
+Dynamic Program Loader
+Usage: ldd [options] [--] pathname

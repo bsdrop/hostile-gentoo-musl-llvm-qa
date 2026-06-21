@@ -1,0 +1,242 @@
+!!! No gcc found. You probably need to 'source /etc/profile'
+!!! to update the environment of this terminal and possibly
+!!! other terminals also.
+Portage 3.0.79 (python 3.14.6-final-0, default/linux/amd64/23.0/musl/llvm, [unavailable], musl-1.2.6-r1, 6.18.33-p1 x86_64)
+=================================================================
+System uname: Linux-6.18.33-p1-x86_64-AMD_Ryzen_5_5600_6-Core_Processor-with-musl1
+KiB Mem:    16354088 total,  11277004 free
+KiB Swap:    8388604 total,   8388604 free
+Timestamp of repository gentoo: Sun, 21 Jun 2026 00:45:00 +0000
+Head commit of repository gentoo: ab374cc04b49d6726e07fbf93cc3d6a5e74e4c0c
+sh bash 5.3_p9-r1
+ld LLD 21.1.8 (compatible with GNU linkers)
+app-misc/pax-utils:       1.3.10::gentoo
+app-shells/bash:          5.3_p9-r1::gentoo
+dev-build/autoconf:       2.72-r7::gentoo
+dev-build/automake:       1.18.1-r1::gentoo
+dev-build/cmake:          4.3.3::gentoo
+dev-build/libtool:        2.5.4::gentoo
+dev-build/make:           4.4.1-r102::gentoo
+dev-build/meson:          1.10.2::gentoo
+dev-lang/perl:            5.42.0-r1::gentoo
+dev-lang/python:          3.13.14::gentoo, 3.14.6::gentoo
+dev-lang/rust-bin:        1.93.1::gentoo
+llvm-core/clang:          21.1.8::gentoo
+llvm-core/lld:            21.1.8-r1::gentoo
+llvm-core/llvm:           21.1.8::gentoo
+sys-apps/baselayout:      2.18-r1::gentoo
+sys-apps/openrc:          0.63.1::gentoo
+sys-apps/sandbox:         2.46::gentoo
+sys-kernel/linux-headers: 6.18::gentoo (virtual/os-headers)
+sys-libs/musl:            1.2.6-r1::gentoo
+Repositories:
+
+gentoo
+    location: /var/db/repos/gentoo
+    sync-type: rsync
+    sync-uri: rsync://rsync.gentoo.org/gentoo-portage
+    priority: -1000
+    volatile: False
+    sync-rsync-verify-max-age: 3
+    sync-rsync-verify-jobs: 1
+    sync-rsync-extra-opts: 
+    sync-rsync-verify-metamanifest: yes
+
+Binary Repositories:
+
+gentoo
+    location: /var/cache/binhost/gentoo
+    priority: 1
+    sync-uri: https://distfiles.gentoo.org/releases/amd64/binpackages/23.0/x86-64_musl_llvm
+    verify-signature: True
+
+ABI="amd64"
+ABI_X86="64"
+ACCEPT_KEYWORDS="amd64 ~amd64"
+ACCEPT_LICENSE="@FREE"
+ACCEPT_PROPERTIES="*"
+ACCEPT_RESTRICT="*"
+ADA_TARGET="gcc_15"
+ADDR2LINE="llvm-addr2line"
+APACHE2_MODULES="authn_core authz_core socache_shmcb unixd actions alias auth_basic authn_anon authn_dbm authn_file authz_dbm authz_groupfile authz_host authz_owner authz_user autoindex cache cgi cgid dav dav_fs dav_lock deflate dir env expires ext_filter file_cache filter headers include info log_config logio mime mime_magic negotiation rewrite setenvif speling status unique_id userdir usertrack vhost_alias"
+AR="llvm-ar"
+ARCH="amd64"
+AS="clang -c"
+AUTOCLEAN="no"
+BINPKG_COMPRESS="zstd"
+BINPKG_FORMAT="gpkg"
+BINPKG_GPG_SIGNING_BASE_COMMAND="/usr/bin/flock /run/lock/portage-binpkg-gpg.lock /usr/bin/gpg --sign --armor [PORTAGE_CONFIG]"
+BINPKG_GPG_SIGNING_DIGEST="SHA512"
+BINPKG_GPG_VERIFY_BASE_COMMAND="/usr/bin/gpg --verify --batch --no-tty --no-auto-check-trustdb --status-fd 2 [PORTAGE_CONFIG] [SIGNATURE]"
+BINPKG_GPG_VERIFY_GPG_HOME="/etc/portage/gnupg"
+BOOTSTRAP_USE="unicode pkg-config split-usr xml python_targets_python3_14 python_single_target_python3_14 multilib zstd cet -berkdb -gdbm -berkdb -gdbm ssl curl_ssl_openssl -binutils-plugin compiler-rt clang libunwind default-compiler-rt default-lld default-libcxx llvm-libunwind libcxx -sanitize libcxxabi -llvm_targets_BPF -llvm_targets_AMDGPU -llvm_targets_NVPTX -llvm_targets_BPF"
+BROOT=""
+CALLIGRA_FEATURES="karbon sheets words"
+CARGO_TARGET_X86_64_UNKNOWN_LINUX_MUSL_RUSTFLAGS="-C target-feature=-crt-static"
+CBUILD="x86_64-pc-linux-musl"
+CC="clang"
+CFLAGS="-march=x86-64-v3 -O2 -pipe -fstack-protector-strong -fno-semantic-interposition -flto=thin -D_FORTIFY_SOURCE=3"
+CFLAGS_amd64="-m64"
+CFLAGS_x32="-mx32"
+CFLAGS_x86="-m32 -mfpmath=sse"
+CHOST="x86_64-pc-linux-musl"
+CHOST_amd64="x86_64-pc-linux-musl"
+CHOST_x32="x86_64-pc-linux-gnux32"
+CHOST_x86="i686-pc-linux-gnu"
+CLEAN_DELAY="5"
+COLLECTD_PLUGINS="df interface irq load memory rrdtool swap syslog"
+COLLISION_IGNORE="/boot/dtbs/* /lib/modules/*"
+COMMON_FLAGS="-march=x86-64-v3 -O2 -pipe -fstack-protector-strong -fno-semantic-interposition -flto=thin -D_FORTIFY_SOURCE=3"
+CONFIG_PROTECT="/etc /var/bind"
+CONFIG_PROTECT_MASK="/etc/ca-certificates.conf /etc/env.d /etc/gconf /etc/gentoo-release /etc/sandbox.d"
+CPP="clang-cpp"
+CPU_FLAGS_X86="mmx mmxext sse sse2"
+CXX="clang++"
+CXXFLAGS="-march=x86-64-v3 -O2 -pipe -fstack-protector-strong -fno-semantic-interposition -flto=thin -D_FORTIFY_SOURCE=3"
+CXXSTDLIB="c++"
+DEFAULT_ABI="amd64"
+DISTDIR="/var/cache/distfiles"
+EDITOR="/bin/nano"
+ELIBC="musl"
+EMERGE_DEFAULT_OPTS="--verbose --jobs=2 --load-average=12 --keep-going=y --with-bdeps=y"
+EMERGE_WARNING_DELAY="10"
+ENV_UNSET="CARGO_HOME DBUS_SESSION_BUS_ADDRESS DISPLAY GDK_PIXBUF_MODULE_FILE GOBIN GOPATH PERL5LIB PERL5OPT PERLPREFIX PERL_CORE PERL_MB_OPT PERL_MM_OPT XAUTHORITY XDG_CACHE_HOME XDG_CONFIG_DIRS XDG_CONFIG_HOME XDG_DATA_DIRS XDG_DATA_HOME XDG_RUNTIME_DIR XDG_STATE_HOME"
+EPREFIX=""
+EROOT="/"
+ESYSROOT="/"
+FCFLAGS="-march=x86-64-v3 -O2 -pipe -fstack-protector-strong -fno-semantic-interposition -flto=thin -D_FORTIFY_SOURCE=3"
+FEATURES="assume-digests binpkg-docompress binpkg-dostrip binpkg-logs binpkg-multi-instance buildpkg buildpkg-live compress-index config-protect-if-modified distlocks ebuild-locks fail-clean fixlafiles ipc-sandbox merge-sync merge-wait network-sandbox news parallel-fetch parallel-install pid-sandbox pkgdir-index-trusted preserve-libs protect-owned qa-unresolved-soname-deps sandbox strict test unknown-features-warn unmerge-logs unmerge-orphans userfetch userpriv usersandbox usersync xattr"
+FETCHCOMMAND="wget -t 3 -T 60 --passive-ftp -O "${DISTDIR}/${FILE}" "${URI}""
+FETCHCOMMAND_RSYNC="rsync -LtvP "${URI}" "${DISTDIR}/${FILE}""
+FETCHCOMMAND_SFTP="bash -c "x=\${2#sftp://} ; host=\${x%%/*} ; port=\${host##*:} ; host=\${host%:*} ; [[ \${host} = \${port} ]] && port= ; eval \"declare -a ssh_opts=(\${3})\" ; exec sftp \${port:+-P \${port}} \"\${ssh_opts[@]}\" \"\${host}:/\${x#*/}\" \"\$1\"" sftp "${DISTDIR}/${FILE}" "${URI}" "${PORTAGE_SSH_OPTS}""
+FETCHCOMMAND_SSH="bash -c "x=\${2#ssh://} ; host=\${x%%/*} ; port=\${host##*:} ; host=\${host%:*} ; [[ \${host} = \${port} ]] && port= ; exec rsync --rsh=\"ssh \${port:+-p\${port}} \${3}\" -avP \"\${host}:/\${x#*/}\" \"\$1\"" rsync "${DISTDIR}/${FILE}" "${URI}" "${PORTAGE_SSH_OPTS}""
+FFLAGS="-march=x86-64-v3 -O2 -pipe -fstack-protector-strong -fno-semantic-interposition -flto=thin -D_FORTIFY_SOURCE=3"
+GCC_SPECS=""
+GENTOO_MIRRORS="https://distfiles.gentoo.org https://mirror.leaseweb.com/gentoo"
+GPG_VERIFY_GROUP_DROP="nogroup"
+GPG_VERIFY_USER_DROP="nobody"
+GPSD_PROTOCOLS="ashtech aivdm earthmate evermore fv18 garmin garmintxt gpsclock greis isync itrax navcom oncore skytraq superstar2 tsip tripmate tnt"
+GRUB_PLATFORMS=""
+GUILE_SINGLE_TARGET="3-0"
+GUILE_TARGETS="3-0"
+HOME="/root"
+INFOPATH="/usr/share/autoconf-2.72/info:/usr/share/automake-1.18.1/info:/usr/share/info"
+INPUT_DEVICES="libinput"
+INSTALL_MASK="charset.alias /usr/share/locale/locale.alias"
+IUSE_IMPLICIT="abi_x86_64 prefix prefix-guest prefix-stack"
+KERNEL="linux"
+LANG="C.UTF-8"
+LCD_DEVICES="bayrad cfontz glk hd44780 lb216 lcdm001 mtxorb text"
+LC_MESSAGES="C.UTF-8"
+LD="ld.lld"
+LDFLAGS="-Wl,-O1 -Wl,--as-needed -Wl,-z,relro -Wl,-z,now"
+LDFLAGS_amd64="-m elf_x86_64"
+LDFLAGS_x32="-m elf32_x86_64"
+LDFLAGS_x86="-m elf_i386"
+LESS="-R -M --shift 5"
+LESSOPEN="|lesspipe %s"
+LEX="flex"
+LIBDIR_amd64="lib"
+LIBDIR_x32="libx32"
+LIBDIR_x86="lib"
+LLVM_TARGETS="X86"
+LLVM_USE_LIBCXX="1"
+LOGNAME="root"
+LUA_SINGLE_TARGET="lua5-1"
+LUA_TARGETS="lua5-1"
+MAIL="/var/mail/root"
+MAKEOPTS="-j8 -l12"
+MANPAGER="manpager"
+MANPATH="/usr/local/share/man:/usr/share/man:/usr/lib/rust/man-bin-1.93.1:/usr/lib/llvm/21/share/man"
+MOTD_SHOWN="pam"
+MULTILIB_ABIS="amd64"
+MULTILIB_STRICT_DENY="64-bit.*shared object"
+MULTILIB_STRICT_DIRS="/lib32 /lib /usr/lib32 /usr/lib /usr/kde/*/lib32 /usr/kde/*/lib /usr/qt/*/lib32 /usr/qt/*/lib /usr/X11R6/lib32 /usr/X11R6/lib"
+MULTILIB_STRICT_EXEMPT="(perl5|gcc|binutils|eclipse-3|debug|portage|udev|systemd|clang|python-exec|llvm)"
+MUSL_LOCPATH="/usr/share/i18n/locales/musl"
+NM="llvm-nm"
+OBJCOPY="llvm-objcopy"
+OBJDUMP="llvm-objdump"
+OFFICE_IMPLEMENTATION="libreoffice"
+PAGER="/usr/bin/less"
+PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/bin:/usr/lib/llvm/21/bin"
+PHP_TARGETS="php8-3"
+PKGDIR="/var/cache/binpkgs"
+PORTAGE_ARCHLIST="alpha amd64 arm arm64 arm64-macos hppa loong m68k mips ppc ppc64 riscv s390 sparc x64-macos x64-solaris x86"
+PORTAGE_BIN_PATH="/usr/lib/portage/python3.14"
+PORTAGE_COMPRESS="bzip2"
+PORTAGE_COMPRESS_EXCLUDE_SUFFIXES="css gif htm[l]? jp[e]?g js pdf png"
+PORTAGE_CONFIGROOT="/"
+PORTAGE_DEBUG="0"
+PORTAGE_DEPCACHEDIR="/var/cache/edb/dep"
+PORTAGE_ELOG_CLASSES="log warn error qa"
+PORTAGE_ELOG_MAILFROM="portage@localhost"
+PORTAGE_ELOG_MAILSUBJECT="[portage] ebuild log for ${PACKAGE} on ${HOST}"
+PORTAGE_ELOG_MAILURI="root"
+PORTAGE_ELOG_SYSTEM="save"
+PORTAGE_FETCH_CHECKSUM_TRY_MIRRORS="5"
+PORTAGE_FETCH_RESUME_MIN_SIZE="350K"
+PORTAGE_GID="250"
+PORTAGE_GPG_SIGNING_COMMAND="gpg --sign --digest-algo SHA256 --clearsign --yes --default-key "${PORTAGE_GPG_KEY}" --homedir "${PORTAGE_GPG_DIR}" "${FILE}""
+PORTAGE_GRPNAME="portage"
+PORTAGE_INST_GID="0"
+PORTAGE_INST_UID="0"
+PORTAGE_INTERNAL_CALLER="1"
+PORTAGE_LIBC="musl"
+PORTAGE_LOGDIR_CLEAN="find "${PORTAGE_LOGDIR}" -type f ! -name "summary.log*" -mtime +7 -delete"
+PORTAGE_OVERRIDE_EPREFIX=""
+PORTAGE_PYM_PATH="/usr/lib/python3.14/site-packages"
+PORTAGE_PYTHONPATH="/usr/lib/python3.14/site-packages"
+PORTAGE_RSYNC_OPTS="--recursive --links --safe-links --perms --times --omit-dir-times --compress --force --whole-file --delete --stats --human-readable --timeout=180 --exclude=/distfiles --exclude=/local --exclude=/packages --exclude=/.git"
+PORTAGE_RSYNC_RETRIES="-1"
+PORTAGE_SYNC_STALE="30"
+PORTAGE_TMPDIR="/var/tmp"
+PORTAGE_TRUST_HELPER="/usr/bin/getuto"
+PORTAGE_USERNAME="portage"
+PORTAGE_VERBOSE="1"
+PORTAGE_WORKDIR_MODE="0700"
+PORTAGE_XATTR_EXCLUDE="bcachefs.* bcachefs_effective.* 	btrfs.* security.evm security.ima 	security.selinux system.nfs4_acl user.apache_handler 	user.Beagle.* user.dublincore.* user.mime_encoding user.xdg.*"
+POSTGRES_TARGETS="postgres17"
+PROFILE_ONLY_VARIABLES="ARCH ELIBC IUSE_IMPLICIT KERNEL USE_EXPAND_IMPLICIT USE_EXPAND_UNPREFIXED USE_EXPAND_VALUES_ARCH USE_EXPAND_VALUES_ELIBC USE_EXPAND_VALUES_KERNEL"
+PWD="/"
+PYTHONDONTWRITEBYTECODE="1"
+PYTHON_SINGLE_TARGET="python3_14"
+PYTHON_TARGETS="python3_14"
+QEMU_SOFTMMU_TARGETS="x86_64"
+RANLIB="llvm-ranlib"
+READELF="llvm-readelf"
+RESUMECOMMAND="wget -c -t 3 -T 60 --passive-ftp -O "${DISTDIR}/${FILE}" "${URI}""
+RESUMECOMMAND_RSYNC="rsync -LtvP "${URI}" "${DISTDIR}/${FILE}""
+RESUMECOMMAND_SSH="bash -c "x=\${2#ssh://} ; host=\${x%%/*} ; port=\${host##*:} ; host=\${host%:*} ; [[ \${host} = \${port} ]] && port= ; exec rsync --rsh=\"ssh \${port:+-p\${port}} \${3}\" -avP \"\${host}:/\${x#*/}\" \"\$1\"" rsync "${DISTDIR}/${FILE}" "${URI}" "${PORTAGE_SSH_OPTS}""
+ROOT="/"
+ROOTPATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/bin:/usr/lib/llvm/21/bin"
+RPMDIR="/var/cache/rpm"
+RUBY_TARGETS="ruby33"
+SHELL="/bin/bash"
+SHLVL="1"
+SSH_CLIENT="10.0.2.2 47122 22"
+SSH_CONNECTION="10.0.2.2 47122 10.0.2.15 22"
+STRINGS="llvm-strings"
+STRIP="llvm-strip"
+SYMLINK_LIB="no"
+SYSROOT="/"
+TWISTED_DISABLE_WRITING_OF_PLUGIN_CACHE="1"
+UNINSTALL_IGNORE="/boot/dtbs/* /lib/modules/* /var/run /var/lock /bin /lib /lib32 /lib64 /libx32 /sbin /usr/sbin /usr/lib/modules/*"
+USE="acl alsa amd64 btrfs bzip2 cet clang crypt dbus elogind hardened iconv ipv6 libinput libtirpc llvm-libunwind lto ncurses networkmanager nls openmp pam pcre pic pie pipewire policykit readline screencast seccomp ssl test test-rust unicode vaapi vulkan wayland xattr zlib" ABI_X86="64" ADA_TARGET="gcc_15" APACHE2_MODULES="authn_core authz_core socache_shmcb unixd actions alias auth_basic authn_anon authn_dbm authn_file authz_dbm authz_groupfile authz_host authz_owner authz_user autoindex cache cgi cgid dav dav_fs dav_lock deflate dir env expires ext_filter file_cache filter headers include info log_config logio mime mime_magic negotiation rewrite setenvif speling status unique_id userdir usertrack vhost_alias" CALLIGRA_FEATURES="karbon sheets words" COLLECTD_PLUGINS="df interface irq load memory rrdtool swap syslog" CPU_FLAGS_X86="mmx mmxext sse sse2" ELIBC="musl" GPSD_PROTOCOLS="ashtech aivdm earthmate evermore fv18 garmin garmintxt gpsclock greis isync itrax navcom oncore skytraq superstar2 tsip tripmate tnt" GUILE_SINGLE_TARGET="3-0" GUILE_TARGETS="3-0" INPUT_DEVICES="libinput" KERNEL="linux" LCD_DEVICES="bayrad cfontz glk hd44780 lb216 lcdm001 mtxorb text" LLVM_TARGETS="X86" LUA_SINGLE_TARGET="lua5-1" LUA_TARGETS="lua5-1" OFFICE_IMPLEMENTATION="libreoffice" PHP_TARGETS="php8-3" POSTGRES_TARGETS="postgres17" PYTHON_SINGLE_TARGET="python3_14" PYTHON_TARGETS="python3_14" QEMU_SOFTMMU_TARGETS="x86_64" RUBY_TARGETS="ruby33" VIDEO_CARDS="virtio virgl" XTABLES_ADDONS="quota2 psd pknock lscan length2 ipv4options ipp2p iface geoip fuzzy condition tarpit sysrq proto logmark ipmark dhcpmac delude chaos account"
+USER="root"
+USERLAND="GNU"
+USE_EXPAND="ABI_MIPS ABI_S390 ABI_X86 ADA_TARGET ALSA_CARDS AMDGPU_TARGETS APACHE2_MODULES APACHE2_MPMS CALLIGRA_FEATURES CAMERAS COLLECTD_PLUGINS CPU_FLAGS_ARM CPU_FLAGS_PPC CPU_FLAGS_X86 CURL_QUIC CURL_SSL ELIBC GPSD_PROTOCOLS GRUB_PLATFORMS GUILE_SINGLE_TARGET GUILE_TARGETS INPUT_DEVICES KERNEL L10N LCD_DEVICES LIBREOFFICE_EXTENSIONS LLVM_SLOT LLVM_TARGETS LUA_SINGLE_TARGET LUA_TARGETS NGINX_MODULES_HTTP NGINX_MODULES_MAIL NGINX_MODULES_STREAM OFFICE_IMPLEMENTATION OPENMPI_FABRICS OPENMPI_OFED_FEATURES OPENMPI_RM PERL_FEATURES PHP_TARGETS POSTGRES_TARGETS PYTHON_SINGLE_TARGET PYTHON_TARGETS QEMU_SOFTMMU_TARGETS QEMU_USER_TARGETS RUBY_TARGETS RUST_SYSROOTS SANE_BACKENDS SELINUX_POLICY_TYPES UWSGI_PLUGINS VIDEO_CARDS VOICEMAIL_STORAGE XTABLES_ADDONS"
+USE_EXPAND_HIDDEN="ABI_MIPS ABI_S390 ABI_X86 CPU_FLAGS_ARM CPU_FLAGS_PPC ELIBC KERNEL"
+USE_EXPAND_IMPLICIT="ARCH ELIBC KERNEL"
+USE_EXPAND_UNPREFIXED="ARCH"
+USE_EXPAND_VALUES_ARCH="alpha amd64 arm arm64 arm64-macos hppa loong m68k mips ppc ppc64 riscv s390 sparc x64-macos x64-solaris x86"
+USE_EXPAND_VALUES_ELIBC="bionic Darwin glibc mingw musl SunOS"
+USE_EXPAND_VALUES_KERNEL="Darwin Hurd linux SunOS"
+USE_ORDER="env:pkg:conf:defaults:pkginternal:features:repo:env.d"
+VIDEO_CARDS="virtio virgl"
+XTABLES_ADDONS="quota2 psd pknock lscan length2 ipv4options ipp2p iface geoip fuzzy condition tarpit sysrq proto logmark ipmark dhcpmac delude chaos account"
+ac_cv_c_undeclared_builtin_options="none needed"
+enable_year2038="no"
+gl_cv_compiler_check_decl_option="-Werror=implicit-function-declaration"
+gl_cv_func_getcwd_path_max="no, but it is partly working"
+

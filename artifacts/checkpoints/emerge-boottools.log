@@ -1,0 +1,691 @@
+
+ * IMPORTANT: 20 news items need reading for repository 'gentoo'.
+ * Use eselect news read to view new items.
+
+
+These are the packages that would be merged, in order:
+
+Calculating dependencies  ... done!
+Dependency resolution took 1.01 s (backtrack: 0/20).
+
+[ebuild  N     ] dev-util/xxd-2025.08.24-r1::gentoo  18323 KiB
+[ebuild  N     ] sys-apps/hwdata-0.401::gentoo  2477 KiB
+[ebuild  N     ] sys-kernel/installkernel-68::gentoo  USE="-dracut -efistub -grub -refind -systemd -systemd-boot -ugrd -uki -ukify" 33 KiB
+[ebuild   R    ] sys-apps/diffutils-3.12::gentoo  USE="nls -verify-sig" 1894 KiB
+[ebuild  N     ] virtual/perl-Test-Simple-1.302.210::gentoo  0 KiB
+[ebuild  N     ] app-editors/vim-core-9.1.1652-r3::gentoo  USE="acl nls -minimal" 18340 KiB
+[ebuild  N     ] sys-devel/binutils-config-5.6::gentoo  USE="(native-symlinks)" 8 KiB
+[ebuild  N     ] virtual/libelf-3-r1:0/1::gentoo  0 KiB
+[ebuild  N     ] virtual/libudev-251-r2:0/1::gentoo  USE="-systemd" 0 KiB
+[ebuild  N     ] virtual/perl-ExtUtils-ParseXS-3.570.0::gentoo  0 KiB
+[ebuild  N     ] virtual/perl-Module-Metadata-1.0.38-r1::gentoo  0 KiB
+[ebuild  N     ] virtual/perl-podlators-6.0.2::gentoo  0 KiB
+[ebuild  N     ] virtual/perl-version-0.993.300::gentoo  0 KiB
+[ebuild  N     ] virtual/perl-JSON-PP-4.160.0-r3::gentoo  0 KiB
+[ebuild  N     ] virtual/perl-IO-1.550.0-r1::gentoo  0 KiB
+[ebuild  N     ] virtual/perl-Digest-MD5-2.590.0::gentoo  0 KiB
+[ebuild  N     ] virtual/perl-Digest-SHA-6.40.0-r2::gentoo  0 KiB
+[ebuild  N     ] dev-perl/Sub-Uplevel-0.280.0-r1::gentoo  USE="test" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 28 KiB
+[ebuild  N     ] dev-perl/Crypt-URandom-0.550.0::gentoo  USE="test" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 24 KiB
+[ebuild  N     ] dev-perl/Digest-HMAC-1.50.0::gentoo  USE="test" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 15 KiB
+[ebuild  N     ] dev-perl/TimeDate-2.330.0-r1::gentoo  USE="test" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 30 KiB
+[ebuild  N     ] sys-apps/pciutils-3.15.0::gentoo  USE="kmod udev zlib -dns -static-libs -verify-sig" 724 KiB
+[ebuild  N     ] app-text/mandoc-1.14.6-r1::gentoo  USE="test -cgi (-selinux) -system-man" 681 KiB
+[ebuild  N     ] media-libs/libpng-1.6.58:0/16::gentoo  USE="test -apng -static-libs" CPU_FLAGS_X86="sse" 1046 KiB
+[ebuild  N     ] dev-lang/tcl-8.6.17:0/8.6::gentoo  USE="threads -debug" 6867 KiB
+[ebuild  N     ] virtual/perl-CPAN-Meta-2.150.10-r11::gentoo  0 KiB
+[ebuild  N     ] dev-perl/Test-NoWarnings-1.60.0::gentoo  USE="test" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 19 KiB
+[ebuild  N     ] sys-fs/dosfstools-4.2::gentoo  USE="iconv test -compat" 314 KiB
+[ebuild  N     ] dev-perl/Authen-SASL-2.200.0::gentoo  USE="test -kerberos" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 41 KiB
+[ebuild  N     ] dev-perl/Module-Build-0.423.400-r5::gentoo  USE="test" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 305 KiB
+[ebuild  N     ] sys-libs/efivar-39-r1:0/1::gentoo  USE="-test" 453 KiB
+[ebuild  N     ] media-libs/freetype-2.14.3:2::gentoo  USE="adobe-cff bzip2 cleartype-hinting png -X -brotli -debug -doc -fontforge -harfbuzz -static-libs -svg -utils -verify-sig" 2608 KiB
+[ebuild  N     ] dev-tcltk/expect-5.45.4-r6::gentoo  USE="-debug -doc -test -threads" 618 KiB
+[ebuild  N     ] dev-perl/Test-Exception-0.430.0-r1::gentoo  USE="test" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 15 KiB
+[ebuild  N     ] dev-perl/Test-Warn-0.370.0::gentoo  USE="test" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 13 KiB
+[ebuild  N     ] sys-boot/efibootmgr-18-r2::gentoo  45 KiB
+[ebuild  N     ] dev-perl/Error-0.170.300-r1::gentoo  USE="test" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 33 KiB
+[ebuild  N     ] dev-util/dejagnu-1.6.3::gentoo  USE="-test" 608 KiB
+[ebuild  N     ] dev-perl/Net-SSLeay-1.960.0-r1::gentoo  USE="test -examples -minimal" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 653 KiB
+[ebuild  N     ] sys-libs/binutils-libs-2.46.1:0/2.46.1::gentoo  USE="nls test -64-bit-bfd (-cet) -multitarget -static-libs -verify-sig" 27973 KiB
+[ebuild  N     ] dev-perl/IO-Socket-SSL-2.95.0::gentoo  USE="test -examples -idn" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 270 KiB
+[ebuild  N     ] virtual/perl-libnet-3.150.0-r2::gentoo  USE="ssl" 0 KiB
+[ebuild  N     ] dev-perl/MailTools-2.220.0::gentoo  USE="test -examples" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 58 KiB
+[ebuild  N     ] dev-vcs/git-2.54.0::gentoo  USE="curl gpg iconv nls pcre perl safe-directory test webdav -cgi -cvs -doc -highlight -keyring -perforce -rust (-selinux) -subversion -tk -xinetd" PYTHON_SINGLE_TARGET="python3_14 -python3_12 -python3_13" 8545 KiB
+[ebuild  N     ] sys-boot/grub-themes-gentoo-1.0-r2::gentoo  5117 KiB
+[ebuild  N     ] sys-boot/grub-2.14-r5:2/2.14-r5::gentoo  USE="branding fonts nls themes -device-mapper -doc -efiemu -libzfs -mount -protect -sdl -secureboot (-test) -truetype -verify-sig" GRUB_PLATFORMS="efi-64 -coreboot -efi-32 -emu -ieee1275 (-loongson) -multiboot -pc -qemu (-qemu-mips) -uboot -xen -xen-32 -xen-pvh" 14183 KiB
+[ebuild  N     ] sys-devel/bc-1.08.2::gentoo  USE="readline -libedit -static" 447 KiB
+[ebuild  N     ] app-alternatives/bc-0::gentoo  USE="gnu -gh" 0 KiB
+[ebuild  N     ] app-arch/cpio-2.15::gentoo  USE="nls" 1613 KiB
+[ebuild  N     ] app-alternatives/cpio-0::gentoo  USE="gnu -libarchive (-split-usr)" 0 KiB
+[ebuild  N     ] sys-kernel/gentoo-sources-7.1.1:7.1.1::gentoo  USE="-build -experimental -symlink -vanilla" 154611 KiB
+
+Total: 51 packages (50 new, 1 reinstall), Size of downloads: 269013 KiB
+>>> Verifying ebuild manifests
+
+>>> Running pre-merge checks for sys-apps/pciutils-3.15.0
+>>> Running pre-merge checks for app-text/mandoc-1.14.6-r1
+>>> Running pre-merge checks for media-libs/freetype-2.14.3
+>>> Running pre-merge checks for sys-boot/grub-themes-gentoo-1.0-r2
+ [31;01m*[0m Your /boot partition is not mounted
+ [31;01m*[0m Please mount it and retry.
+ [31;01m*[0m ERROR: sys-boot/grub-themes-gentoo-1.0-r2::gentoo failed (pretend phase):
+ [31;01m*[0m   /boot not mounted
+ [31;01m*[0m 
+ [31;01m*[0m Call stack:
+ [31;01m*[0m                 ebuild.sh, line 143:  Called pkg_pretend
+ [31;01m*[0m                 ebuild.sh, line 379:  Called mount-boot_pkg_pretend
+ [31;01m*[0m         mount-boot.eclass, line  27:  Called mount-boot_check_status
+ [31;01m*[0m   mount-boot-utils.eclass, line  97:  Called die
+ [31;01m*[0m The specific snippet of code:
+ [31;01m*[0m   				die -n "${partition} not mounted"
+ [31;01m*[0m 
+ [31;01m*[0m If you need support, post the output of `emerge --info '=sys-boot/grub-themes-gentoo-1.0-r2::gentoo'`,
+ [31;01m*[0m the complete build log and the output of `emerge -pqv '=sys-boot/grub-themes-gentoo-1.0-r2::gentoo'`.
+ [31;01m*[0m The complete build log is located at '/var/tmp/portage/sys-boot/grub-themes-gentoo-1.0-r2/temp/build.log'.
+ [31;01m*[0m The ebuild environment file is located at '/var/tmp/portage/sys-boot/grub-themes-gentoo-1.0-r2/temp/die.env'.
+ [31;01m*[0m Working directory: '/var/tmp/portage/sys-boot/grub-themes-gentoo-1.0-r2/empty'
+ [31;01m*[0m S: '/var/tmp/portage/sys-boot/grub-themes-gentoo-1.0-r2/work/gentoo-grub-themes-1.0'
+>>> Failed to emerge sys-boot/grub-themes-gentoo-1.0-r2
+*** Resuming merge...
+
+These are the packages that would be merged, in order:
+
+Calculating dependencies  ... done!
+Dependency resolution took 1.61 s.
+
+[ebuild  N     ] dev-util/xxd-2025.08.24-r1::gentoo  20 KiB
+[ebuild  N     ] sys-apps/hwdata-0.401::gentoo  2477 KiB
+[ebuild  N     ] sys-kernel/installkernel-68::gentoo  USE="-dracut -efistub -grub -refind -systemd -systemd-boot -ugrd -uki -ukify" 33 KiB
+[ebuild  N     ] sys-devel/binutils-config-5.6::gentoo  USE="(native-symlinks)" 8 KiB
+[ebuild  N     ] media-libs/libpng-1.6.58:0/16::gentoo  USE="test -apng -static-libs" CPU_FLAGS_X86="sse" 1046 KiB
+[ebuild   R    ] sys-apps/diffutils-3.12::gentoo  USE="nls -verify-sig" 1894 KiB
+[ebuild  N     ] virtual/libelf-3-r1:0/1::gentoo  0 KiB
+[ebuild  N     ] virtual/perl-Test-Simple-1.302.210::gentoo  0 KiB
+[ebuild  N     ] virtual/perl-ExtUtils-ParseXS-3.570.0::gentoo  0 KiB
+[ebuild  N     ] virtual/perl-Module-Metadata-1.0.38-r1::gentoo  0 KiB
+[ebuild  N     ] virtual/perl-podlators-6.0.2::gentoo  0 KiB
+[ebuild  N     ] virtual/perl-version-0.993.300::gentoo  0 KiB
+[ebuild  N     ] virtual/perl-JSON-PP-4.160.0-r3::gentoo  0 KiB
+[ebuild  N     ] virtual/perl-IO-1.550.0-r1::gentoo  0 KiB
+[ebuild  N     ] virtual/perl-Digest-MD5-2.590.0::gentoo  0 KiB
+[ebuild  N     ] virtual/perl-Digest-SHA-6.40.0-r2::gentoo  0 KiB
+[ebuild  N     ] app-text/mandoc-1.14.6-r1::gentoo  USE="test -cgi (-selinux) -system-man" 681 KiB
+[ebuild  N     ] dev-perl/Sub-Uplevel-0.280.0-r1::gentoo  USE="test" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 28 KiB
+[ebuild  N     ] app-editors/vim-core-9.1.1652-r3::gentoo  USE="acl nls -minimal" 18340 KiB
+[ebuild  N     ] dev-perl/Crypt-URandom-0.550.0::gentoo  USE="test" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 24 KiB
+[ebuild  N     ] dev-perl/Digest-HMAC-1.50.0::gentoo  USE="test" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 15 KiB
+[ebuild  N     ] dev-perl/TimeDate-2.330.0-r1::gentoo  USE="test" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 30 KiB
+[ebuild  N     ] virtual/perl-CPAN-Meta-2.150.10-r11::gentoo  0 KiB
+[ebuild  N     ] dev-perl/Test-NoWarnings-1.60.0::gentoo  USE="test" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 19 KiB
+[ebuild  N     ] sys-libs/efivar-39-r1:0/1::gentoo  USE="-test" 453 KiB
+[ebuild  N     ] dev-perl/Authen-SASL-2.200.0::gentoo  USE="test -kerberos" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 41 KiB
+[ebuild  N     ] dev-perl/Module-Build-0.423.400-r5::gentoo  USE="test" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 305 KiB
+[ebuild  N     ] dev-perl/Test-Exception-0.430.0-r1::gentoo  USE="test" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 15 KiB
+[ebuild  N     ] dev-perl/Test-Warn-0.370.0::gentoo  USE="test" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 13 KiB
+[ebuild  N     ] sys-fs/dosfstools-4.2::gentoo  USE="iconv test -compat" 314 KiB
+[ebuild  N     ] dev-perl/Error-0.170.300-r1::gentoo  USE="test" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 33 KiB
+[ebuild  N     ] dev-perl/Net-SSLeay-1.960.0-r1::gentoo  USE="test -examples -minimal" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 653 KiB
+[ebuild  N     ] dev-perl/IO-Socket-SSL-2.95.0::gentoo  USE="test -examples -idn" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 270 KiB
+[ebuild  N     ] virtual/perl-libnet-3.150.0-r2::gentoo  USE="ssl" 0 KiB
+[ebuild  N     ] dev-perl/MailTools-2.220.0::gentoo  USE="test -examples" PERL_FEATURES="(-debug) -ithreads (-quadmath)" 58 KiB
+[ebuild  N     ] dev-lang/tcl-8.6.17:0/8.6::gentoo  USE="threads -debug" 6867 KiB
+[ebuild  N     ] media-libs/freetype-2.14.3:2::gentoo  USE="adobe-cff bzip2 cleartype-hinting png -X -brotli -debug -doc -fontforge -harfbuzz -static-libs -svg -utils -verify-sig" 2608 KiB
+[ebuild  N     ] dev-tcltk/expect-5.45.4-r6::gentoo  USE="-debug -doc -test -threads" 618 KiB
+[ebuild  N     ] dev-util/dejagnu-1.6.3::gentoo  USE="-test" 608 KiB
+[ebuild  N     ] sys-libs/binutils-libs-2.46.1:0/2.46.1::gentoo  USE="nls test -64-bit-bfd (-cet) -multitarget -static-libs -verify-sig" 27973 KiB
+[ebuild  N     ] virtual/libudev-251-r2:0/1::gentoo  USE="-systemd" 0 KiB
+[ebuild  N     ] sys-apps/pciutils-3.15.0::gentoo  USE="kmod udev zlib -dns -static-libs -verify-sig" 724 KiB
+[ebuild  N     ] sys-boot/efibootmgr-18-r2::gentoo  45 KiB
+[ebuild  N     ] sys-devel/bc-1.08.2::gentoo  USE="readline -libedit -static" 447 KiB
+[ebuild  N     ] app-alternatives/bc-0::gentoo  USE="gnu -gh" 0 KiB
+[ebuild  N     ] app-arch/cpio-2.15::gentoo  USE="nls" 1613 KiB
+[ebuild  N     ] app-alternatives/cpio-0::gentoo  USE="gnu -libarchive (-split-usr)" 0 KiB
+[ebuild  N     ] sys-kernel/gentoo-sources-7.1.1:7.1.1::gentoo  USE="-build -experimental -symlink -vanilla" 154611 KiB
+[ebuild  N     ] dev-vcs/git-2.54.0::gentoo  USE="curl gpg iconv nls pcre perl safe-directory test webdav -cgi -cvs -doc -highlight -keyring -perforce -rust (-selinux) -subversion -tk -xinetd" PYTHON_SINGLE_TARGET="python3_14 -python3_12 -python3_13" 8545 KiB
+
+Total: 49 packages (48 new, 1 reinstall), Size of downloads: 231411 KiB
+ * emerge --keep-going: sys-boot/grub-2.14-r5 dropped because it requires
+ * >=sys-boot/grub-themes-gentoo-1.0-r1
+>>> Running pre-merge checks for app-text/mandoc-1.14.6-r1
+>>> Running pre-merge checks for media-libs/freetype-2.14.3
+>>> Running pre-merge checks for sys-apps/pciutils-3.15.0
+>>> Jobs: 0 of 49 complete, 1 running                                   Load avg: 0.24, 0.13, 0.09
+>>> Emerging (1 of 49) dev-util/xxd-2025.08.24-r1::gentoo
+>>> Jobs: 0 of 49 complete, 1 running                                   Load avg: 0.24, 0.13, 0.09
+>>> Jobs: 0 of 49 complete, 2 running                                   Load avg: 0.24, 0.13, 0.09
+>>> Emerging (2 of 49) sys-apps/hwdata-0.401::gentoo
+>>> Jobs: 0 of 49 complete, 2 running                                   Load avg: 0.24, 0.13, 0.09
+>>> Jobs: 0 of 49 complete, 1 running                                   Load avg: 0.54, 0.19, 0.11
+>>> Jobs: 0 of 49 complete, 2 running, 1 merge wait                     Load avg: 0.54, 0.19, 0.11
+>>> Emerging (3 of 49) sys-kernel/installkernel-68::gentoo
+>>> Jobs: 0 of 49 complete, 2 running, 1 merge wait                     Load avg: 0.54, 0.19, 0.11
+>>> Jobs: 0 of 49 complete, 1 running, 1 merge wait                     Load avg: 0.54, 0.19, 0.11
+>>> Jobs: 0 of 49 complete, 2 running, 2 merge wait                     Load avg: 0.54, 0.19, 0.11
+>>> Emerging (4 of 49) sys-devel/binutils-config-5.6::gentoo
+>>> Jobs: 0 of 49 complete, 2 running, 2 merge wait                     Load avg: 0.54, 0.19, 0.11
+>>> Jobs: 0 of 49 complete, 1 running, 2 merge wait                     Load avg: 0.54, 0.19, 0.11
+>>> Jobs: 0 of 49 complete, 2 running, 3 merge wait                     Load avg: 0.54, 0.19, 0.11
+>>> Emerging (5 of 49) media-libs/libpng-1.6.58::gentoo
+>>> Jobs: 0 of 49 complete, 2 running, 3 merge wait                     Load avg: 0.54, 0.19, 0.11
+>>> Jobs: 0 of 49 complete, 1 running, 3 merge wait                     Load avg: 0.82, 0.26, 0.14
+>>> Jobs: 0 of 49 complete, 2 running, 4 merge wait                     Load avg: 0.82, 0.26, 0.14
+>>> Emerging (6 of 49) sys-apps/diffutils-3.12::gentoo
+>>> Jobs: 0 of 49 complete, 2 running, 4 merge wait                     Load avg: 0.82, 0.26, 0.14
+>>> Jobs: 0 of 49 complete, 1 running, 4 merge wait                     Load avg: 1.87, 0.62, 0.26
+>>> Jobs: 0 of 49 complete, 2 running, 5 merge wait                     Load avg: 1.87, 0.62, 0.26
+>>> Emerging (7 of 49) virtual/libelf-3-r1::gentoo
+>>> Jobs: 0 of 49 complete, 2 running, 5 merge wait                     Load avg: 1.87, 0.62, 0.26
+>>> Jobs: 0 of 49 complete, 1 running, 5 merge wait                     Load avg: 2.92, 0.85, 0.34
+>>> Jobs: 0 of 49 complete, 2 running, 6 merge wait                     Load avg: 2.92, 0.85, 0.34
+>>> Emerging (8 of 49) virtual/perl-Test-Simple-1.302.210::gentoo
+>>> Jobs: 0 of 49 complete, 2 running, 6 merge wait                     Load avg: 2.92, 0.85, 0.34
+>>> Jobs: 0 of 49 complete, 1 running, 6 merge wait                     Load avg: 3.41, 0.99, 0.39
+>>> Jobs: 0 of 49 complete, 2 running, 7 merge wait                     Load avg: 3.41, 0.99, 0.39
+>>> Emerging (9 of 49) virtual/perl-ExtUtils-ParseXS-3.570.0::gentoo
+>>> Jobs: 0 of 49 complete, 2 running, 7 merge wait                     Load avg: 3.41, 0.99, 0.39
+>>> Jobs: 0 of 49 complete, 1 running, 7 merge wait                     Load avg: 4.10, 1.17, 0.45
+>>> Jobs: 0 of 49 complete, 2 running, 8 merge wait                     Load avg: 4.10, 1.17, 0.45
+>>> Emerging (10 of 49) virtual/perl-Module-Metadata-1.0.38-r1::gentoo
+>>> Jobs: 0 of 49 complete, 2 running, 8 merge wait                     Load avg: 4.10, 1.17, 0.45
+>>> Jobs: 0 of 49 complete, 1 running, 8 merge wait                     Load avg: 5.37, 1.49, 0.56
+>>> Jobs: 0 of 49 complete, 2 running, 9 merge wait                     Load avg: 5.37, 1.49, 0.56
+>>> Emerging (11 of 49) virtual/perl-podlators-6.0.2::gentoo
+>>> Jobs: 0 of 49 complete, 2 running, 9 merge wait                     Load avg: 5.37, 1.49, 0.56
+>>> Jobs: 0 of 49 complete, 1 running, 9 merge wait                     Load avg: 5.26, 1.53, 0.58
+>>> Jobs: 0 of 49 complete, 2 running, 10 merge wait                    Load avg: 5.26, 1.53, 0.58
+>>> Emerging (12 of 49) virtual/perl-version-0.993.300::gentoo
+>>> Jobs: 0 of 49 complete, 2 running, 10 merge wait                    Load avg: 5.26, 1.53, 0.58
+>>> Jobs: 0 of 49 complete, 1 running, 10 merge wait                    Load avg: 5.08, 1.55, 0.59
+>>> Jobs: 0 of 49 complete, 2 running, 11 merge wait                    Load avg: 5.08, 1.55, 0.59
+>>> Emerging (13 of 49) virtual/perl-JSON-PP-4.160.0-r3::gentoo
+>>> Jobs: 0 of 49 complete, 2 running, 11 merge wait                    Load avg: 5.08, 1.55, 0.59
+>>> Jobs: 0 of 49 complete, 1 running, 11 merge wait                    Load avg: 5.08, 1.55, 0.59
+>>> Jobs: 0 of 49 complete, 2 running, 12 merge wait                    Load avg: 5.08, 1.55, 0.59
+>>> Emerging (14 of 49) virtual/perl-IO-1.550.0-r1::gentoo
+>>> Jobs: 0 of 49 complete, 2 running, 12 merge wait                    Load avg: 5.08, 1.55, 0.59
+>>> Jobs: 0 of 49 complete, 1 running, 12 merge wait                    Load avg: 5.08, 1.55, 0.59
+>>> Jobs: 0 of 49 complete, 2 running, 13 merge wait                    Load avg: 5.08, 1.55, 0.59
+>>> Emerging (15 of 49) virtual/perl-Digest-MD5-2.590.0::gentoo
+>>> Jobs: 0 of 49 complete, 2 running, 13 merge wait                    Load avg: 5.08, 1.55, 0.59
+>>> Jobs: 0 of 49 complete, 1 running, 13 merge wait                    Load avg: 4.91, 1.58, 0.60
+>>> Jobs: 0 of 49 complete, 2 running, 14 merge wait                    Load avg: 4.91, 1.58, 0.60
+>>> Emerging (16 of 49) virtual/perl-Digest-SHA-6.40.0-r2::gentoo
+>>> Jobs: 0 of 49 complete, 2 running, 14 merge wait                    Load avg: 4.91, 1.58, 0.60
+>>> Jobs: 0 of 49 complete, 1 running, 14 merge wait                    Load avg: 4.91, 1.58, 0.60
+>>> Jobs: 0 of 49 complete, 2 running, 15 merge wait                    Load avg: 4.91, 1.58, 0.60
+>>> Emerging (17 of 49) app-text/mandoc-1.14.6-r1::gentoo
+>>> Jobs: 0 of 49 complete, 2 running, 15 merge wait                    Load avg: 4.91, 1.58, 0.60
+>>> Jobs: 0 of 49 complete, 1 running, 15 merge wait                    Load avg: 4.68, 1.58, 0.61
+>>> Jobs: 0 of 49 complete, 2 running, 16 merge wait                    Load avg: 4.68, 1.58, 0.61
+>>> Emerging (18 of 49) dev-lang/tcl-8.6.17::gentoo
+>>> Jobs: 0 of 49 complete, 2 running, 16 merge wait                    Load avg: 4.68, 1.58, 0.61
+>>> Jobs: 0 of 49 complete, 1 running, 16 merge wait                    Load avg: 5.78, 2.15, 0.83
+>>> Jobs: 0 of 49 complete, 2 running, 17 merge wait                    Load avg: 5.78, 2.15, 0.83
+>>> Emerging (19 of 49) virtual/libudev-251-r2::gentoo
+>>> Jobs: 0 of 49 complete, 2 running, 17 merge wait                    Load avg: 5.78, 2.15, 0.83
+>>> Jobs: 0 of 49 complete, 1 running, 17 merge wait                    Load avg: 5.78, 2.15, 0.83
+>>> Jobs: 0 of 49 complete, 2 running, 18 merge wait                    Load avg: 5.78, 2.15, 0.83
+>>> Emerging (20 of 49) sys-devel/bc-1.08.2::gentoo
+>>> Jobs: 0 of 49 complete, 2 running, 18 merge wait                    Load avg: 5.78, 2.15, 0.83
+>>> Jobs: 0 of 49 complete, 1 running, 18 merge wait                    Load avg: 5.11, 2.13, 0.84
+>>> Jobs: 0 of 49 complete, 2 running, 19 merge wait                    Load avg: 5.11, 2.13, 0.84
+>>> Emerging (21 of 49) app-arch/cpio-2.15::gentoo
+>>> Jobs: 0 of 49 complete, 2 running, 19 merge wait                    Load avg: 5.11, 2.13, 0.84
+>>> Jobs: 0 of 49 complete, 1 running, 19 merge wait                    Load avg: 3.35, 2.05, 0.87
+>>> Jobs: 0 of 49 complete, 20 merge wait                               Load avg: 1.01, 1.57, 0.82
+>>> Installing (2 of 49) sys-apps/hwdata-0.401::gentoo
+>>> Jobs: 0 of 49 complete, 21 merge wait                               Load avg: 1.01, 1.57, 0.82
+>>> Installing (1 of 49) dev-util/xxd-2025.08.24-r1::gentoo
+>>> Jobs: 0 of 49 complete, 21 merge wait                               Load avg: 1.01, 1.57, 0.82
+>>> Completed (2 of 49) sys-apps/hwdata-0.401::gentoo
+>>> Jobs: 0 of 49 complete, 10 merge wait                               Load avg: 1.17, 1.59, 0.83
+>>> Installing (3 of 49) sys-kernel/installkernel-68::gentoo
+>>> Jobs: 0 of 49 complete, 10 merge wait                               Load avg: 1.17, 1.59, 0.83
+>>> Jobs: 1 of 49 complete, 10 merge wait                               Load avg: 1.17, 1.59, 0.83
+>>> Completed (1 of 49) dev-util/xxd-2025.08.24-r1::gentoo
+>>> Jobs: 1 of 49 complete, 10 merge wait                               Load avg: 1.17, 1.59, 0.83
+>>> Installing (4 of 49) sys-devel/binutils-config-5.6::gentoo
+>>> Jobs: 1 of 49 complete, 10 merge wait                               Load avg: 1.17, 1.59, 0.83
+>>> Jobs: 2 of 49 complete, 10 merge wait                               Load avg: 1.17, 1.59, 0.83
+>>> Recording sys-kernel/installkernel in "world" favorites file...
+>>> Jobs: 2 of 49 complete, 10 merge wait                               Load avg: 1.17, 1.59, 0.83
+>>> Completed (3 of 49) sys-kernel/installkernel-68::gentoo
+>>> Jobs: 2 of 49 complete, 10 merge wait                               Load avg: 1.17, 1.59, 0.83
+>>> Jobs: 3 of 49 complete, 10 merge wait                               Load avg: 1.17, 1.59, 0.83
+>>> Installing (5 of 49) media-libs/libpng-1.6.58::gentoo
+>>> Jobs: 3 of 49 complete, 10 merge wait                               Load avg: 1.17, 1.59, 0.83
+>>> Completed (4 of 49) sys-devel/binutils-config-5.6::gentoo
+>>> Jobs: 3 of 49 complete, 10 merge wait                               Load avg: 1.17, 1.59, 0.83
+>>> Jobs: 4 of 49 complete, 10 merge wait                               Load avg: 1.17, 1.59, 0.83
+>>> Installing (7 of 49) virtual/libelf-3-r1::gentoo
+>>> Jobs: 4 of 49 complete, 10 merge wait                               Load avg: 1.17, 1.59, 0.83
+>>> Completed (5 of 49) media-libs/libpng-1.6.58::gentoo
+>>> Jobs: 4 of 49 complete, 10 merge wait                               Load avg: 1.40, 1.63, 0.85
+>>> Jobs: 5 of 49 complete, 10 merge wait                               Load avg: 1.40, 1.63, 0.85
+>>> Installing (8 of 49) virtual/perl-Test-Simple-1.302.210::gentoo
+>>> Jobs: 5 of 49 complete, 10 merge wait                               Load avg: 1.40, 1.63, 0.85
+>>> Completed (7 of 49) virtual/libelf-3-r1::gentoo
+>>> Jobs: 5 of 49 complete, 10 merge wait                               Load avg: 1.40, 1.63, 0.85
+>>> Jobs: 6 of 49 complete, 10 merge wait                               Load avg: 1.40, 1.63, 0.85
+>>> Installing (9 of 49) virtual/perl-ExtUtils-ParseXS-3.570.0::gentoo
+>>> Jobs: 6 of 49 complete, 10 merge wait                               Load avg: 1.40, 1.63, 0.85
+>>> Completed (8 of 49) virtual/perl-Test-Simple-1.302.210::gentoo
+>>> Jobs: 6 of 49 complete, 10 merge wait                               Load avg: 1.40, 1.63, 0.85
+>>> Jobs: 7 of 49 complete, 10 merge wait                               Load avg: 1.40, 1.63, 0.85
+>>> Installing (10 of 49) virtual/perl-Module-Metadata-1.0.38-r1::gentoo
+>>> Jobs: 7 of 49 complete, 10 merge wait                               Load avg: 1.40, 1.63, 0.85
+>>> Completed (9 of 49) virtual/perl-ExtUtils-ParseXS-3.570.0::gentoo
+>>> Jobs: 7 of 49 complete, 10 merge wait                               Load avg: 1.40, 1.63, 0.85
+>>> Jobs: 8 of 49 complete, 10 merge wait                               Load avg: 1.40, 1.63, 0.85
+>>> Installing (11 of 49) virtual/perl-podlators-6.0.2::gentoo
+>>> Jobs: 8 of 49 complete, 10 merge wait                               Load avg: 1.40, 1.63, 0.85
+>>> Completed (10 of 49) virtual/perl-Module-Metadata-1.0.38-r1::gentoo
+>>> Jobs: 8 of 49 complete, 10 merge wait                               Load avg: 1.53, 1.66, 0.86
+>>> Jobs: 9 of 49 complete, 10 merge wait                               Load avg: 1.53, 1.66, 0.86
+>>> Installing (12 of 49) virtual/perl-version-0.993.300::gentoo
+>>> Jobs: 9 of 49 complete, 10 merge wait                               Load avg: 1.53, 1.66, 0.86
+>>> Completed (11 of 49) virtual/perl-podlators-6.0.2::gentoo
+>>> Jobs: 9 of 49 complete, 10 merge wait                               Load avg: 1.53, 1.66, 0.86
+>>> Jobs: 10 of 49 complete, 10 merge wait                              Load avg: 1.53, 1.66, 0.86
+>>> Completed (12 of 49) virtual/perl-version-0.993.300::gentoo
+>>> Jobs: 10 of 49 complete, 10 merge wait                              Load avg: 1.53, 1.66, 0.86
+>>> Jobs: 11 of 49 complete, 10 merge wait                              Load avg: 1.53, 1.66, 0.86
+>>> Jobs: 11 of 49 complete, 1 running, 10 merge wait                   Load avg: 1.53, 1.66, 0.86
+>>> Emerging (22 of 49) dev-perl/Sub-Uplevel-0.280.0-r1::gentoo
+>>> Jobs: 11 of 49 complete, 1 running, 10 merge wait                   Load avg: 1.53, 1.66, 0.86
+>>> Jobs: 11 of 49 complete, 2 running, 10 merge wait                   Load avg: 1.53, 1.66, 0.86
+>>> Emerging (23 of 49) app-editors/vim-core-9.1.1652-r3::gentoo
+>>> Jobs: 11 of 49 complete, 2 running, 10 merge wait                   Load avg: 1.53, 1.66, 0.86
+>>> Jobs: 11 of 49 complete, 1 running, 10 merge wait                   Load avg: 1.48, 1.65, 0.86
+>>> Jobs: 11 of 49 complete, 2 running, 11 merge wait                   Load avg: 1.48, 1.65, 0.86
+>>> Emerging (24 of 49) dev-perl/Crypt-URandom-0.550.0::gentoo
+>>> Jobs: 11 of 49 complete, 2 running, 11 merge wait                   Load avg: 1.48, 1.65, 0.86
+>>> Jobs: 11 of 49 complete, 1 running, 11 merge wait                   Load avg: 1.52, 1.65, 0.87
+>>> Jobs: 11 of 49 complete, 2 running, 12 merge wait                   Load avg: 1.52, 1.65, 0.87
+>>> Emerging (25 of 49) dev-perl/TimeDate-2.330.0-r1::gentoo
+>>> Jobs: 11 of 49 complete, 2 running, 12 merge wait                   Load avg: 1.52, 1.65, 0.87
+>>> Jobs: 11 of 49 complete, 1 running, 12 merge wait                   Load avg: 1.48, 1.64, 0.87
+>>> Jobs: 11 of 49 complete, 2 running, 13 merge wait                   Load avg: 1.48, 1.64, 0.87
+>>> Emerging (26 of 49) dev-perl/Test-NoWarnings-1.60.0::gentoo
+>>> Jobs: 11 of 49 complete, 2 running, 13 merge wait                   Load avg: 1.48, 1.64, 0.87
+>>> Jobs: 11 of 49 complete, 1 running, 13 merge wait                   Load avg: 2.27, 1.80, 0.93
+>>> Jobs: 11 of 49 complete, 2 running, 14 merge wait                   Load avg: 2.27, 1.80, 0.93
+>>> Emerging (27 of 49) media-libs/freetype-2.14.3::gentoo
+>>> Jobs: 11 of 49 complete, 2 running, 14 merge wait                   Load avg: 2.27, 1.80, 0.93
+>>> Jobs: 11 of 49 complete, 1 running, 14 merge wait                   Load avg: 5.80, 2.70, 1.25
+>>> Jobs: 11 of 49 complete, 15 merge wait                              Load avg: 5.42, 2.67, 1.25
+>>> Installing (6 of 49) sys-apps/diffutils-3.12::gentoo
+>>> Jobs: 11 of 49 complete, 16 merge wait                              Load avg: 5.42, 2.67, 1.25
+>>> Completed (6 of 49) sys-apps/diffutils-3.12::gentoo
+>>> Jobs: 11 of 49 complete, 15 merge wait                              Load avg: 5.42, 2.67, 1.25
+>>> Jobs: 12 of 49 complete, 15 merge wait                              Load avg: 5.42, 2.67, 1.25
+>>> Installing (13 of 49) virtual/perl-JSON-PP-4.160.0-r3::gentoo
+>>> Jobs: 12 of 49 complete, 15 merge wait                              Load avg: 5.42, 2.67, 1.25
+>>> Installing (14 of 49) virtual/perl-IO-1.550.0-r1::gentoo
+>>> Jobs: 12 of 49 complete, 15 merge wait                              Load avg: 5.42, 2.67, 1.25
+>>> Completed (13 of 49) virtual/perl-JSON-PP-4.160.0-r3::gentoo
+>>> Jobs: 12 of 49 complete                                             Load avg: 5.15, 2.66, 1.26
+>>> Installing (15 of 49) virtual/perl-Digest-MD5-2.590.0::gentoo
+>>> Jobs: 12 of 49 complete                                             Load avg: 5.15, 2.66, 1.26
+>>> Jobs: 13 of 49 complete                                             Load avg: 5.15, 2.66, 1.26
+>>> Completed (14 of 49) virtual/perl-IO-1.550.0-r1::gentoo
+>>> Jobs: 13 of 49 complete                                             Load avg: 5.15, 2.66, 1.26
+>>> Installing (16 of 49) virtual/perl-Digest-SHA-6.40.0-r2::gentoo
+>>> Jobs: 13 of 49 complete                                             Load avg: 5.15, 2.66, 1.26
+>>> Jobs: 14 of 49 complete                                             Load avg: 5.15, 2.66, 1.26
+>>> Completed (15 of 49) virtual/perl-Digest-MD5-2.590.0::gentoo
+>>> Jobs: 14 of 49 complete                                             Load avg: 5.15, 2.66, 1.26
+>>> Jobs: 15 of 49 complete                                             Load avg: 5.15, 2.66, 1.26
+>>> Installing (17 of 49) app-text/mandoc-1.14.6-r1::gentoo
+>>> Jobs: 15 of 49 complete                                             Load avg: 5.15, 2.66, 1.26
+>>> Completed (16 of 49) virtual/perl-Digest-SHA-6.40.0-r2::gentoo
+>>> Jobs: 15 of 49 complete                                             Load avg: 5.15, 2.66, 1.26
+>>> Jobs: 16 of 49 complete                                             Load avg: 5.15, 2.66, 1.26
+>>> Installing (19 of 49) virtual/libudev-251-r2::gentoo
+>>> Jobs: 16 of 49 complete                                             Load avg: 5.15, 2.66, 1.26
+>>> Completed (17 of 49) app-text/mandoc-1.14.6-r1::gentoo
+>>> Jobs: 16 of 49 complete                                             Load avg: 4.89, 2.65, 1.26
+>>> Jobs: 17 of 49 complete                                             Load avg: 4.89, 2.65, 1.26
+>>> Installing (20 of 49) sys-devel/bc-1.08.2::gentoo
+>>> Jobs: 17 of 49 complete                                             Load avg: 4.89, 2.65, 1.26
+>>> Completed (19 of 49) virtual/libudev-251-r2::gentoo
+>>> Jobs: 17 of 49 complete                                             Load avg: 4.89, 2.65, 1.26
+>>> Jobs: 18 of 49 complete                                             Load avg: 4.89, 2.65, 1.26
+>>> Installing (21 of 49) app-arch/cpio-2.15::gentoo
+>>> Jobs: 18 of 49 complete                                             Load avg: 4.89, 2.65, 1.26
+>>> Completed (20 of 49) sys-devel/bc-1.08.2::gentoo
+>>> Jobs: 18 of 49 complete                                             Load avg: 4.89, 2.65, 1.26
+>>> Jobs: 19 of 49 complete                                             Load avg: 4.89, 2.65, 1.26
+>>> Installing (18 of 49) dev-lang/tcl-8.6.17::gentoo
+>>> Jobs: 19 of 49 complete                                             Load avg: 4.89, 2.65, 1.26
+>>> Completed (21 of 49) app-arch/cpio-2.15::gentoo
+>>> Jobs: 19 of 49 complete                                             Load avg: 4.89, 2.65, 1.26
+>>> Jobs: 20 of 49 complete                                             Load avg: 4.89, 2.65, 1.26
+>>> Installing (22 of 49) dev-perl/Sub-Uplevel-0.280.0-r1::gentoo
+>>> Jobs: 20 of 49 complete                                             Load avg: 4.89, 2.65, 1.26
+>>> Completed (22 of 49) dev-perl/Sub-Uplevel-0.280.0-r1::gentoo
+>>> Jobs: 20 of 49 complete                                             Load avg: 4.89, 2.65, 1.26
+>>> Jobs: 21 of 49 complete                                             Load avg: 4.89, 2.65, 1.26
+>>> Installing (24 of 49) dev-perl/Crypt-URandom-0.550.0::gentoo
+>>> Jobs: 21 of 49 complete                                             Load avg: 4.89, 2.65, 1.26
+>>> Completed (18 of 49) dev-lang/tcl-8.6.17::gentoo
+>>> Jobs: 21 of 49 complete                                             Load avg: 4.66, 2.64, 1.27
+>>> Jobs: 22 of 49 complete                                             Load avg: 4.66, 2.64, 1.27
+>>> Installing (25 of 49) dev-perl/TimeDate-2.330.0-r1::gentoo
+>>> Jobs: 22 of 49 complete                                             Load avg: 4.66, 2.64, 1.27
+>>> Completed (24 of 49) dev-perl/Crypt-URandom-0.550.0::gentoo
+>>> Jobs: 22 of 49 complete                                             Load avg: 4.66, 2.64, 1.27
+>>> Jobs: 23 of 49 complete                                             Load avg: 4.66, 2.64, 1.27
+>>> Installing (26 of 49) dev-perl/Test-NoWarnings-1.60.0::gentoo
+>>> Jobs: 23 of 49 complete                                             Load avg: 4.66, 2.64, 1.27
+>>> Completed (25 of 49) dev-perl/TimeDate-2.330.0-r1::gentoo
+>>> Jobs: 23 of 49 complete                                             Load avg: 4.66, 2.64, 1.27
+>>> Jobs: 24 of 49 complete                                             Load avg: 4.66, 2.64, 1.27
+>>> Installing (27 of 49) media-libs/freetype-2.14.3::gentoo
+>>> Jobs: 24 of 49 complete                                             Load avg: 4.66, 2.64, 1.27
+>>> Completed (26 of 49) dev-perl/Test-NoWarnings-1.60.0::gentoo
+>>> Jobs: 24 of 49 complete                                             Load avg: 4.66, 2.64, 1.27
+>>> Jobs: 25 of 49 complete                                             Load avg: 4.66, 2.64, 1.27
+>>> Installing (23 of 49) app-editors/vim-core-9.1.1652-r3::gentoo
+>>> Jobs: 25 of 49 complete                                             Load avg: 4.66, 2.64, 1.27
+>>> Completed (27 of 49) media-libs/freetype-2.14.3::gentoo
+>>> Jobs: 25 of 49 complete                                             Load avg: 4.66, 2.64, 1.27
+>>> Jobs: 26 of 49 complete                                             Load avg: 4.66, 2.64, 1.27
+>>> Completed (23 of 49) app-editors/vim-core-9.1.1652-r3::gentoo
+>>> Jobs: 26 of 49 complete                                             Load avg: 4.37, 2.61, 1.26
+>>> Jobs: 27 of 49 complete                                             Load avg: 4.37, 2.61, 1.26
+>>> Jobs: 27 of 49 complete, 1 running                                  Load avg: 4.37, 2.61, 1.26
+>>> Emerging (28 of 49) dev-perl/Digest-HMAC-1.50.0::gentoo
+>>> Jobs: 27 of 49 complete, 1 running                                  Load avg: 4.37, 2.61, 1.26
+>>> Jobs: 27 of 49 complete, 2 running                                  Load avg: 4.37, 2.61, 1.26
+>>> Emerging (29 of 49) virtual/perl-CPAN-Meta-2.150.10-r11::gentoo
+>>> Jobs: 27 of 49 complete, 2 running                                  Load avg: 4.37, 2.61, 1.26
+>>> Jobs: 27 of 49 complete, 1 running                                  Load avg: 4.42, 2.65, 1.29
+>>> Jobs: 27 of 49 complete, 2 running, 1 merge wait                    Load avg: 4.42, 2.65, 1.29
+>>> Emerging (30 of 49) sys-libs/efivar-39-r1::gentoo
+>>> Jobs: 27 of 49 complete, 2 running, 1 merge wait                    Load avg: 4.42, 2.65, 1.29
+>>> Jobs: 27 of 49 complete, 1 running, 1 merge wait                    Load avg: 4.42, 2.65, 1.29
+>>> Jobs: 27 of 49 complete, 2 running, 2 merge wait                    Load avg: 4.42, 2.65, 1.29
+>>> Emerging (31 of 49) dev-perl/Test-Exception-0.430.0-r1::gentoo
+>>> Jobs: 27 of 49 complete, 2 running, 2 merge wait                    Load avg: 4.42, 2.65, 1.29
+>>> Jobs: 27 of 49 complete, 1 running, 2 merge wait                    Load avg: 4.39, 2.67, 1.30
+>>> Jobs: 27 of 49 complete, 2 running, 3 merge wait                    Load avg: 4.39, 2.67, 1.30
+>>> Emerging (32 of 49) dev-perl/Test-Warn-0.370.0::gentoo
+>>> Jobs: 27 of 49 complete, 2 running, 3 merge wait                    Load avg: 4.39, 2.67, 1.30
+>>> Jobs: 27 of 49 complete, 1 running, 3 merge wait                    Load avg: 4.39, 2.67, 1.30
+>>> Jobs: 27 of 49 complete, 2 running, 4 merge wait                    Load avg: 4.11, 2.64, 1.30
+>>> Emerging (33 of 49) sys-fs/dosfstools-4.2::gentoo
+>>> Jobs: 27 of 49 complete, 2 running, 4 merge wait                    Load avg: 4.11, 2.64, 1.30
+>>> Jobs: 27 of 49 complete, 1 running, 4 merge wait                    Load avg: 4.11, 2.64, 1.30
+>>> Jobs: 27 of 49 complete, 2 running, 5 merge wait                    Load avg: 4.11, 2.64, 1.30
+>>> Emerging (34 of 49) dev-tcltk/expect-5.45.4-r6::gentoo
+>>> Jobs: 27 of 49 complete, 2 running, 5 merge wait                    Load avg: 4.11, 2.64, 1.30
+>>> Jobs: 27 of 49 complete, 1 running, 5 merge wait                    Load avg: 3.79, 2.62, 1.31
+>>> Jobs: 27 of 49 complete, 2 running, 6 merge wait                    Load avg: 3.79, 2.62, 1.31
+>>> Emerging (35 of 49) sys-apps/pciutils-3.15.0::gentoo
+>>> Jobs: 27 of 49 complete, 2 running, 6 merge wait                    Load avg: 3.79, 2.62, 1.31
+>>> Jobs: 27 of 49 complete, 1 running, 6 merge wait                    Load avg: 3.65, 2.61, 1.31
+>>> Jobs: 27 of 49 complete, 2 running, 7 merge wait                    Load avg: 3.65, 2.61, 1.31
+>>> Emerging (36 of 49) app-alternatives/bc-0::gentoo
+>>> Jobs: 27 of 49 complete, 2 running, 7 merge wait                    Load avg: 3.65, 2.61, 1.31
+>>> Jobs: 27 of 49 complete, 1 running, 7 merge wait                    Load avg: 3.65, 2.61, 1.31
+>>> Jobs: 27 of 49 complete, 2 running, 8 merge wait                    Load avg: 3.65, 2.61, 1.31
+>>> Emerging (37 of 49) app-alternatives/cpio-0::gentoo
+>>> Jobs: 27 of 49 complete, 2 running, 8 merge wait                    Load avg: 3.65, 2.61, 1.31
+>>> Jobs: 27 of 49 complete, 1 running, 8 merge wait                    Load avg: 3.59, 2.62, 1.32
+>>> Jobs: 27 of 49 complete, 9 merge wait                               Load avg: 3.59, 2.62, 1.32
+>>> Installing (28 of 49) dev-perl/Digest-HMAC-1.50.0::gentoo
+>>> Jobs: 27 of 49 complete, 10 merge wait                              Load avg: 3.59, 2.62, 1.32
+>>> Installing (29 of 49) virtual/perl-CPAN-Meta-2.150.10-r11::gentoo
+>>> Jobs: 27 of 49 complete, 10 merge wait                              Load avg: 3.59, 2.62, 1.32
+>>> Completed (28 of 49) dev-perl/Digest-HMAC-1.50.0::gentoo
+>>> Jobs: 27 of 49 complete                                             Load avg: 3.47, 2.61, 1.32
+>>> Installing (30 of 49) sys-libs/efivar-39-r1::gentoo
+>>> Jobs: 27 of 49 complete                                             Load avg: 3.47, 2.61, 1.32
+>>> Jobs: 28 of 49 complete                                             Load avg: 3.47, 2.61, 1.32
+>>> Completed (29 of 49) virtual/perl-CPAN-Meta-2.150.10-r11::gentoo
+>>> Jobs: 28 of 49 complete                                             Load avg: 3.47, 2.61, 1.32
+>>> Installing (31 of 49) dev-perl/Test-Exception-0.430.0-r1::gentoo
+>>> Jobs: 28 of 49 complete                                             Load avg: 3.47, 2.61, 1.32
+>>> Jobs: 29 of 49 complete                                             Load avg: 3.47, 2.61, 1.32
+>>> Completed (30 of 49) sys-libs/efivar-39-r1::gentoo
+>>> Jobs: 29 of 49 complete                                             Load avg: 3.47, 2.61, 1.32
+>>> Jobs: 30 of 49 complete                                             Load avg: 3.47, 2.61, 1.32
+>>> Installing (32 of 49) dev-perl/Test-Warn-0.370.0::gentoo
+>>> Jobs: 30 of 49 complete                                             Load avg: 3.47, 2.61, 1.32
+>>> Completed (31 of 49) dev-perl/Test-Exception-0.430.0-r1::gentoo
+>>> Jobs: 30 of 49 complete                                             Load avg: 3.47, 2.61, 1.32
+>>> Jobs: 31 of 49 complete                                             Load avg: 3.47, 2.61, 1.32
+>>> Installing (33 of 49) sys-fs/dosfstools-4.2::gentoo
+>>> Jobs: 31 of 49 complete                                             Load avg: 3.47, 2.61, 1.32
+>>> Completed (32 of 49) dev-perl/Test-Warn-0.370.0::gentoo
+>>> Jobs: 31 of 49 complete                                             Load avg: 3.47, 2.61, 1.32
+>>> Jobs: 32 of 49 complete                                             Load avg: 3.47, 2.61, 1.32
+>>> Installing (35 of 49) sys-apps/pciutils-3.15.0::gentoo
+>>> Jobs: 32 of 49 complete                                             Load avg: 3.47, 2.61, 1.32
+>>> Recording sys-fs/dosfstools in "world" favorites file...
+>>> Jobs: 32 of 49 complete                                             Load avg: 3.47, 2.61, 1.32
+>>> Completed (33 of 49) sys-fs/dosfstools-4.2::gentoo
+>>> Jobs: 32 of 49 complete                                             Load avg: 3.47, 2.61, 1.32
+>>> Jobs: 33 of 49 complete                                             Load avg: 3.47, 2.61, 1.32
+>>> Installing (34 of 49) dev-tcltk/expect-5.45.4-r6::gentoo
+>>> Jobs: 33 of 49 complete                                             Load avg: 3.47, 2.61, 1.32
+>>> Completed (35 of 49) sys-apps/pciutils-3.15.0::gentoo
+>>> Jobs: 33 of 49 complete                                             Load avg: 3.35, 2.60, 1.33
+>>> Jobs: 34 of 49 complete                                             Load avg: 3.35, 2.60, 1.33
+>>> Installing (36 of 49) app-alternatives/bc-0::gentoo
+>>> Jobs: 34 of 49 complete                                             Load avg: 3.35, 2.60, 1.33
+>>> Completed (34 of 49) dev-tcltk/expect-5.45.4-r6::gentoo
+>>> Jobs: 34 of 49 complete                                             Load avg: 3.35, 2.60, 1.33
+>>> Jobs: 35 of 49 complete                                             Load avg: 3.35, 2.60, 1.33
+>>> Installing (37 of 49) app-alternatives/cpio-0::gentoo
+>>> Jobs: 35 of 49 complete                                             Load avg: 3.35, 2.60, 1.33
+>>> Completed (36 of 49) app-alternatives/bc-0::gentoo
+>>> Jobs: 35 of 49 complete                                             Load avg: 3.35, 2.60, 1.33
+>>> Jobs: 36 of 49 complete                                             Load avg: 3.35, 2.60, 1.33
+>>> Completed (37 of 49) app-alternatives/cpio-0::gentoo
+>>> Jobs: 36 of 49 complete                                             Load avg: 3.35, 2.60, 1.33
+>>> Jobs: 37 of 49 complete                                             Load avg: 3.35, 2.60, 1.33
+>>> Jobs: 37 of 49 complete, 1 running                                  Load avg: 3.35, 2.60, 1.33
+>>> Emerging (38 of 49) dev-perl/Authen-SASL-2.200.0::gentoo
+>>> Jobs: 37 of 49 complete, 1 running                                  Load avg: 3.35, 2.60, 1.33
+>>> Jobs: 37 of 49 complete, 2 running                                  Load avg: 3.16, 2.57, 1.32
+>>> Emerging (39 of 49) dev-perl/Module-Build-0.423.400-r5::gentoo
+>>> Jobs: 37 of 49 complete, 2 running                                  Load avg: 3.16, 2.57, 1.32
+>>> Jobs: 37 of 49 complete, 1 running                                  Load avg: 3.16, 2.57, 1.32
+>>> Jobs: 37 of 49 complete, 2 running, 1 merge wait                    Load avg: 3.16, 2.57, 1.32
+>>> Emerging (40 of 49) dev-perl/Net-SSLeay-1.960.0-r1::gentoo
+>>> Jobs: 37 of 49 complete, 2 running, 1 merge wait                    Load avg: 3.16, 2.57, 1.32
+>>> Jobs: 37 of 49 complete, 1 running, 1 merge wait                    Load avg: 3.59, 2.70, 1.39
+>>> Jobs: 37 of 49 complete, 2 running, 2 merge wait                    Load avg: 3.59, 2.70, 1.39
+>>> Emerging (41 of 49) dev-util/dejagnu-1.6.3::gentoo
+>>> Jobs: 37 of 49 complete, 2 running, 2 merge wait                    Load avg: 3.59, 2.70, 1.39
+>>> Jobs: 37 of 49 complete, 1 running, 2 merge wait                    Load avg: 3.59, 2.70, 1.39
+>>> Jobs: 37 of 49 complete, 2 running, 3 merge wait                    Load avg: 3.59, 2.70, 1.39
+>>> Emerging (42 of 49) sys-boot/efibootmgr-18-r2::gentoo
+>>> Jobs: 37 of 49 complete, 2 running, 3 merge wait                    Load avg: 3.59, 2.70, 1.39
+>>> Jobs: 37 of 49 complete, 1 running, 3 merge wait                    Load avg: 3.30, 2.66, 1.38
+>>> Jobs: 37 of 49 complete, 4 merge wait                               Load avg: 3.30, 2.66, 1.38
+>>> Installing (38 of 49) dev-perl/Authen-SASL-2.200.0::gentoo
+>>> Jobs: 37 of 49 complete, 5 merge wait                               Load avg: 3.30, 2.66, 1.38
+>>> Installing (40 of 49) dev-perl/Net-SSLeay-1.960.0-r1::gentoo
+>>> Jobs: 37 of 49 complete, 5 merge wait                               Load avg: 3.30, 2.66, 1.38
+>>> Completed (38 of 49) dev-perl/Authen-SASL-2.200.0::gentoo
+>>> Jobs: 37 of 49 complete                                             Load avg: 3.19, 2.65, 1.38
+>>> Installing (39 of 49) dev-perl/Module-Build-0.423.400-r5::gentoo
+>>> Jobs: 37 of 49 complete                                             Load avg: 3.19, 2.65, 1.38
+>>> Jobs: 38 of 49 complete                                             Load avg: 3.19, 2.65, 1.38
+>>> Completed (40 of 49) dev-perl/Net-SSLeay-1.960.0-r1::gentoo
+>>> Jobs: 38 of 49 complete                                             Load avg: 3.19, 2.65, 1.38
+>>> Installing (41 of 49) dev-util/dejagnu-1.6.3::gentoo
+>>> Jobs: 38 of 49 complete                                             Load avg: 3.19, 2.65, 1.38
+>>> Jobs: 39 of 49 complete                                             Load avg: 3.19, 2.65, 1.38
+>>> Completed (39 of 49) dev-perl/Module-Build-0.423.400-r5::gentoo
+>>> Jobs: 39 of 49 complete                                             Load avg: 3.19, 2.65, 1.38
+>>> Jobs: 40 of 49 complete                                             Load avg: 3.19, 2.65, 1.38
+>>> Installing (42 of 49) sys-boot/efibootmgr-18-r2::gentoo
+>>> Jobs: 40 of 49 complete                                             Load avg: 3.19, 2.65, 1.38
+>>> Completed (41 of 49) dev-util/dejagnu-1.6.3::gentoo
+>>> Jobs: 40 of 49 complete                                             Load avg: 3.19, 2.65, 1.38
+>>> Jobs: 41 of 49 complete                                             Load avg: 3.19, 2.65, 1.38
+>>> Recording sys-boot/efibootmgr in "world" favorites file...
+>>> Jobs: 41 of 49 complete                                             Load avg: 2.94, 2.60, 1.38
+>>> Completed (42 of 49) sys-boot/efibootmgr-18-r2::gentoo
+>>> Jobs: 41 of 49 complete                                             Load avg: 2.94, 2.60, 1.38
+>>> Jobs: 42 of 49 complete                                             Load avg: 2.94, 2.60, 1.38
+>>> Jobs: 42 of 49 complete, 1 running                                  Load avg: 2.94, 2.60, 1.38
+>>> Emerging (43 of 49) dev-perl/Error-0.170.300-r1::gentoo
+>>> Jobs: 42 of 49 complete, 1 running                                  Load avg: 2.94, 2.60, 1.38
+>>> Jobs: 42 of 49 complete, 2 running                                  Load avg: 2.94, 2.60, 1.38
+>>> Emerging (44 of 49) dev-perl/IO-Socket-SSL-2.95.0::gentoo
+>>> Jobs: 42 of 49 complete, 2 running                                  Load avg: 2.94, 2.60, 1.38
+>>> Jobs: 42 of 49 complete, 1 running                                  Load avg: 2.78, 2.58, 1.37
+>>> Jobs: 42 of 49 complete, 2 running, 1 merge wait                    Load avg: 2.78, 2.58, 1.37
+>>> Emerging (45 of 49) sys-libs/binutils-libs-2.46.1::gentoo
+>>> Jobs: 42 of 49 complete, 2 running, 1 merge wait                    Load avg: 2.78, 2.58, 1.37
+>>> Jobs: 42 of 49 complete, 1 running, 1 merge wait                    Load avg: 3.50, 2.75, 1.48
+>>> Jobs: 42 of 49 complete, 2 merge wait                               Load avg: 2.80, 2.63, 1.46
+>>> Installing (43 of 49) dev-perl/Error-0.170.300-r1::gentoo
+>>> Jobs: 42 of 49 complete, 3 merge wait                               Load avg: 2.80, 2.63, 1.46
+>>> Installing (44 of 49) dev-perl/IO-Socket-SSL-2.95.0::gentoo
+>>> Jobs: 42 of 49 complete, 3 merge wait                               Load avg: 2.80, 2.63, 1.46
+>>> Completed (43 of 49) dev-perl/Error-0.170.300-r1::gentoo
+>>> Jobs: 42 of 49 complete                                             Load avg: 2.80, 2.63, 1.46
+>>> Installing (45 of 49) sys-libs/binutils-libs-2.46.1::gentoo
+>>> Jobs: 42 of 49 complete                                             Load avg: 2.80, 2.63, 1.46
+>>> Jobs: 43 of 49 complete                                             Load avg: 2.80, 2.63, 1.46
+>>> Completed (44 of 49) dev-perl/IO-Socket-SSL-2.95.0::gentoo
+>>> Jobs: 43 of 49 complete                                             Load avg: 2.80, 2.63, 1.46
+>>> Jobs: 44 of 49 complete                                             Load avg: 2.80, 2.63, 1.46
+>>> Completed (45 of 49) sys-libs/binutils-libs-2.46.1::gentoo
+>>> Jobs: 44 of 49 complete                                             Load avg: 2.66, 2.60, 1.46
+>>> Jobs: 45 of 49 complete                                             Load avg: 2.66, 2.60, 1.46
+>>> Jobs: 45 of 49 complete, 1 running                                  Load avg: 2.66, 2.60, 1.46
+>>> Emerging (46 of 49) virtual/perl-libnet-3.150.0-r2::gentoo
+>>> Jobs: 45 of 49 complete, 1 running                                  Load avg: 2.66, 2.60, 1.46
+>>> Jobs: 45 of 49 complete, 2 running                                  Load avg: 2.66, 2.60, 1.46
+>>> Emerging (47 of 49) sys-kernel/gentoo-sources-7.1.1::gentoo
+>>> Jobs: 45 of 49 complete, 2 running                                  Load avg: 2.66, 2.60, 1.46
+>>> Jobs: 45 of 49 complete, 1 running                                  Load avg: 2.61, 2.59, 1.46
+>>> Jobs: 45 of 49 complete, 1 merge wait                               Load avg: 1.62, 2.29, 1.43
+>>> Installing (46 of 49) virtual/perl-libnet-3.150.0-r2::gentoo
+>>> Jobs: 45 of 49 complete, 2 merge wait                               Load avg: 1.62, 2.29, 1.43
+>>> Installing (47 of 49) sys-kernel/gentoo-sources-7.1.1::gentoo
+>>> Jobs: 45 of 49 complete, 2 merge wait                               Load avg: 1.62, 2.29, 1.43
+>>> Completed (46 of 49) virtual/perl-libnet-3.150.0-r2::gentoo
+>>> Jobs: 45 of 49 complete                                             Load avg: 1.62, 2.29, 1.43
+>>> Jobs: 46 of 49 complete                                             Load avg: 1.62, 2.29, 1.43
+>>> Recording sys-kernel/gentoo-sources in "world" favorites file...
+>>> Jobs: 46 of 49 complete                                             Load avg: 1.47, 2.21, 1.43
+>>> Completed (47 of 49) sys-kernel/gentoo-sources-7.1.1::gentoo
+>>> Jobs: 46 of 49 complete                                             Load avg: 1.47, 2.21, 1.43
+>>> Jobs: 47 of 49 complete                                             Load avg: 1.47, 2.21, 1.43
+>>> Jobs: 47 of 49 complete, 1 running                                  Load avg: 1.47, 2.21, 1.43
+>>> Emerging (48 of 49) dev-perl/MailTools-2.220.0::gentoo
+>>> Jobs: 47 of 49 complete, 1 running                                  Load avg: 1.47, 2.21, 1.43
+>>> Jobs: 47 of 49 complete                                             Load avg: 1.43, 2.19, 1.42
+>>> Installing (48 of 49) dev-perl/MailTools-2.220.0::gentoo
+>>> Jobs: 47 of 49 complete, 1 merge wait                               Load avg: 1.43, 2.19, 1.42
+>>> Completed (48 of 49) dev-perl/MailTools-2.220.0::gentoo
+>>> Jobs: 47 of 49 complete                                             Load avg: 1.40, 2.17, 1.42
+>>> Jobs: 48 of 49 complete                                             Load avg: 1.40, 2.17, 1.42
+>>> Jobs: 48 of 49 complete, 1 running                                  Load avg: 1.40, 2.17, 1.42
+>>> Emerging (49 of 49) dev-vcs/git-2.54.0::gentoo
+>>> Jobs: 48 of 49 complete, 1 running                                  Load avg: 1.40, 2.17, 1.42
+>>> Jobs: 48 of 49 complete                                             Load avg: 3.31, 6.34, 4.77
+>>> Installing (49 of 49) dev-vcs/git-2.54.0::gentoo
+>>> Jobs: 48 of 49 complete, 1 merge wait                               Load avg: 3.31, 6.34, 4.77
+>>> Recording dev-vcs/git in "world" favorites file...
+>>> Jobs: 48 of 49 complete                                             Load avg: 3.12, 6.26, 4.75
+>>> Completed (49 of 49) dev-vcs/git-2.54.0::gentoo
+>>> Jobs: 48 of 49 complete                                             Load avg: 3.12, 6.26, 4.75
+>>> Jobs: 49 of 49 complete                                             Load avg: 3.12, 6.26, 4.75
+
+
+ * Error messages for package sys-boot/grub-themes-gentoo-1.0-r2:
+ * Your /boot partition is not mounted
+ * Please mount it and retry.
+ * ERROR: sys-boot/grub-themes-gentoo-1.0-r2::gentoo failed (pretend phase):
+ *   /boot not mounted
+ * Call stack:
+ *                 ebuild.sh, line 143:  Called pkg_pretend
+ *                 ebuild.sh, line 379:  Called mount-boot_pkg_pretend
+ *         mount-boot.eclass, line  27:  Called mount-boot_check_status
+ *   mount-boot-utils.eclass, line  97:  Called die
+ * The specific snippet of code:
+ *   				die -n "${partition} not mounted"
+ * If you need support, post the output of `emerge --info '=sys-boot/grub-themes-gentoo-1.0-r2::gentoo'`,
+ * the complete build log and the output of `emerge -pqv '=sys-boot/grub-themes-gentoo-1.0-r2::gentoo'`.
+ * The complete build log is located at '/var/tmp/portage/sys-boot/grub-themes-gentoo-1.0-r2/temp/build.log'.
+ * The ebuild environment file is located at '/var/tmp/portage/sys-boot/grub-themes-gentoo-1.0-r2/temp/die.env'.
+ * Working directory: '/var/tmp/portage/sys-boot/grub-themes-gentoo-1.0-r2/empty'
+ * S: '/var/tmp/portage/sys-boot/grub-themes-gentoo-1.0-r2/work/gentoo-grub-themes-1.0'
+
+
+ * Error messages for package app-alternatives/bc-0:
+ * This package will overwrite one or more files that may belong to other
+ * packages (see list below). You can use a command such as `portageq
+ * owners / <filename>` to identify the installed package that owns a
+ * file. If portageq reports that only one package owns a file then do
+ * NOT file a bug report. A bug report is only useful if it identifies at
+ * least two or more packages that are known to install the same file(s).
+ * If a collision occurs and you can not explain where the file came from
+ * then you should simply ignore the collision since there is not enough
+ * information to determine if a real problem exists. Please do NOT file
+ * a bug report at https://bugs.gentoo.org/ unless you report exactly
+ * which two packages install the same file(s). See
+ * https://wiki.gentoo.org/wiki/Knowledge_Base:Blockers for tips on how
+ * to solve the problem. And once again, please do NOT file a bug report
+ * unless you have completely understood the above message.
+ * 
+ * Detected file collision(s):
+ * 
+ * 	/usr/bin/dc
+ * 	/usr/bin/bc
+ * 
+ * Searching all installed packages for file collisions...
+ * 
+ * Press Ctrl-C to Stop
+ * 
+
+
+ * Error messages for package app-alternatives/cpio-0:
+ * This package will overwrite one or more files that may belong to other
+ * packages (see list below). You can use a command such as `portageq
+ * owners / <filename>` to identify the installed package that owns a
+ * file. If portageq reports that only one package owns a file then do
+ * NOT file a bug report. A bug report is only useful if it identifies at
+ * least two or more packages that are known to install the same file(s).
+ * If a collision occurs and you can not explain where the file came from
+ * then you should simply ignore the collision since there is not enough
+ * information to determine if a real problem exists. Please do NOT file
+ * a bug report at https://bugs.gentoo.org/ unless you report exactly
+ * which two packages install the same file(s). See
+ * https://wiki.gentoo.org/wiki/Knowledge_Base:Blockers for tips on how
+ * to solve the problem. And once again, please do NOT file a bug report
+ * unless you have completely understood the above message.
+ * 
+ * Detected file collision(s):
+ * 
+ * 	/bin/cpio
+ * 
+ * Searching all installed packages for file collisions...
+ * 
+ * Press Ctrl-C to Stop
+ * 
+ * 
+ * The following 2 packages have failed to build, install, or execute
+ * postinst:
+ * 
+ *  (sys-boot/grub-themes-gentoo-1.0-r2:0/0::gentoo, ebuild scheduled for merge)
+ *  (sys-boot/grub-2.14-r5:2/2.14-r5::gentoo, ebuild scheduled for merge)
+ * 
+
+
+ * Regenerating GNU info directory index...
+ * Processed 109 info files.
+
+ * IMPORTANT: 21 news items need reading for repository 'gentoo'.
+ * Use eselect news read to view new items.
+
