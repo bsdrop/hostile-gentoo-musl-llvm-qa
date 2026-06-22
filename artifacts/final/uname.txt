@@ -1,0 +1,1 @@
+Linux gentoo-qa 7.1.1-gentoo #3 SMP PREEMPT_DYNAMIC Mon Jun 22 03:59:37 UTC 2026 x86_64 AMD Ryzen 5 5600 6-Core Processor AuthenticAMD GNU/Linux

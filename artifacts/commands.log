@@ -53,3 +53,6 @@
 [05:17:33] firefox deferred (needs dynamic rust@LLVM21; ~3-4h). priority: KDE (decision A) next.
 [05:17:55] KDE: autounmask-write plasma-desktop (enable X for stack)
 [05:32:59] KDE = BLOCKED (plasma-workspace->networkmanager-qt->networkmanager[elogind]; musl elogind unbuildable). Same logind wall as GNOME. E22.
+[05:48:31] enforcing prep: portage cleaned, qa_local module, relabel done
+[05:59:50] qa_local(sshd->unconfined transition) loaded; enforcing retry
+[06:03:39] tighten: root->sysadm_u, ssh_sysadm_login=on; reboot

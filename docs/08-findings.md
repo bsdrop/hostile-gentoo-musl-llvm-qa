@@ -82,6 +82,27 @@ unbuildable (F4/E14: gshadow.h) and systemd is prohibited, so:
   X **client** libs + XWayland, **no xorg-server** (the xorg-server pull was a `libglvnd[test,X]→xvfb`
   test artifact). Working wlroots compositors (Hyprland, sway) avoid this because they use **seatd**, not logind.
 
+### Compromise advice — "but I refuse to give up GNOME/KDE"
+The blocker is purely the **logind** requirement (`org.freedesktop.login1`): GNOME (mutter) and KDE
+(accountsservice + networkmanager-qt→networkmanager[elogind]) hard-require `elogind` or `systemd`.
+`seatd` provides *seats*, not the login1 D-Bus API, so it does **not** satisfy them. Pick the
+least-bad constraint to drop (in order of least disruption):
+
+1. **Drop musl → use glibc** (keep OpenRC, clang/LTO, hardened, SELinux, Wayland, PipeWire). On glibc,
+   `sys-auth/elogind` builds fine, so GNOME *and* KDE work with OpenRC + elogind. This is the single
+   most effective compromise: musl is the actual blocker (gshadow/glibc-NSS assumptions), not OpenRC.
+   You keep everything hostile *except* the libc. **Recommended if GNOME/KDE is non-negotiable.**
+2. **Drop OpenRC → use systemd** — gives systemd-logind directly. But systemd also doesn't build on
+   musl, so this realistically means glibc too; i.e. it's strictly worse than option 1 for this stack.
+3. **Keep musl + OpenRC, change the desktop** — there is *no* mature drop-in logind that GNOME/KDE
+   accept on musl. So run a **wlroots compositor** instead: Hyprland, sway, labwc, wayfire, niri — all
+   use `seatd` and run well on musl/OpenRC (we proved Hyprland + sway here). This is the
+   **musl-native desktop path** and keeps every constraint intact.
+
+Do **not** "fix" it by stubbing `gshadow` to force elogind to compile — that yields an elogind that
+links but whose account/session lookups silently misbehave (real AI-slop; build≠works). The honest
+engineering answer on musl-without-systemd is option 1 or option 3.
+
 ## F10 — firefox on musl: static rust-bin can't dlopen libclang (bindgen)
 firefox builds gcc/nodejs but `mach build` dies: bindgen panics `Unable to find libclang ... Dynamic
 loading not supported` — the toolchain's `rust-bin` is statically linked (musl), and static musl can't

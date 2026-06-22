@@ -1,0 +1,6 @@
+clang version 22.1.8+libcxx
+Target: x86_64-pc-linux-musl
+Thread model: posix
+InstalledDir: /usr/lib/llvm/22/bin
+Configuration file: /etc/clang/22/x86_64-pc-linux-musl-clang.cfg
+LLD 22.1.8 (compatible with GNU linkers)

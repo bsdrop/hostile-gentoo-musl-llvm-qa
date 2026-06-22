@@ -79,6 +79,7 @@ Gentoo contribution pipeline (which bans exactly this).
 8. [docs/07-exceptions.md](docs/07-exceptions.md) — **E1–E15**: every deviation (problem → cause → fix → why)
 9. [docs/08-findings.md](docs/08-findings.md) — QA findings worth filing as Gentoo/upstream bugs
 10. [docs/09-reproduce.md](docs/09-reproduce.md) — how to reproduce from scratch
+11. [docs/10-final-report-musl.md](docs/10-final-report-musl.md) — **final report** (musl image, the 17 required points)
 
 ## TL;DR status
 Bootable musl + clang21/LLD + OpenRC system; SSH works; **SELinux enabled at boot** (targeted,
