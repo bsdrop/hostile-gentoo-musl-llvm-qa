@@ -32,12 +32,6 @@ __pycache__/
 ###############################################################################
 # artifacts/checkpoints/*.log   # uncomment to exclude verbose emerge logs
 
-###############################################################################
-# NOTE: scripts/say and the root say embed a Discord webhook URL. The user
-# stated it is non-sensitive and freely regenerable; it is intentionally NOT
-# ignored. Rotate/remove before any public push if that ever changes.
-###############################################################################
-
 # live Discord webhook — never commit
 .webhook
 
@@ -46,3 +40,6 @@ __pycache__/
 
 # live VM runtime dir (canonical copies are in scripts/ & config/)
 qemu-run/
+
+# internal state dump (not for public repo)
+INTERNAL-STATE.md

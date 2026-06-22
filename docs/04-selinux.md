@@ -1,53 +1,64 @@
-# 04 · SELinux — the hardest part
+# 04 · SELinux
 
-> **Context:** A self-contained account of getting SELinux working on a musl/clang/OpenRC system
-> that is *not* on a SELinux profile. This is where most QA findings came from. You can read this
-> alone; cross-refs point to [07-exceptions.md](07-exceptions.md) for the terse exception entries.
+Getting SELinux working on a musl/clang/OpenRC system that is not on a SELinux profile. Most of the
+findings came from this work. Cross-references point to [07-exceptions.md](07-exceptions.md) for the
+short exception entries.
 
-## Outcome first
-SELinux ends up **enabled at boot**: `sestatus` → enabled / targeted / **permissive**, the
-filesystem is labeled (`/sbin/init` → `init_exec_t`, `/` → `root_t`), processes are contextualized
-(`ps -eZ` → `init_t`, `kernel_t`), and the shell has a context (`id -Z` →
-`unconfined_u:unconfined_r:unconfined_t`). Permissive (not enforcing) is deliberate: it logs
-denials without locking out SSH while labeling/policy settle.
+## Result
 
-## The blockers, in the order they bit, and why
+SELinux is enabled and **enforcing**: `sestatus` reports enabled, `targeted` policy, enforcing mode.
+The filesystem is labeled (`/sbin/init` → `init_exec_t`, `/` → `root_t`), processes are labeled
+(`ps -eZ` shows `init_t`, `kernel_t`), and root login is mapped to `sysadm_u:sysadm_r:sysadm_t`, a
+confined admin domain rather than `unconfined_t`. `__default__` maps to `unconfined_u`. There are no
+AVC denials at boot.
 
-1. **`selinux` USE is masked off-profile (E10).** `profiles/base/use.mask` masks `selinux`; only the
-   SELinux profiles unmask it. On `musl/llvm` it stays masked, so the userland installs but
-   *nothing integrates* (coreutils/openrc/pam build `-selinux`). **Fix:** `/etc/portage/profile/use.mask`
-   with `-selinux` to unmask. **Why it matters:** without this, boot-time policy loading is impossible.
+The system first ran in permissive mode so that denials were logged without locking out SSH while the
+labeling and policy settled, then moved to enforcing after the denials were resolved (see "Reaching
+enforcing" below).
 
-2. **libselinux won't compile on musl (E9).** `selinux_restorecon.c` uses glibc-only `struct stat64`
-   / `lstat64()` (the Makefile forces `USE_LFS=y`); musl has no `*64` API (its `stat`/`lstat` are
-   already 64-bit), and clang turns the implicit declaration into a hard error. **Fix:** a 2-line
-   `/etc/portage/patches` patch (`stat64`→`stat`, `lstat64`→`lstat`). **Why:** libselinux is the
-   foundation; nothing SELinux builds without it. *(This is musl-specific, not clang/LTO-specific.)*
+## Blockers, in the order they occurred
 
-3. **`FEATURES=test` makes the userland uninstallable (E7/E8).** Global test auto-enables `test` USE
-   on `selinux-python`/`setools`, which pull `pyqt6[testlib]` and a Python test tree
-   (cryptography, werkzeug, pip, poetry-core…) that terminates in `dev-python/pillow` with an
-   unsatisfiable `REQUIRED_USE="test?(jpeg jpeg2k lcms tiff truetype)"`. **Fix:** disable tests for
-   the SELinux cluster and `dev-python/*` only (C/C++ tests stay on — that's where this QA cares).
+1. **The `selinux` USE flag is masked off-profile (E10).** `profiles/base/use.mask` masks `selinux`;
+   only the SELinux profiles unmask it. On `musl/llvm` it stays masked, so the userland installs but
+   nothing integrates (coreutils, openrc, and pam build with `-selinux`). Fix: add `-selinux` to
+   `/etc/portage/profile/use.mask` to unmask it. Without this, boot-time policy loading is not
+   possible.
 
-4. **The sandbox blocks SELinux-aware coreutils (E13).** After coreutils is rebuilt `selinux`, `cp -a`
-   writes the fscreate context to `/proc/*/attr/fscreate`; Gentoo's build sandbox *denies* that path
-   → **every** subsequent emerge install fails. **Fix:** `sandbox.d` adds `SANDBOX_WRITE` for the
-   `/proc/*/attr/` paths. **Why it's nasty:** turning on SELinux silently breaks all future builds
-   until the sandbox is taught about the attr procfs.
+2. **libselinux does not compile on musl (E9).** `selinux_restorecon.c` uses the glibc-only `struct
+   stat64` and `lstat64()` (the Makefile sets `USE_LFS=y`). musl has no `*64` API because its `stat`
+   and `lstat` are already 64-bit, and clang treats the implicit declaration as an error. Fix: a
+   two-line `/etc/portage/patches` patch (`stat64`→`stat`, `lstat64`→`lstat`). libselinux is the base
+   of the stack; nothing SELinux builds without it. This is specific to musl, not to clang or LTO.
 
-5. **Integrating SELinux without dragging in X11 (E11/E12).** Rebuilding base packages with `selinux`
-   under `FEATURES=test` pulls `dbus`/`glib` test-deps that need `xorg-server`/`mesa[X]` — i.e. tests
-   would reintroduce X11, violating no-X11. **Fix:** run that *one* rebuild with command-scoped
-   `FEATURES=-test` (global `test` unchanged). Packages rebuilt with `selinux`: openrc, coreutils,
+3. **`FEATURES=test` makes the userland uninstallable (E7/E8).** Global `test` enables the `test` USE
+   flag on `selinux-python` and `setools`, which pull `pyqt6[testlib]` and a Python test tree
+   (cryptography, werkzeug, pip, poetry-core, and others) ending at `dev-python/pillow` with an
+   unsatisfiable `REQUIRED_USE="test? ( jpeg jpeg2k lcms tiff truetype )"`. Fix: disable tests for the
+   SELinux cluster and `dev-python/*` only. C/C++ tests stay enabled.
+
+4. **The sandbox blocks SELinux-aware coreutils (E13).** After coreutils is rebuilt with `selinux`,
+   `cp -a` writes the fscreate context to `/proc/*/attr/fscreate`, which Gentoo's build sandbox denies,
+   so every later emerge install fails. Fix: a `sandbox.d` entry adding `SANDBOX_WRITE` for the
+   `/proc/*/attr/` paths. Enabling SELinux silently breaks all later builds until the sandbox is told
+   about the attr procfs.
+
+5. **Integrating SELinux without pulling in X11 (E11/E12).** Rebuilding base packages with `selinux`
+   under `FEATURES=test` pulls `dbus` and `glib` test dependencies that need `xorg-server` and
+   `mesa[X]`, which would reintroduce X11. Fix: run that one rebuild with command-scoped
+   `FEATURES=-test`; global `test` is unchanged. Packages rebuilt with `selinux`: openrc, coreutils,
    util-linux, pam, shadow, procps, findutils, openssh, sysvinit.
 
 ## Boot-time loading
-With `openrc[selinux]` + `sysvinit[selinux]` + the `selinux-openrc` policy module, the policy loads
-automatically at boot (dmesg shows `SELinux: Initializing` + policy capabilities). Kernel side is in
-`kernel-qa.fragment` (`SECURITY_SELINUX`, `AUDIT`, `CONFIG_LSM=...,selinux`, `EXT4_FS_SECURITY`).
 
-## What's left for "enforcing"
-Move `SELINUX=enforcing` after reviewing AVC denials; that needs broader policy coverage for the
-custom daemons. Documented as a follow-up, not a blocker — the target was "enabled if feasible," and
-it is enabled.
+With `openrc[selinux]`, `sysvinit[selinux]`, and the `selinux-openrc` policy module, the policy loads
+automatically at boot (dmesg shows `SELinux: Initializing` and the policy capabilities). The kernel
+side is in `kernel-qa.fragment` (`SECURITY_SELINUX`, `AUDIT`, `CONFIG_LSM=...,selinux`,
+`EXT4_FS_SECURITY`).
+
+## Reaching enforcing
+
+Starting from permissive, the logged AVC denials were reviewed and resolved, then `SELINUX=enforcing`
+was set and confirmed across a reboot. The main item was the SSH login transition: a custom policy
+module `qa_local` allows the `sshd_t` → login domain transition that the base targeted policy did not
+cover. Root is mapped to `sysadm_t` rather than left unconfined. After these changes the system boots
+enforcing with no AVC denials.

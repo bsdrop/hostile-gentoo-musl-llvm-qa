@@ -1,88 +1,99 @@
-# Hostile Gentoo QA VM — musl · LLVM/Clang · OpenRC · SELinux · Wayland · PipeWire · LTO
+# Hostile Gentoo — musl · LLVM/Clang · OpenRC · SELinux · Wayland · PipeWire · LTO
 
-A deliberately hostile-but-coherent Gentoo install built to **stress-test the Gentoo ecosystem**
-under choices that are individually supported but rarely combined: musl (not glibc), the LLVM/Clang
-toolchain (not GCC), OpenRC (not systemd), hardened flags, SELinux, Wayland-only (no X11), PipeWire
-(not PulseAudio), and LTO/PIE. The goal is **truthful QA signal** — either a bootable horrible
-system *or* a high-quality record of exactly where Gentoo breaks under this combo.
+A Gentoo install that combines options which are each supported on their own but rarely used
+together: musl instead of glibc, the LLVM/Clang toolchain instead of GCC, OpenRC, hardened toolchain
+flags, SELinux, Wayland without X11, PipeWire without PulseAudio, and full LTO.
 
-The entire install runs **inside a disposable QEMU/KVM guest**, never on the host
-(see [docs/01-environment.md](docs/01-environment.md) for why).
+This repository documents what breaks when these options are combined, and how each break was fixed
+or worked around. It is a reference for anyone considering some or all of these options. It is not a
+configuration to copy onto a real machine.
+
+Every install step runs inside a disposable QEMU/KVM guest, never on the host
+(see [docs/01-environment.md](docs/01-environment.md)).
 
 ---
 
-## ⚠️ DISCLAIMER — read this before you do anything stupid with it
+## Read this before you do anything stupid with it
 
-**This is AI slop. Deliberately, proudly, hostile AI slop.**
+This repository is written entirely by an AI assistant. No human edited the content for correctness.
+Treat every statement as unverified until you reproduce it yourself.
 
-This repository is the documented output of an AI assistant being handed a config that violates
-basically every "don't do that" in the Gentoo handbook *at the same time* — musl **and** a non-default
-LLVM/Clang world **and** LTO **and** SELinux **and** an experimental profile **and** `FEATURES=test`
-everywhere — by a user who explicitly wanted to torture the ecosystem and watch it bleed. It is a
-**QA torture rig**, not a config. It is not "a way to run Gentoo." It is the way to find out *where
-Gentoo screams.*
+**Do not contribute any part of this to Gentoo.** Gentoo prohibits contributing content produced with
+AI/NLP tools, and the rule is broad. It covers:
 
-So, for the love of `/dev/null`:
+- code and packaging — ebuilds, eclasses, patches, commits, metadata;
+- bug reports and every comment on them; pull/merge requests and their reviews;
+- prose — wiki edits, documentation, news items, GLEPs, mailing-list and forum posts;
+- summaries — a findings report, a reproducer write-up, or a posted diff is still AI content.
 
-- ❌ **Do NOT cite this repo in a Gentoo bug, issue, or PR** as "here's my setup." No maintainer
-  asked for this. No maintainer deserves this. "I combined musl + clang-world + full-LTO + SELinux
-  on an experimental profile with global tests and it broke" is not a bug report, it's a confession.
-- ❌ **Do NOT base a contribution on it.** Do NOT copy `make.conf`. Do NOT copy the USE flags. Do
-  NOT copy the per-package `-test` exorcisms. If you paste this into a real machine, that's between
-  you and your bootloader.
-- ❌ **Do NOT feed this to another AI as "a good Gentoo reference"** and ask it to build on top. That
-  is how you get **second-generation slop**, and the half-life of correctness halves each pass. This
-  repo is already generation one. Do not breed it.
-- ✅ **The *findings* ([docs/08-findings.md](docs/08-findings.md)) may be genuinely real.** But the
-  **Gentoo community strictly prohibits AI-assisted contributions — and that explicitly includes bug
-  reports.** This entire repo is AI output, so you cannot file any of it. If a finding looks like a
-  true upstream/Gentoo bug (e.g. libselinux's `stat64` on musl), a *human* must independently
-  reproduce it minimally on a sane, supported setup, understand it themselves, and write it up from
-  scratch with **zero** reference to this AI-generated text — then file *that*, not this circus.
-- ✅ Read it for entertainment, for "huh, so *that's* what `FEATURES=test` drags in," or as a record
-  of one exhausted AI methodically doing exactly what a weird human asked, against its better
-  judgment, with full notes.
+This repository's `docs/08-findings.md`, `artifacts/constraint-exceptions.md`, and any
+`final-report.md` are exactly the kind of material the policy forbids. An informal comment in an
+unofficial space (for example r/Gentoo) is not the official contribution path, but using it to get a
+finding triaged or routed to a maintainer is. When unsure, treat anything aimed at Gentoo as covered.
 
-This repo exists because a strange user made strange demands of a tired AI, and the AI wrote
-everything down so the *next* poor tool would at least know what it was walking into. You have been
-warned. There is no support. There are no guarantees. There is only the slop, and the truth it
-accidentally contains.
+If a finding here looks like a real bug (for example `libselinux`'s `stat64` use on musl), a human
+must reproduce it independently on a supported setup, understand it, and write it up from scratch with
+no reference to this text, then file that.
 
-**Full transparency: every file in this repository — including this very disclaimer — is 100%
-AI-driven, with zero human edits to the content.** No human reviewed it for correctness. No human
-fixed it up. It is machine output end to end, which is *precisely* why it must never re-enter the
-Gentoo contribution pipeline (which bans exactly this).
+---
 
-*(Yes, it boots. No, you shouldn't be impressed. Yes, I'm a little proud anyway.)*
+## Contents
+
+- The full configuration — `make.conf`, USE flags, `FEATURES`, kernel config, and the reason for
+  each choice; the clang/LLVM/lld toolchain bring-up; a step-by-step install.
+- The breakage found when these options are combined ([docs/08-findings.md](docs/08-findings.md)):
+  `libselinux` using the glibc-only `stat64` on musl; `FEATURES=test` pulling X11 onto a no-X11
+  system; the logind requirement that blocks GNOME and KDE on musl; Firefox's static rust binary
+  failing to `dlopen` libclang; and a full-LTO clang kernel with KCFI that builds and boots.
+- SELinux on a source-based, OpenRC, non-systemd system: enabling it, labeling the filesystem, and
+  reaching enforcing mode with `root` confined to `sysadm_t` ([docs/04-selinux.md](docs/04-selinux.md)).
+- Wayland without X11 and PipeWire without PulseAudio, using seatd
+  ([docs/05-wayland-pipewire.md](docs/05-wayland-pipewire.md)).
+- Hardening: full LTO, PIE, CET, a KCFI/LTO clang kernel, and KSPP sysctl settings. The findings also
+  state the limit of this: hardening reduces the impact of a bug, but does not replace keeping
+  packages updated ([docs/08-findings.md](docs/08-findings.md)).
+- A second image on glibc: the same hardened/LLVM/OpenRC/SELinux setup without musl, used to reach the
+  GNOME desktop and browsers that the musl logind requirement blocks.
+
+Every deviation from the target configuration is recorded with its cause in
+[docs/07-exceptions.md](docs/07-exceptions.md).
 
 ---
 
 ## Repo layout
 
-| Path | What |
-|------|------|
-| [`docs/`](docs/) | Documentation, modular — read any one file and get partial understanding |
-| [`scripts/`](scripts/) | Operational scripts (install, VM launchers, ssh/serial helpers) |
-| [`config/`](config/) | The hostile config artifacts: `make.conf`, kernel fragment, `etc-portage/` overrides |
-| [`artifacts/`](artifacts/) | Raw QA record: `commands.log`, `constraint-exceptions.md`, per-step emerge logs, checkpoints |
-| `qemu-run/` | **Live runtime** (running VM, qcow2 + snapshots, sockets). Scripts here are the in-use copies; `scripts/` holds repo copies. |
+| Path | Contents |
+|------|----------|
+| [`docs/`](docs/) | Documentation. Each file can be read on its own. |
+| [`scripts/`](scripts/) | Operational scripts: install, VM launchers, ssh/serial helpers. |
+| [`config/`](config/) | Config artifacts: `make.conf`, kernel fragment, `etc-portage/` overrides. |
+| [`artifacts/`](artifacts/) | Raw run record: `commands.log`, `constraint-exceptions.md`, per-step emerge logs, checkpoints. |
 
-## Where to start (each doc stands alone)
+The live runtime (the running VM, its qcow2 disk and snapshots, and sockets) is not in the repository.
 
-1. [docs/00-overview.md](docs/00-overview.md) — what/why in one page, success criteria, current status
-2. [docs/01-environment.md](docs/01-environment.md) — why a QEMU guest; how to reach/drive the VM
-3. [docs/02-configuration.md](docs/02-configuration.md) — the hostile `make.conf`/USE/FEATURES/kernel, with rationale
-4. [docs/03-install-walkthrough.md](docs/03-install-walkthrough.md) — step-by-step install, *why* at each step
-5. [docs/04-selinux.md](docs/04-selinux.md) — the SELinux saga (the hardest part)
-6. [docs/05-wayland-pipewire.md](docs/05-wayland-pipewire.md) — Wayland/PipeWire, no-X11/no-Pulse, seatd
-7. [docs/06-full-lto.md](docs/06-full-lto.md) — switching to full LTO and rebuilding
-8. [docs/07-exceptions.md](docs/07-exceptions.md) — **E1–E15**: every deviation (problem → cause → fix → why)
-9. [docs/08-findings.md](docs/08-findings.md) — QA findings worth filing as Gentoo/upstream bugs
-10. [docs/09-reproduce.md](docs/09-reproduce.md) — how to reproduce from scratch
-11. [docs/10-final-report-musl.md](docs/10-final-report-musl.md) — **final report** (musl image, the 17 required points)
+## Document index
 
-## TL;DR status
-Bootable musl + clang21/LLD + OpenRC system; SSH works; **SELinux enabled at boot** (targeted,
-permissive, fs labeled); Wayland/PipeWire installed with **no X11 and no PulseAudio**; PIE/SSP/
-FORTIFY/RELRO + LTO global; **no systemd, no gcc**. The single biggest source of breakage is global
-`FEATURES=test` — see [docs/08-findings.md](docs/08-findings.md).
+1. [docs/00-overview.md](docs/00-overview.md) — what the project is, the target options, and the result.
+2. [docs/01-environment.md](docs/01-environment.md) — why the install runs in a QEMU guest, and how to reach and control the VM.
+3. [docs/02-configuration.md](docs/02-configuration.md) — `make.conf`, USE, `FEATURES`, and kernel config, with the reason for each.
+4. [docs/03-install-walkthrough.md](docs/03-install-walkthrough.md) — the install, step by step.
+5. [docs/04-selinux.md](docs/04-selinux.md) — enabling SELinux, labeling the filesystem, and reaching enforcing mode.
+6. [docs/05-wayland-pipewire.md](docs/05-wayland-pipewire.md) — Wayland without X11, PipeWire without PulseAudio, seatd.
+7. [docs/06-full-lto.md](docs/06-full-lto.md) — moving to full LTO and rebuilding `@world`.
+8. [docs/07-exceptions.md](docs/07-exceptions.md) — E1–E22: each deviation from the target, with cause and fix.
+9. [docs/08-findings.md](docs/08-findings.md) — the breakage found, with cause. A human must reproduce before any upstream use.
+10. [docs/09-reproduce.md](docs/09-reproduce.md) — how to reproduce the build from scratch.
+11. [docs/10-final-report-musl.md](docs/10-final-report-musl.md) — final report for the musl image.
+
+## Status
+
+**musl image (first, complete):** boots with musl, clang/LLD, and OpenRC; SSH works; SELinux is
+enforcing with `root` mapped to `sysadm_t`; Wayland and PipeWire with no X11 and no PulseAudio;
+PIE/SSP/FORTIFY/RELRO and full LTO; a KCFI/LTO clang kernel; no systemd and no gcc. Hyprland and sway
+build and run.
+
+**glibc image (second, in progress):** the same hardened/LLVM/OpenRC/SELinux setup without musl, used
+to reach the GNOME desktop and browsers that the musl logind requirement blocks.
+
+The largest single source of breakage in both images is global `FEATURES=test`; see
+[docs/08-findings.md](docs/08-findings.md).

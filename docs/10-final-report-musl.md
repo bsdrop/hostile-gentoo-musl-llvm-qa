@@ -1,77 +1,84 @@
-# 10 · Final Report — musl image (the briefing's required final-report)
+# 10 · Final report — musl image
 
-> **Context:** The success report for the musl/LLVM image, structured to the 17 points the briefing
-> required. Verified state captured in `artifacts/final/`. Standalone; deep-dives are
-> [02-configuration.md](02-configuration.md), [04-selinux.md](04-selinux.md), [07-exceptions.md](07-exceptions.md),
-> [08-findings.md](08-findings.md).
+The final state of the musl/LLVM image. Verified state is captured in `artifacts/final/`. Related
+detail: [02-configuration.md](02-configuration.md), [04-selinux.md](04-selinux.md),
+[07-exceptions.md](07-exceptions.md), [08-findings.md](08-findings.md).
 
-**Outcome: SUCCESS** — a bootable, hostile, reproducible Gentoo musl/LLVM QA VM meeting every hard
-constraint, with the desktop-environment limits honestly characterized as findings.
+Result: a bootable, reproducible Gentoo musl/LLVM image that meets every required option. The desktop
+limits are recorded as findings.
 
-1. **Exact stage3:** `stage3-amd64-musl-llvm-openrc-20260614T170130Z.tar.xz`
-   (sha256 `b8a97df7…def84bd`, recorded in `artifacts/commands.log`).
-2. **Final profile:** `default/linux/amd64/23.0/musl/llvm` (kept; no musl/llvm/hardened/selinux
-   composite exists — hardening+SELinux layered, E2).
-3. **Final USE:** `clang lto pie selinux hardened btrfs -elogind dbus nls opengl qml wayland pipewire
-   alsa libinput policykit networkmanager screencast vaapi vulkan -X -pulseaudio -systemd -gnome -kde`
-   (+ `~amd64`; `-elogind` because elogind is unbuildable on musl — E14/E14-COROLLARY). Full make.conf in `config/make.conf`.
-4. **Final FEATURES:** `test fail-clean buildpkg preserve-libs parallel-install` + `PORTAGE_LOGDIR`.
-   Global `test` kept; narrow per-package / command-scoped `-test` exceptions only (E5–E8, E11–E13, E21).
-5. **Compiler/linker:** `clang 22.1.8` / `ld.lld 22`, `AR=llvm-ar`, `NM=llvm-nm` (set by the profile).
-6. **musl/glibc:** **musl** (`ldd → musl libc`; `sys-libs/glibc` NOT installed). `sys-devel/gcc-16` IS
-   installed (pulled as a build-dep by nodejs/rust during the firefox attempt) but `CC/CXX` remain
-   clang/clang++ — the global default toolchain was never switched to GCC.
-7. **OpenRC/systemd:** **OpenRC** (sysvinit+openrc); **no systemd** (`systemctl` absent).
-8. **SELinux:** **Enforcing**, policy `targeted`, filesystem labeled, services confined
-   (`init_t`/`sshd_t`/`system_dbusd_t`/`seatd_t`); **root login mapped to `sysadm_u:sysadm_r:sysadm_t`**
-   (a *confined* admin domain — strictly tighter than Rocky/RHEL stock, where root is `unconfined_t`).
-   `__default__` → `unconfined_u`. 0 boot AVC denials. Custom module `qa_local` (sshd→unconfined
-   transition + service denials, audit2allow). See [04-selinux.md](04-selinux.md).
-9. **PipeWire/PulseAudio:** **PipeWire** (+wireplumber); **no PulseAudio** (`media-sound/pulseaudio` absent).
-10. **Wayland/X11:** **Wayland-only**, **no `x11-base/xorg-server`**. Only X *client* libs (libX11/
-    libXcursor, pulled by Hyprland's cursor dep — E18); XWayland off (`-X`). Compositors use **seatd**.
-11. **LTO/PIE/hardening:** **full `-flto`**, `-O3`, `-fstack-protector-strong`, `-D_FORTIFY_SOURCE=3`,
+1. **Stage3:** `stage3-amd64-musl-llvm-openrc-20260614T170130Z.tar.xz` (sha256 `b8a97df7…def84bd`,
+   recorded in `artifacts/commands.log`).
+2. **Profile:** `default/linux/amd64/23.0/musl/llvm`, kept; no musl/llvm/hardened/selinux composite
+   exists, so hardening and SELinux are layered (E2).
+3. **USE:** `clang lto pie selinux hardened btrfs -elogind dbus nls opengl qml wayland pipewire alsa
+   libinput policykit networkmanager screencast vaapi vulkan -X -pulseaudio -systemd -gnome -kde`
+   (with `~amd64`; `-elogind` because elogind is unbuildable on musl, E14). Full make.conf in
+   `config/make.conf`.
+4. **FEATURES:** `test fail-clean buildpkg preserve-libs parallel-install` with `PORTAGE_LOGDIR`.
+   Global `test` kept; only narrow per-package and command-scoped `-test` exceptions (E5–E8, E11–E13).
+5. **Compiler and linker:** clang 22.1.8, `ld.lld` 22, `AR=llvm-ar`, `NM=llvm-nm` (set by the profile).
+6. **libc:** musl (`ldd → musl libc`; `sys-libs/glibc` not installed). `sys-devel/gcc-16` is installed,
+   pulled as a build dependency by nodejs/rust during the Firefox attempt, but `CC`/`CXX` stay
+   clang/clang++; the default toolchain was not switched to GCC.
+7. **Init:** OpenRC (sysvinit + openrc); no systemd (`systemctl` absent).
+8. **SELinux:** enforcing, `targeted` policy, filesystem labeled, services confined
+   (`init_t`/`sshd_t`/`system_dbusd_t`/`seatd_t`). Root login is mapped to
+   `sysadm_u:sysadm_r:sysadm_t`, a confined admin domain rather than the `unconfined_t` that stock
+   targeted policies leave root in. `__default__` maps to `unconfined_u`. No AVC denials at boot. Custom
+   module `qa_local` (sshd login transition and service denials, via audit2allow). See
+   [04-selinux.md](04-selinux.md).
+9. **Audio:** PipeWire with wireplumber; no PulseAudio (`media-sound/pulseaudio` absent).
+10. **Display:** Wayland only, no `x11-base/xorg-server`. Only X client libraries are present (libX11
+    and libXcursor, pulled by Hyprland's cursor dependency, E18); XWayland off (`-X`). Compositors use
+    seatd.
+11. **LTO, PIE, hardening:** full `-flto`, `-O3`, `-fstack-protector-strong`, `-D_FORTIFY_SOURCE=3`,
     `-fstack-clash-protection`, `-fcf-protection=full` (CET), `-ftrivial-auto-var-init=zero`,
-    `-fzero-call-used-regs=used-gpr`; LDFLAGS RELRO/BIND_NOW/noexecstack/separate-code; PIE/CET/seccomp
-    from the 23.0 profile. **Kernel:** clang-built with **KCFI** (`CONFIG_CFI`) + `LTO_CLANG` + KASLR +
-    hardened-usercopy + init-on-alloc/free + slab hardening; boot cmdline `lockdown=confidentiality` +
-    full CPU side-channel mitigations (`mitigations=auto,nosmt` + explicit spectre/ssb/l1tf/mds/tsx/
-    mmio/retbleed/gds) + KSPP params (slab_nomerge, randomize_kstack, pti=on, vsyscall=none, debugfs=off).
-12. **Package-specific exceptions:** E1–E22 in `artifacts/constraint-exceptions.md` (curated:
-    [07-exceptions.md](07-exceptions.md)). Highlights: libselinux musl `stat64` patch (E9), `selinux`
-    USE unmask (E10), `FEATURES=test` cascades (E4–E8/E11–E13/E21), grub `-device-mapper` (E4),
-    net-tools ROSE off (E17), global `-elogind` (E14-corollary).
-13. **Unresolved / blocked (documented findings, not silent):**
-    - **GNOME** (E19) and **KDE Plasma** (E22): blocked by the **logind** requirement
-      (elogind unbuildable on musl, systemd prohibited). Compromise advice in [08-findings.md](08-findings.md).
-    - **firefox** (E20/F10): static `rust-bin` can't `dlopen` libclang; needs dynamic source rust
-      matched to firefox's LLVM slot (21). Deferred (browsers = "later").
-    - **systemd-tmpfiles-setup**: non-fatal boot warning under enforcing (services unaffected).
-    - **net-tools** (E17), **elogind** (E14): fixed / substituted (seatd).
-14. **Reproduce:** `scripts/install.sh` + [09-reproduce.md](09-reproduce.md) + `config/` (make.conf,
-    kernel fragments, `etc-portage/` overrides incl. patches) + `artifacts/commands.log`.
-15. **Boots after reboot:** **YES** — verified across many reboots (live→disk, full-LTO, hardened
-    kernel, KCFI kernel, enforcing). UEFI(OVMF)→GRUB→`vmlinuz-7.1.1-gentoo`→OpenRC.
-16. **SSH after reboot:** **YES** — sshd auto-starts (OpenRC); reachable on host `127.0.0.1:2224`;
-    works even under SELinux enforcing with root confined to sysadm_t.
-17. **Changed from the target & why:** `-flto=auto`→`-flto`/`thin` (GCC-ism→clang spelling, E1);
-    hardening+SELinux layered instead of a composite profile (none exists, E2); `~amd64` (experimental
-    profile, E3); global `-elogind` (unbuildable on musl, E14); narrow per-package/command-scoped
-    `-test` (FEATURES=test induces unresolvable cascades, E5–E13); X *client* libs allowed where a dep
-    forces them (E18); ThinLTO→full LTO staging (E1). No hard constraint was silently weakened.
+    `-fzero-call-used-regs=used-gpr`; LDFLAGS with RELRO/BIND_NOW/noexecstack/separate-code; PIE, CET,
+    and seccomp from the 23.0 profile. Kernel: clang-built with KCFI (`CONFIG_CFI`), `LTO_CLANG`,
+    KASLR, hardened-usercopy, init-on-alloc/free, and slab hardening; boot command line
+    `lockdown=confidentiality`, full CPU side-channel mitigations (`mitigations=auto,nosmt` plus
+    explicit spectre/ssb/l1tf/mds/tsx/mmio/retbleed/gds), and KSPP parameters (slab_nomerge,
+    randomize_kstack, pti=on, vsyscall=none, debugfs=off).
+12. **Exceptions:** E1–E22 in `artifacts/constraint-exceptions.md` (curated in
+    [07-exceptions.md](07-exceptions.md)). Main items: libselinux musl `stat64` patch (E9), `selinux`
+    USE unmask (E10), `FEATURES=test` cascades (E4–E8, E11–E13), grub `-device-mapper` (E4), net-tools
+    ROSE off (E17), global `-elogind` (E14).
+13. **Blocked, recorded as findings:**
+    - GNOME (E19) and KDE Plasma (E22): blocked by the logind requirement (elogind unbuildable on musl,
+      systemd prohibited). Options in [08-findings.md](08-findings.md).
+    - Firefox (E20/F10): static `rust-bin` cannot `dlopen` libclang; needs a dynamic source rust matched
+      to Firefox's LLVM slot (21). Deferred.
+    - systemd-tmpfiles-setup: non-fatal boot warning under enforcing; services unaffected.
+    - net-tools (E17) and elogind (E14): fixed and substituted (seatd), respectively.
+14. **Reproduce:** `scripts/install.sh`, [09-reproduce.md](09-reproduce.md), and `config/` (make.conf,
+    kernel fragments, `etc-portage/` overrides including patches), with `artifacts/commands.log`.
+15. **Boots after reboot:** yes, verified across reboots (live to disk, full-LTO, hardened kernel, KCFI
+    kernel, enforcing). UEFI (OVMF) → GRUB → `vmlinuz-7.1.1-gentoo` → OpenRC.
+16. **SSH after reboot:** yes, sshd auto-starts under OpenRC, reachable on `127.0.0.1:2224`, and works
+    under SELinux enforcing with root confined to sysadm_t.
+17. **Changes from the target, with cause:** `-flto=auto` → `-flto`/`thin` (clang spelling, E1);
+    hardening and SELinux layered instead of a composite profile (none exists, E2); `~amd64`
+    (experimental profile, E3); global `-elogind` (unbuildable on musl, E14); narrow per-package and
+    command-scoped `-test` (`FEATURES=test` causes unresolvable cascades, E5–E13); X client libraries
+    allowed where a dependency forces them (E18); ThinLTO-to-full-LTO staging (E1). No required option
+    was silently weakened.
 
-## Snapshots (qcow2, `qemu-run/gentoo-musl-llvm.qcow2`)
+## Stages
+
+The work proceeded through these snapshots, each taken before the next stage:
 `base-musl-llvm-selinux-wayland` → `base-full-lto` → `base-full-lto-hardened` → `hyprland` →
-`wayland-desktop` → `hardened-kernel-kcfi` → `enforcing-rollback`(permissive) → `enforcing-ok`(unconfined
-root) → `enforcing-tight`(root=sysadm_t, the headline state).
+`wayland-desktop` → `hardened-kernel-kcfi` → `enforcing` (root mapped to `sysadm_t`).
 
-## What works (verified running)
-Boot, OpenRC, SSH, networking; clang/lld toolchain; SELinux enforcing (root confined); Hyprland 0.55.4
-and sway 1.12 (wlroots 0.20.1) both **built and launched** on virtio-gpu DRM (swrast, no virgl);
-PipeWire/wireplumber/seatd; xdg-desktop-portal(-wlr). The KCFI hardened kernel boots and enforces.
+## Verified running
 
-## The one-line thesis
-On musl + OpenRC (no systemd), **wlroots compositors via seatd are the viable Wayland desktop**;
-**GNOME/KDE are not**, because they hard-require logind and `elogind` doesn't build on musl. Global
-`FEATURES=test` is the single largest source of friction. Everything else (musl + clang + full-LTO +
-KCFI-hardened kernel + enforcing SELinux) works and is reproducible.
+Boot, OpenRC, SSH, networking; the clang/lld toolchain; SELinux enforcing with root confined; Hyprland
+0.55.4 and sway 1.12 (wlroots 0.20.1) both built and launched on virtio-gpu DRM (swrast, no virgl);
+PipeWire, wireplumber, seatd; xdg-desktop-portal and -wlr. The KCFI hardened kernel boots and enforces.
+
+## Summary
+
+On musl with OpenRC and no systemd, wlroots compositors via seatd are a working Wayland desktop;
+GNOME and KDE are not, because they require logind and elogind does not build on musl. Global
+`FEATURES=test` is the largest single source of friction. The rest of the stack (musl, clang, full
+LTO, the KCFI hardened kernel, and enforcing SELinux) works and is reproducible.
