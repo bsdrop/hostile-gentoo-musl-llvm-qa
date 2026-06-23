@@ -122,7 +122,11 @@ the narrative for E5–E15. There is no E21.
   hard-depends on `net-misc/networkmanager[elogind]`; elogind is unbuildable on musl (E14) and systemd
   is prohibited. No USE flag removes networkmanager-qt. With tests off, KDE needs only X client
   libraries and XWayland, not a full xorg-server, so it is closer than GNOME on that one axis, but the
-  logind requirement is the same.
+  logind requirement is the same. On the glibc image, where elogind builds, KDE resolves and builds
+  cleanly (`plasma-desktop-6.7.0`, 161 packages, no failures); `kwin_wayland` starts as a Wayland
+  compositor (creates the socket, accepts clients) but its virtual backend cannot render headless in
+  QEMU (`DRM_IOCTL_MODE_CREATE_DUMB` fails; mutter's headless backend falls back to swrast, kwin's does
+  not). GNOME and KDE therefore both build on glibc and both fail on musl, isolating logind as the cause.
 
 ## Never done
 
