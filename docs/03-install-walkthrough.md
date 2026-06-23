@@ -20,13 +20,14 @@ outline.
    the stage3 has no ebuild tree.
 
 5. **Boot tooling and kernel.** `emerge gentoo-sources installkernel grub efibootmgr dosfstools git`,
-   then build the kernel with `make LLVM=1` using `defconfig` plus `kernel-qa.fragment`. The kernel is
-   built with clang because the LLVM toolchain is the target and the kernel supports `LLVM=1`. No
+   then build the kernel with `make LLVM=1` using `defconfig` plus `kernel-qa.fragment` and
+   `kernel-hardened.fragment` (KCFI, LTO_CLANG, lockdown, KSPP). The kernel is built with clang because
+   the LLVM toolchain is the target and the kernel supports `LLVM=1`. No
    initramfs is used because virtio and ext4 are built in, so the root mounts directly. Expect a few
    `FEATURES=test` bootstrap problems here (E4–E6 in [07-exceptions.md](07-exceptions.md)).
 
 6. **Bootloader.** `grub-install --removable` writes `BOOTX64.EFI`, which OVMF boots without an NVRAM
-   entry; a named `Gentoo-QA` entry is added as well. `grub-mkconfig` generates the config. The GRUB
+   entry; a named `Gentoo` entry is added as well. `grub-mkconfig` generates the config. The GRUB
    command line includes `console=tty0 console=ttyS0,115200 lsm=...,selinux,...`.
 
 7. **fstab, hostname, root password, services.** fstab by UUID; `root:gentooqa`; sshd permits root

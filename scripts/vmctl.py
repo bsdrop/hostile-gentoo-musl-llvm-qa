@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Persistent serial-console driver for the Gentoo QA guest.
+"""Persistent serial-console driver for the Gentoo guest.
 
 Holds the single connection to QEMU's serial unix socket, appends all
 guest output to serial.log, and forwards anything written to the FIFO

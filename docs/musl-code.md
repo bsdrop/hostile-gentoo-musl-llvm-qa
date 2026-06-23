@@ -4,14 +4,14 @@
 
 ## /etc/portage/make.conf
 ```sh
-# Gentoo musl/LLVM hostile QA VM make.conf
+# Gentoo musl/LLVM hostile VM make.conf
 # Profile: default/linux/amd64/23.0/musl/llvm
 # Toolchain (clang/clang++/ld.lld/llvm-ar/llvm-nm) is set by the profile; not overridden here.
 # Exceptions & rationale: /root/ai-run/constraint-exceptions.md
 
 CHOST="x86_64-pc-linux-musl"
 
-# Hostile QA / hardening flags. Do not remove globally to make builds pass.
+# Hostile hardening flags. Do not remove globally to make builds pass.
 COMMON_FLAGS="-march=x86-64-v3 -O3 -pipe"
 COMMON_FLAGS="${COMMON_FLAGS} -fstack-protector-strong -fno-semantic-interposition"
 # LTO: ThinLTO for base bring-up; escalate to full -flto later (user request). See exceptions doc.
@@ -179,11 +179,11 @@ SANDBOX_WRITE="/proc/self/attr/:/proc/thread-self/attr/"
 
 ## /etc/portage/bashrc
 ```sh
-# QA: disable ROSE in net-tools — kernel-7.1 UAPI lacks linux/rose.h, but net-tools
+# disable ROSE in net-tools — kernel-7.1 UAPI lacks linux/rose.h, but net-tools
 # config.in defaults HAVE_AFROSE/HAVE_HWROSE to 'y', so rose.c fails to compile. See E17.
 post_src_prepare() {
     if [[ ${CATEGORY}/${PN} == sys-apps/net-tools ]]; then
-        einfo "QA(E17): disabling ROSE (HAVE_AFROSE/HAVE_HWROSE) — kernel lacks linux/rose.h"
+        einfo "E17: disabling ROSE (HAVE_AFROSE/HAVE_HWROSE) — kernel lacks linux/rose.h"
         sed -i -e "/^bool.* HAVE_AFROSE /s:[yn]\$:n:" \
                -e "/^bool.* HAVE_HWROSE /s:[yn]\$:n:" config.in || true
     fi
@@ -192,7 +192,7 @@ post_src_prepare() {
 
 ## kernel-qa.fragment
 ```
-# QA kernel config fragment (merged onto `make defconfig` with clang/LLVM=1).
+# kernel config fragment (merged onto `make defconfig` with clang/LLVM=1).
 # Goal: boot a virtio UEFI guest off ext4 root with no initramfs, plus SELinux + hardening.
 
 # --- boot/firmware ---
@@ -202,7 +202,7 @@ CONFIG_EFI_MIXED=n
 CONFIG_FB_EFI=y
 CONFIG_EFIVAR_FS=y
 
-# --- console (serial for headless QA) ---
+# --- console (serial for headless boot) ---
 CONFIG_SERIAL_8250=y
 CONFIG_SERIAL_8250_CONSOLE=y
 CONFIG_CMDLINE_BOOL=y
@@ -340,14 +340,14 @@ CONFIG_PROC_KCORE=n
 CONFIG_HARDENED_USERCOPY=y
 CONFIG_FORTIFY_SOURCE=y
 
-# --- module signing off-topic for QA; keep modules but restrict ---
+# --- module signing off-topic here; keep modules but restrict ---
 CONFIG_MODULE_SIG=n
 ```
 
 ## /etc/sysctl.d/99-qa-hardening.conf
 ```
 # /etc/sysctl.d/99-qa-hardening.conf — KSPP-style hardening + perf tuning.
-# Applies to BOTH the musl and glibc QA images. Values that need a kernel feature the VM lacks
+# Applies to BOTH the musl and glibc images. Values that need a kernel feature the VM lacks
 # (e.g. bbr/fq, some bpf knobs) just warn and are skipped — harmless.
 
 ############################ HARDENING (KSPP + common) ############################

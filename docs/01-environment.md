@@ -50,8 +50,8 @@ scripts/gssh 'tail -f /root/ai-run/checkpoints/<name>.log'
 qcow2 internal snapshots, taken with the guest powered off:
 
 ```
-qemu-img snapshot -c <tag> qemu-run/gentoo-musl-llvm.qcow2
-qemu-img snapshot -l qemu-run/gentoo-musl-llvm.qcow2
+qemu-img snapshot -c <tag> <disk>.qcow2
+qemu-img snapshot -l <disk>.qcow2
 ```
 
 ## Host tools

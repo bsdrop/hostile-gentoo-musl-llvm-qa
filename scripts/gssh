@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# SSH into the Gentoo QA guest (root). Usage: ./gssh 'command...'   or   ./gssh   (interactive)
+# SSH into the Gentoo guest (root). Usage: ./gssh 'command...'   or   ./gssh   (interactive)
 cd "$(dirname "$0")"
 exec sshpass -p gentooqa ssh -p 2224 \
   -o StrictHostKeyChecking=no \

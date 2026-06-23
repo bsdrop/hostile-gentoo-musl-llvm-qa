@@ -117,12 +117,26 @@ Do not force elogind to compile by stubbing `gshadow`: that produces an elogind 
 account and session lookups misbehave. On musl without systemd, the correct answers are option 1 or
 option 3.
 
-## F10 — Firefox on musl: static rust-bin cannot dlopen libclang (bindgen)
+## F10 — Firefox on musl: static rust-bin cannot dlopen libclang; fixed with dynamic rust
 
-Firefox builds gcc and nodejs, but `mach build` fails: bindgen reports `Unable to find libclang ...
+Initial symptom: Firefox's `mach build` fails with bindgen reporting `Unable to find libclang ...
 Dynamic loading not supported`. The toolchain's `rust-bin` is statically linked (musl), and static
-musl binaries cannot `dlopen()`. Fix: build `dev-lang/rust` from source (dynamic) matched to Firefox's
-LLVM slot (firefox-152 wants LLVM 21; the source rust built here was LLVM 22). Deferred (E20).
+musl binaries cannot `dlopen()`, which bindgen needs to load libclang.
+
+Resolution: Firefox builds and runs on musl with a dynamically-linked source rust whose `LLVM_SLOT`
+matches the one Firefox uses. firefox-152 defaults to `LLVM_SLOT=21`, but it also supports
+`LLVM_SLOT=22`; setting `www-client/firefox LLVM_SLOT: -21 22` lets it use the already-installed
+`dev-lang/rust-1.95.0` (slot 22, source, dynamic). That collapses the build to one package (no rust
+rebuild), and the dynamic rustc can `dlopen` libclang. Result: `firefox-152.0` built (EXIT_RC=0),
+`firefox --version` works, and `firefox --headless --screenshot` renders a PNG; `ldd` confirms the
+binary is musl-linked.
+
+Note (hardening interaction): under SELinux enforcing with root mapped to the confined `sysadm_t`
+domain, Firefox logs `Sandbox: CanCreateUserNamespace() clone() failure: EACCES`. The kernel allows
+user namespaces (`CONFIG_USER_NS=y`, `user.max_user_namespaces` non-zero); the denial is SELinux
+refusing `user_namespace { create }` to the confined domain (dontaudit'd, so no AVC is logged). The
+warning is absent in permissive. Firefox still runs; only the namespace layer of its content sandbox
+is degraded. A local policy rule granting `user_namespace create` would restore it. See E20.
 
 ## F11 — `-Wl,--icf=safe` (lld-only) breaks the GCC bootstrap
 
@@ -177,7 +191,8 @@ musl image (complete):
 - SELinux is enforcing with `root` mapped to `sysadm_t`.
 - The KCFI/LTO clang kernel builds and boots (F12).
 - GNOME and KDE are blocked by the logind requirement (F9); not pursued on musl.
-- Firefox is deferred pending a source-built, dynamically-linked rust on Firefox's LLVM slot (F10).
+- Firefox builds and runs (`firefox-152.0`, headless render verified) using a dynamic source rust at
+  a matching LLVM slot (F10); under enforcing its content sandbox loses the user-namespace layer.
 
 glibc image (in progress): the same hardened/LLVM/OpenRC/SELinux setup without musl, used to reach the
 GNOME desktop and browsers that the musl logind requirement blocks.

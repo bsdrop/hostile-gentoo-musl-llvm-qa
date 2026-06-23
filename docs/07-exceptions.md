@@ -103,14 +103,15 @@ the narrative for E5–E15. There is no E21.
   requirement is the primary blocker and is independent of display protocol. Building GNOME would
   require dropping three target options, so it was not pursued on musl. This is the reason for the
   second image on glibc.
-- **E20 — Firefox on musl: feasible configuration, blocked by static rust.** `www-client/firefox`
-  resolves under the target USE (`wayland -X -pulseaudio hardened clang selinux`) with no X server and
-  no PulseAudio, using LLVM slot 21. Its build dependencies pull gcc-16 (via nodejs and rust) onto the
-  otherwise clang-only system; gcc is installed but the default CC/CXX stay clang. The build then fails
-  because the pulled `dev-lang/rust-bin` is a statically-linked musl rustc, and static musl binaries
-  cannot `dlopen()`, which bindgen needs to load libclang. The fix is to build `dev-lang/rust` from
-  source (dynamically linked) against the same LLVM slot Firefox selects (21). Deferred; not a target
-  change.
+- **E20 — Firefox on musl: builds and runs with a dynamic source rust at a matching LLVM slot.**
+  `www-client/firefox` resolves under the target USE (`wayland -X -pulseaudio hardened clang selinux`)
+  with no X server and no PulseAudio. The build first failed because a statically-linked
+  `dev-lang/rust-bin` cannot `dlopen()` libclang for bindgen. Resolution: set
+  `www-client/firefox LLVM_SLOT: -21 22` so Firefox uses the already-installed `dev-lang/rust-1.95.0`
+  (slot 22, source, dynamic) instead of defaulting to slot 21. The build is then one package (no rust
+  rebuild) and the dynamic rustc loads libclang. `firefox-152.0` built and renders headless; the binary
+  is musl-linked. Under enforcing, SELinux denies the firefox content sandbox's `user_namespace create`
+  (F10), which is a degradation, not a build failure. Not a target change.
 
 ## KDE
 

@@ -50,5 +50,5 @@ CONFIG_PROC_KCORE=n
 CONFIG_HARDENED_USERCOPY=y
 CONFIG_FORTIFY_SOURCE=y
 
-# --- module signing off-topic for QA; keep modules but restrict ---
+# --- module signing off-topic here; keep modules but restrict ---
 CONFIG_MODULE_SIG=n

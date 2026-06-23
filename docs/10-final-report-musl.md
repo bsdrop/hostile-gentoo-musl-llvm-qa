@@ -44,11 +44,13 @@ limits are recorded as findings.
     [07-exceptions.md](07-exceptions.md)). Main items: libselinux musl `stat64` patch (E9), `selinux`
     USE unmask (E10), `FEATURES=test` cascades (E4–E8, E11–E13), grub `-device-mapper` (E4), net-tools
     ROSE off (E17), global `-elogind` (E14).
-13. **Blocked, recorded as findings:**
+13. **Browser, blockers, and fixes (recorded as findings):**
+    - Firefox (E20/F10): builds and runs. `firefox-152.0` built (EXIT_RC=0) and renders headless. The
+      static-`rust-bin` `dlopen` failure is avoided by building with `LLVM_SLOT=22` so Firefox uses the
+      installed dynamic source `dev-lang/rust-1.95.0`. Under enforcing, SELinux denies its content
+      sandbox's `user_namespace create` (degradation, not a failure).
     - GNOME (E19) and KDE Plasma (E22): blocked by the logind requirement (elogind unbuildable on musl,
       systemd prohibited). Options in [08-findings.md](08-findings.md).
-    - Firefox (E20/F10): static `rust-bin` cannot `dlopen` libclang; needs a dynamic source rust matched
-      to Firefox's LLVM slot (21). Deferred.
     - systemd-tmpfiles-setup: non-fatal boot warning under enforcing; services unaffected.
     - net-tools (E17) and elogind (E14): fixed and substituted (seatd), respectively.
 14. **Reproduce:** `scripts/install.sh`, [09-reproduce.md](09-reproduce.md), and `config/` (make.conf,
@@ -74,7 +76,8 @@ The work proceeded through these snapshots, each taken before the next stage:
 
 Boot, OpenRC, SSH, networking; the clang/lld toolchain; SELinux enforcing with root confined; Hyprland
 0.55.4 and sway 1.12 (wlroots 0.20.1) both built and launched on virtio-gpu DRM (swrast, no virgl);
-PipeWire, wireplumber, seatd; xdg-desktop-portal and -wlr. The KCFI hardened kernel boots and enforces.
+PipeWire, wireplumber, seatd; xdg-desktop-portal and -wlr; Firefox 152.0 (built and renders headless).
+The KCFI hardened kernel boots and enforces.
 
 ## Summary
 

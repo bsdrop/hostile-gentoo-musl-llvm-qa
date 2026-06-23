@@ -1,4 +1,4 @@
-# QA kernel config fragment (merged onto `make defconfig` with clang/LLVM=1).
+# kernel config fragment (merged onto `make defconfig` with clang/LLVM=1).
 # Goal: boot a virtio UEFI guest off ext4 root with no initramfs, plus SELinux + hardening.
 
 # --- boot/firmware ---
@@ -8,7 +8,7 @@ CONFIG_EFI_MIXED=n
 CONFIG_FB_EFI=y
 CONFIG_EFIVAR_FS=y
 
-# --- console (serial for headless QA) ---
+# --- console (serial for headless boot) ---
 CONFIG_SERIAL_8250=y
 CONFIG_SERIAL_8250_CONSOLE=y
 CONFIG_CMDLINE_BOOL=y

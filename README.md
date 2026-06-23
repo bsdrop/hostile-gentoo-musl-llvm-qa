@@ -43,8 +43,9 @@ no reference to this text, then file that.
   each choice; the clang/LLVM/lld toolchain bring-up; a step-by-step install.
 - The breakage found when these options are combined ([docs/08-findings.md](docs/08-findings.md)):
   `libselinux` using the glibc-only `stat64` on musl; `FEATURES=test` pulling X11 onto a no-X11
-  system; the logind requirement that blocks GNOME and KDE on musl; Firefox's static rust binary
-  failing to `dlopen` libclang; and a full-LTO clang kernel with KCFI that builds and boots.
+  system; the logind requirement that blocks GNOME and KDE on musl; Firefox needing a dynamic source
+  rust to `dlopen` libclang on musl (a static rust binary cannot); and a full-LTO clang kernel with
+  KCFI that builds and boots.
 - SELinux on a source-based, OpenRC, non-systemd system: enabling it, labeling the filesystem, and
   reaching enforcing mode with `root` confined to `sysadm_t` ([docs/04-selinux.md](docs/04-selinux.md)).
 - Wayland without X11 and PipeWire without PulseAudio, using seatd
@@ -87,13 +88,16 @@ The live runtime (the running VM, its qcow2 disk and snapshots, and sockets) is 
 
 ## Status
 
-**musl image (first, complete):** boots with musl, clang/LLD, and OpenRC; SSH works; SELinux is
-enforcing with `root` mapped to `sysadm_t`; Wayland and PipeWire with no X11 and no PulseAudio;
-PIE/SSP/FORTIFY/RELRO and full LTO; a KCFI/LTO clang kernel; no systemd and no gcc. Hyprland and sway
-build and run.
+**musl image (first):** boots with musl, clang/LLD, and OpenRC; SSH works; SELinux is enforcing with
+`root` mapped to `sysadm_t`; Wayland and PipeWire with no X11 and no PulseAudio; PIE/SSP/FORTIFY/RELRO
+and full LTO; a KCFI/LTO clang kernel; no systemd and no gcc. Hyprland and sway build and run. Firefox
+builds and runs (using a dynamic source rust at a matching LLVM slot). GNOME and KDE do not build on
+musl (logind requirement).
 
-**glibc image (second, in progress):** the same hardened/LLVM/OpenRC/SELinux setup without musl, used
-to reach the GNOME desktop and browsers that the musl logind requirement blocks.
+**glibc image (second):** the same hardened/LLVM/OpenRC/SELinux setup without musl. It runs the GNOME
+desktop, Firefox, and Chromium (all verified headless), boots SELinux enforcing with root confined to
+`sysadm_t`, and the AMD GPU driver stack (mesa radeonsi, RADV Vulkan, `xf86-video-amdgpu`) builds (it
+is not run, since the guest has only virtio-gpu).
 
 The largest single source of breakage in both images is global `FEATURES=test`; see
 [docs/08-findings.md](docs/08-findings.md).

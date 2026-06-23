@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Launches the Gentoo QA guest under QEMU/KVM.
+# Launches the Gentoo guest under QEMU/KVM.
 # Serial console -> unix socket (serial.sock) so it can be driven headlessly.
 # QMP monitor       -> unix socket (qmp.sock).
 # Host dir shared in via 9p (tag=hostshare) for stage3 tarballs.

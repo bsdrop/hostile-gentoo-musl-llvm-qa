@@ -1,0 +1,40 @@
+module qa_local 1.0;
+
+# Local SELinux policy module for the hostile Gentoo images. It grants the few
+# service denials that appear when SELinux is switched to enforcing on this
+# OpenRC + musl/glibc setup, so the system boots enforcing with no AVCs.
+#
+# Generated with: ausearch -m AVC | audit2allow -M qa_local
+# Build + load:   checkmodule -M -m -o qa_local.mod qa_local.te
+#                 semodule_package -o qa_local.pp -m qa_local.mod
+#                 semodule -i qa_local.pp
+# (or simply re-run audit2allow -M qa_local on the target.)
+
+require {
+	type systemd_tmpfiles_t;
+	type udev_t;
+	type mount_t;
+	type initrc_tmp_t;
+	type nsfs_t;
+	type auditd_log_t;
+	type portage_tmp_t;
+	class capability sys_resource;
+	class process setrlimit;
+	class file { getattr ioctl open read };
+	class dir { mounton relabelfrom relabelto };
+}
+
+#============= mount_t ==============
+# (can also be allowed with the boolean 'allow_mount_anyfile')
+allow mount_t initrc_tmp_t:dir mounton;
+
+#============= systemd_tmpfiles_t ==============
+allow systemd_tmpfiles_t auditd_log_t:dir { relabelfrom relabelto };
+# (can also be allowed with the boolean 'systemd_tmpfiles_manage_all')
+allow systemd_tmpfiles_t portage_tmp_t:file { ioctl open read };
+allow systemd_tmpfiles_t self:capability sys_resource;
+allow systemd_tmpfiles_t self:process setrlimit;
+
+#============= udev_t ==============
+allow udev_t nsfs_t:file getattr;
+allow udev_t portage_tmp_t:file { getattr read };

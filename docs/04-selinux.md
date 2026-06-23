@@ -57,8 +57,20 @@ side is in `kernel-qa.fragment` (`SECURITY_SELINUX`, `AUDIT`, `CONFIG_LSM=...,se
 
 ## Reaching enforcing
 
-Starting from permissive, the logged AVC denials were reviewed and resolved, then `SELINUX=enforcing`
-was set and confirmed across a reboot. The main item was the SSH login transition: a custom policy
-module `qa_local` allows the `sshd_t` → login domain transition that the base targeted policy did not
-cover. Root is mapped to `sysadm_t` rather than left unconfined. After these changes the system boots
-enforcing with no AVC denials.
+Starting from permissive, the steps are (scripted in `config/selinux/setup-enforcing.sh`):
+
+1. Relabel the whole filesystem: `setfiles -F ... file_contexts /`.
+2. Relabel `/root` explicitly. This is the common blocker: `/root` is often left `default_t`, which
+   `sshd_t` cannot `search`, so every login fails before a shell starts (the visible symptom is
+   `/bin/bash: Permission denied` or `Could not chdir to home directory /root`). `restorecon -RF /root`
+   sets it to `user_home_dir_t`.
+3. `setsebool -P ssh_sysadm_login on` before flipping to enforcing. This lets an SSH login reach the
+   `sysadm_r` role and is the anti-lockout switch; without it, confining root would lock SSH out.
+4. `semanage login -a -s sysadm_u root` to map root to the confined `sysadm_u`/`sysadm_t`.
+5. Load `config/selinux/qa_local.te` for the residual service denials (a few `mount_t`,
+   `systemd_tmpfiles_t`, and `udev_t` accesses); it is generated with `audit2allow`.
+6. Enable auditd, set `SELINUX=enforcing`, reboot.
+
+After this the system boots enforcing, `id -Z` shows `sysadm_u:sysadm_r:sysadm_t`, and
+`ausearch -m AVC -ts boot` reports no enforced (`permissive=0`) denials. The glibc image uses the same
+procedure with the `mcs` policy; it needed only the relabel and the boolean/login mapping, no module.
